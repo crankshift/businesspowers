@@ -5,4 +5,6 @@ node_modules/
 .env.local
 dist/
 build/
+.astro/
+.firebase/
 .claude/settings.local.json

@@ -1,0 +1,17 @@
+---
+import { PageShell, isLang, getT } from 'powers-landing-shell'
+import { site } from '../../config'
+import { dicts } from '../../locales'
+
+export function getStaticPaths() {
+  return site.locales.map(({ code }) => ({ params: { locale: code } }))
+}
+
+const { locale } = Astro.params
+if (!isLang(locale, site.locales)) {
+  throw new Error(`Unsupported locale: ${locale}`)
+}
+const t = getT(locale, dicts)
+---
+
+<PageShell lang={locale} t={t} site={site} />
