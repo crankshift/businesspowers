@@ -1,0 +1,33 @@
+{
+  "name": "ua",
+  "description": "Businesspowers Ukraine — субагенти та скіли для ведення ФОП (фізичної особи-підприємця) і податкових питань фізичної особи: реєстрація, вибір групи єдиного податку, розрахунок ЄП / ЄСВ / ПДФО / військового збору, звітність, закриття, декларування інвестицій (акції, крипто, дивіденди з-за кордону, IBKR / Freedom24 / Wise), виставлення і аналіз інвойсів / актів (локальні UAH B2B, валютні USD/EUR/GBP для іноземних клієнтів, ПН в ЄРПН для ФОП з ПДВ), парсинг банківських виписок (mono, privat24, sense, fuib). Команди в Claude Code отримують префікс /ua:…",
+  "version": "0.2.0",
+  "author": {
+    "name": "crankshift"
+  },
+  "homepage": "https://github.com/crankshift/businesspowers",
+  "repository": "https://github.com/crankshift/businesspowers",
+  "license": "MIT",
+  "keywords": [
+    "ukraine",
+    "fop",
+    "private-entrepreneur",
+    "taxes",
+    "tax-calculator",
+    "edynyi-podatok",
+    "esv",
+    "pdfo",
+    "military-zbir",
+    "diia",
+    "podatkova",
+    "investments",
+    "stocks",
+    "ibkr",
+    "ukrainian-tax",
+    "tax-reporting",
+    "foreign-income",
+    "invoices",
+    "invoicing",
+    "bank-statements"
+  ]
+}
