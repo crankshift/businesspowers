@@ -21,7 +21,7 @@ businesspowers/                     # GitHub: crankshift/businesspowers
 ├── LICENSE                         # MIT — covers the whole repo
 ├── .claude-plugin/
 │   └── marketplace.json            # marketplace catalog ("businesspowers"); lists ua and pl with their source paths
-└── plugins/                        # all jurisdiction plugins live here
+├── plugins/                        # all jurisdiction plugins live here
     ├── ua/                         # plugin "ua" — Ukrainian ФОП + фізособа
     │   ├── README.md               # user-facing, Ukrainian
     │   ├── CLAUDE.md               # contributor context for the UA plugin
@@ -36,6 +36,19 @@ businesspowers/                     # GitHub: crankshift/businesspowers
         ├── .claude-plugin/plugin.json  # name: "pl"
         ├── agents/
         └── skills/
+└── site/                           # public landing page (static Astro site, not a plugin)
+    ├── README.md                   # site quick-start, deploy flow
+    ├── CLAUDE.md                   # site contributor context
+    ├── astro.config.mjs            # Astro + i18n + sitemap config
+    ├── firebase.json               # Firebase Hosting config (multi-site "businesspowers")
+    ├── package.json                # separate deps: astro, @astrojs/sitemap, powers-landing-shell
+    └── src/
+        ├── config.ts               # SiteConfig: brand, brandSymbol (%), plugins, agents, skills, sources
+        ├── locales/{en,ua,pl}.ts    # locale dictionaries (satisfies ShellTranslation)
+        ├── locales/index.ts         # dicts map + Translation re-export
+        └── pages/
+            ├── index.astro         # root: one-liner RedirectShell (browser-lang redirect)
+            └── [locale]/index.astro # /en/, /ua/, /pl/ — one-liner PageShell
 ```
 
 ## Contribution principles
@@ -95,3 +108,15 @@ businesspowers/                     # GitHub: crankshift/businesspowers
 | Biała lista VAT | [whitelist.tax.gov.pl](https://www.podatki.gov.pl/wykaz-podatnikow-vat-wyszukiwarka/) | Weryfikacja kontrahentów VAT |
 
 For plugin-specific context (agent catalogs, jurisdiction-specific procedural rules, architectural notes) see the per-plugin `CLAUDE.md` files linked at the top.
+
+## Landing site (`site/`)
+
+The repo ships a static marketing landing alongside the plugins. It lives in [`site/`](./site/), is deployed to Firebase Hosting at `https://businesspowers.web.app/`, and is maintained independently of plugin releases.
+
+- **Stack:** Astro 6 + [powers-landing-shell](https://github.com/crankshift/powers-landing-shell). The site is a thin consumer — it supplies `SiteConfig` (brand, brandSymbol `%`, plugin catalogs) and locale dictionaries; the shell renders the page. No local components, layouts, or styles.
+- **Languages:** EN, UA, PL — path-based routing (`/en/`, `/ua/`, `/pl/`). Dictionaries in `site/src/locales/`, structurally type-checked against the EN shape via `satisfies ShellTranslation`.
+- **Deploy:** `cd site && pnpm run deploy` (requires `pnpm exec firebase login` once per machine).
+- **Release coupling:** **none.** The site isn't versioned with the marketplace — push it whenever a user-facing change lands. The site *does* reflect plugin content (agent and skill lists with labels, counts derived from array lengths), so after a plugin bump update `site/src/config.ts` (add / remove entries in `UA_AGENTS` / `PL_AGENTS` / `UA_SKILLS` / `PL_SKILLS`) and the matching `agents` / `skills` label maps in `site/src/locales/*.ts`, then redeploy.
+- **Editorial rules the site inherits:** same disclaimer discipline as the plugins (not tax or accounting advice, human review mandatory), same jurisdiction separation (no UA/PL mixing in one component), same no-fabrication rule (if it's not in `plugins/`, it's not on the landing).
+
+Full contributor rules in [`site/CLAUDE.md`](./site/CLAUDE.md).
