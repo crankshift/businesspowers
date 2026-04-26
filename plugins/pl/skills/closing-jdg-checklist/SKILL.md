@@ -15,6 +15,17 @@ Pełna checklista zamknięcia JDG w Polsce. Zawiera decyzję między **zawieszen
 - **Ustawa o PIT** — art. 24 ust. 3a (remanent PIT).
 - **Ustawa o USUS** — art. 36 (ZWUA).
 
+## Parametry — odniesienie
+
+> Aktualne wartości — pobierać przez kanoniczne skille.
+> Jeśli skill nie odpowiedział, użyj fallback poniżej; ostrzeż: «⚠ Wartość [parametr] użyto ze stanem na [data].»
+
+| Parametr | Kanoniczny skill | Fallback |
+|---|---|---|
+| ZUS składki (społeczne, zdrowotna) | `calculating-zus` | → patrz skill _(01.01.2026)_ |
+| Stawki VAT, remanent VAT | `vat-agent` | 23% / 8% / 5% / 0% _(01.01.2026)_ |
+| Formy PIT (skala/liniowy/ryczałt) | `calculating-pit-scale`, `calculating-pit-liniowy`, `calculating-ryczalt` | → patrz skille _(01.01.2026)_ |
+
 ## Zawieszenie vs zamknięcie
 
 | Aspekt | Zawieszenie | Zamknięcie |

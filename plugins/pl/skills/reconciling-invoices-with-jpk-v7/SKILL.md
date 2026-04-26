@@ -14,6 +14,16 @@ Skill — procedurowe uzgodnienie portfela faktur z JPK_V7 i rocznymi deklaracja
 - **Rozporządzenie MF w sprawie JPK** — struktura FA_VAT, JPK_V7.
 - **Ustawa o PIT** — art. 14 (przychód — memoriał vs kasa).
 
+## Parametry — odniesienie
+
+> Aktualne wartości — pobierać przez kanoniczne skille.
+> Jeśli skill nie odpowiedział, użyj fallback poniżej; ostrzeż: «⚠ Wartość [parametr] użyto ze stanem na [data].»
+
+| Parametr | Kanoniczny skill | Fallback |
+|---|---|---|
+| Stawki VAT, GTU, MPP | `vat-agent` | 23/8/5/0%; MPP > 15 000 zł _(01.01.2026)_ |
+| Kara za błędny rekord JPK (art. 82b Ordynacji) | — (Ordynacja podatkowa) | do 500 zł / wpis _(fallback; stan na 01.01.2026)_ |
+
 ## Zasada
 
 ```
@@ -197,7 +207,7 @@ for inv in invoices_df.itertuples():
 
 ### Sankcje za brak GTU
 
-- Do **500 zł** za każdy błędny rekord w JPK (art. 82b Ordynacji).
+- Do **500 zł** _(fallback; stan na 01.01.2026)_ za każdy błędny rekord w JPK (art. 82b Ordynacji).
 - Przy wielu faktur — kwota narasta.
 
 ## Oznaczenia procedur

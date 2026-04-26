@@ -16,6 +16,19 @@ Drzewo decyzyjne wyboru formy opodatkowania dla polskiej JDG. Skill uruchamia si
 5. **Relacje z byłym pracodawcą** — 2-letni zakaz dla liniowego i ryczałtu.
 6. **Plany** — zmiana branży, dodatkowe źródła dochodu.
 
+## Parametry — odniesienie
+
+> Aktualne wartości — pobierać przez kanoniczne skille.
+> Jeśli skill nie odpowiedział, użyj fallback poniżej; ostrzeż: «⚠ Wartość [parametr] użyto ze stanem na [data].»
+
+| Parametr | Kanoniczny skill | Fallback |
+|---|---|---|
+| Skala 12%/32%, kwota wolna 30 000, próg 120 000 | `calculating-pit-scale` | 12% / 32%; 30 000 zł; 120 000 zł _(01.01.2026)_ |
+| Liniowy 19%, limit odliczenia zdrowotnej | `calculating-pit-liniowy` | 19%; ~10 200 zł _(01.01.2026)_ |
+| Ryczałt stawki 2-17%, limit 2M EUR | `calculating-ryczalt` | art. 12; 2 000 000 EUR _(01.01.2026)_ |
+| Składka zdrowotna 9%/4,9%/ryczałtowa | `calculating-skladka-zdrowotna` | 9% skala / 4,9% lin. / progi ryczałt _(01.01.2026)_ |
+| Ulga na dziecko (kwoty) | `calculating-pit-scale` | 92,67 / 166,67 / 225 zł/mies _(01.01.2026)_ |
+
 ## Formy w skrócie
 
 | Forma | Stawka | Baza | Koszty | Ulgi |

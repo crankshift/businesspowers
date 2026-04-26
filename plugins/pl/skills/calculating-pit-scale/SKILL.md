@@ -17,6 +17,19 @@ Kalkulacja PIT wg skali podatkowej dla polskiego rezydenta — na JDG, z umowy o
   - Art. 26 — odliczenia od dochodu.
   - Art. 27c — ulga na termomodernizację.
 
+## Aktualne parametry — pobrać przed obliczeniem
+
+| Parametr | Źródło | Sposób pobrania | Fallback _(ostatnio zweryfikowany)_ |
+|---|---|---|---|
+| Progi skali PIT (12% / 32%), kwota zmniejszająca | Art. 27 ustawy o PIT | WebFetch: `https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19910800350` → art. 27 | 12% do 120 000 zł; 32% powyżej; kwota zmniejszająca 3 600 zł _(01.01.2026)_ |
+| Kwoty ulgi na dziecko (miesięczne/roczne) | Art. 27f ustawy o PIT | WebSearch: `ulga na dziecko 2026 kwoty art 27f` | 92,67 / 92,67 / 166,67 / 225 zł/mies _(01.01.2026)_ |
+| Limit PIT-0 dla rodziców 4+ | Art. 21 ust. 1 pkt 152 ustawy o PIT | WebSearch: `PIT-0 rodzice 4+ limit 2026` | 85 528 zł _(01.01.2026)_ |
+| Limit dochodu dziecka | Art. 6 ust. 4 pkt 2 ustawy o PIT | WebSearch: `dochód dziecka ulga 2026 limit` | ~19 061 zł _(01.01.2024)_ |
+
+**Zasady:**
+1. **Fetch udany** → użyj pobranej wartości, podaj źródło i datę pobrania.
+2. **Fetch nieudany** → użyj fallback. Ostrzeż użytkownika: «⚠ Wartość [parametr] użyto ze stanem na [data]. Zweryfikuj na isap.sejm.gov.pl.»
+
 ## Stawki (2026, potwierdzić w obwieszczeniu MF)
 
 | Dochód roczny | Stawka |

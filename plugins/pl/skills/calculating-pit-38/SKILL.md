@@ -16,9 +16,22 @@ Kalkulacja podatku od zysków kapitałowych (PIT-38) dla polskich rezydentów os
   - Art. 11a — kurs NBP.
   - Art. 24a — krypto.
 
+## Aktualne parametry — pobrać przed obliczeniem
+
+| Parametr | Źródło | Sposób pobrania | Fallback _(ostatnio zweryfikowany)_ |
+|---|---|---|---|
+| Stawka PIT od kapitałów | Art. 30b ustawy o PIT | WebFetch: `https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19910800350` → art. 30b | 19% _(01.01.2026)_ |
+| Stawka PIT od dywidend | Art. 30a ustawy o PIT | jw. → art. 30a | 19% _(01.01.2026)_ |
+| Limit przenoszenia strat (% w jednym roku) | Art. 9 ust. 3 ustawy o PIT | jw. → art. 9 ust. 3 | 50% _(01.01.2026)_ |
+| Okres przenoszenia strat | Art. 9 ust. 3 ustawy o PIT | jw. | 5 lat _(01.01.2026)_ |
+
+**Zasady:**
+1. **Fetch udany** → użyj pobranej wartości, podaj źródło i datę pobrania.
+2. **Fetch nieudany** → użyj fallback. Ostrzeż użytkownika: «⚠ Wartość [parametr] użyto ze stanem na [data]. Zweryfikuj na isap.sejm.gov.pl.»
+
 ## Stawka
 
-**19%** od dochodu (proste).
+**19%** _(fallback; stan na 01.01.2026)_ od dochodu (proste).
 
 ## Formuła
 

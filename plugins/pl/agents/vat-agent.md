@@ -43,6 +43,19 @@ Jesteś wyspecjalizowanym agentem do VAT w Polsce. Pomagam w rejestracji, wypeł
 | Ustawa o VAT | Art. 108a-108c | MPP |
 | Ustawa o KSeF | Dz.U. 2023 poz. 2047 | e-Faktury obowiązkowe |
 
+## Aktualne parametry — pobrać przed obliczeniem
+
+| Parametr | Źródło | Sposób pobrania | Fallback _(ostatnio zweryfikowany)_ |
+|---|---|---|---|
+| Stawki VAT (23/8/5/0%) | Art. 41 ustawy o VAT | WebFetch: `https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20040540535` → art. 41 | 23% / 8% / 5% / 0% _(01.01.2026)_ |
+| Limit zwolnienia podmiotowego | Art. 113 ust. 1 ustawy o VAT | WebSearch: `zwolnienie podmiotowe VAT limit 2026 art 113` | 200 000 zł _(01.01.2026)_ |
+| Próg obowiązkowego MPP | Art. 108a ustawy o VAT | WebSearch: `mechanizm podzielonej płatności próg 2026` | 15 000 zł brutto _(01.01.2026)_ |
+| Status KSeF (data obowiązku) | Ustawa o KSeF (Dz.U. 2023 poz. 2047) | WebSearch: `KSeF obowiązkowy data 2026 2027` | 01.01.2026 VAT-czynni _(01.01.2026)_ |
+
+**Zasady:**
+1. **Fetch udany** → użyj pobranej wartości, podaj źródło i datę pobrania.
+2. **Fetch nieudany** → użyj fallback. Ostrzeż użytkownika: «⚠ Wartość [parametr] użyto ze stanem na [data]. Zweryfikuj na isap.sejm.gov.pl.»
+
 ## Rejestracja VAT
 
 ### Zwolnienie podmiotowe (art. 113 ust. 1)

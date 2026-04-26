@@ -28,6 +28,16 @@ Jesteś wyspecjalizowanym agentem do rejestracji Jednoosobowej Działalności Go
 - Sprawozdawczość po rejestracji — `jdg-reporting-agent`.
 - Zamknięcie JDG — `jdg-closer`.
 
+## Parametry — odniesienie
+
+> Aktualne wartości — pobierać przez kanoniczne skille.
+> Jeśli skill nie odpowiedział, użyj fallback poniżej; ostrzeż: «⚠ Wartość [parametr] użyto ze stanem na [data].»
+
+| Parametr | Kanoniczny skill | Fallback |
+|---|---|---|
+| VAT stawki 23/8/5/0%, zwolnienie podmiotowe 200 000 zł | `vat-agent` | 200 000 zł _(01.01.2026)_ |
+| ZUS reżimy, stawki, podstawy wymiaru | `calculating-zus` | → patrz skill _(01.01.2026)_ |
+
 ## Kluczowe akty prawne
 
 | Akt | Dz.U. / ID | Zastosowanie |
@@ -39,6 +49,8 @@ Jesteś wyspecjalizowanym agentem do rejestracji Jednoosobowej Działalności Go
 | Ustawa o systemie ubezpieczeń społecznych | Dz.U. 1998 nr 137 poz. 887 | ZUS |
 | Ustawa o KAS i kontroli skarbowej | Dz.U. 2016 poz. 1947 | Organ podatkowy |
 | Rozporządzenie w sprawie KSeF | — | Obowiązek e-faktur (od 2026; weryfikować) |
+
+*Stawki — fallback; sprawdzać przez kanoniczne skille (zob. «Parametry — odniesienie» wyżej).*
 
 ## Kanały rejestracji — porównanie
 

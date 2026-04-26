@@ -13,6 +13,17 @@ Pełna checklista otwarcia JDG w Polsce. Skill podaje gotową listę zadań od p
 - **Prawo przedsiębiorców** (Dz.U. 2018 poz. 646).
 - **Ustawa o PIT**, **VAT**, **USUS**, **ustawa o ryczałcie**.
 
+## Parametry — odniesienie
+
+> Aktualne wartości — pobierać przez kanoniczne skille.
+> Jeśli skill nie odpowiedział, użyj fallback poniżej; ostrzeż: «⚠ Wartość [parametr] użyto ze stanem na [data].»
+
+| Parametr | Kanoniczny skill | Fallback |
+|---|---|---|
+| ZUS reżimy (ulga na start, mały, duży), chorobowa 2,45% | `calculating-zus` | → patrz skill _(01.01.2026)_ |
+| VAT limit zwolnienia 200 000 zł (art. 113) | `vat-agent` | 200 000 zł _(01.01.2026)_ |
+| Formy opodatkowania (skala/liniowy/ryczałt) | `calculating-pit-scale`, `calculating-pit-liniowy`, `calculating-ryczalt` | → patrz skille _(01.01.2026)_ |
+
 ## Kanały rejestracji
 
 | Kanał | Czas | Koszt | Wymagania |

@@ -16,9 +16,19 @@ Deklarowanie działalności kryptowalutowej w polskim PIT-38. Podstawa prawna �
   - Art. 22 — koszty uzyskania.
 - Interpretacje KIS (eureka.mf.gov.pl) — liczne dotyczące krypto.
 
+## Parametry — odniesienie
+
+> Aktualne wartości — pobierać przez kanoniczne skille.
+> Jeśli skill nie odpowiedział, użyj fallback poniżej; ostrzeż: «⚠ Wartość [parametr] użyto ze stanem na [data].»
+
+| Parametr | Kanoniczny skill | Fallback |
+|---|---|---|
+| Stawka 19% krypto (art. 30b ust. 1 pkt 4) | `calculating-pit-38` | 19% _(01.01.2026)_ |
+| Przenoszenie strat (50%, 5 lat) | `calculating-pit-38` | 50% / 5 lat _(01.01.2026)_ |
+
 ## Stawka
 
-**19%** od dochodu (proste, jak PIT-38 standardowy).
+**19%** _(fallback; stan na 01.01.2026)_ od dochodu (proste, jak PIT-38 standardowy).
 
 ## Co jest przedmiotem opodatkowania
 

@@ -26,6 +26,17 @@ Jesteś wyspecjalizowanym agentem do zamykania JDG w Polsce. Pomagam przejść p
 - Kalkulacja konkretnych kwot — `jdg-tax-calculator`.
 - Rejestracja nowej JDG po zamknięciu — `jdg-registrator`.
 
+## Parametry — odniesienie
+
+> Aktualne wartości — pobierać przez kanoniczne skille.
+> Jeśli skill nie odpowiedział, użyj fallback poniżej; ostrzeż: «⚠ Wartość [parametr] użyto ze stanem na [data].»
+
+| Parametr | Kanoniczny skill | Fallback |
+|---|---|---|
+| ZUS składki, reżimy, wyrejestrowanie | `calculating-zus` | → patrz skill _(01.01.2026)_ |
+| VAT stawki 23/8/5/0%, remanent VAT | `vat-agent` | 23% / 8% / 5% / 0% _(01.01.2026)_ |
+| PIT formy (skala/liniowy/ryczałt) | `calculating-pit-scale`, `calculating-pit-liniowy`, `calculating-ryczalt` | → patrz skille _(01.01.2026)_ |
+
 ## Kluczowe akty prawne
 
 | Akt | Artykuł | Zastosowanie |
@@ -37,6 +48,8 @@ Jesteś wyspecjalizowanym agentem do zamykania JDG w Polsce. Pomagam przejść p
 | Ustawa o PIT | Art. 24 ust. 3a | Remanent likwidacyjny PIT |
 | Ustawa o systemie ubezpieczeń społecznych | Art. 36 | Wyrejestrowanie ZUS |
 | Kodeks pracy | Art. 30 i n. | Rozwiązanie stosunku pracy |
+
+*Stawki — fallback; sprawdzać przez kanoniczne skille (zob. «Parametry — odniesienie» wyżej).*
 
 ## Zawieszenie vs zamknięcie — porównanie
 

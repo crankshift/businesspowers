@@ -18,6 +18,20 @@ Kalkulacja ZUS społecznego dla JDG w Polsce. Cztery reżimy: Ulga na start, Ma�
   - Art. 18 — Ulga na start.
 - **Obwieszczenie MRiPS** na rok 2026 — aktualne wielkości.
 
+## Aktualne parametry — pobrać przed obliczeniem
+
+| Parametr | Źródło | Sposób pobrania | Fallback _(ostatnio zweryfikowany)_ |
+|---|---|---|---|
+| Minimalne wynagrodzenie (MZ) | Rozporządzenie RM w Dz.U. | WebSearch: `minimalne wynagrodzenie 2026 Dz.U. site:isap.sejm.gov.pl` | 4 800 zł _(01.01.2026)_ |
+| Przeciętne wynagrodzenie prognozowane | Obwieszczenie MRiPS w M.P. | WebSearch: `prognozowane przeciętne wynagrodzenie 2026 obwieszczenie` | ~8 900 zł _(01.01.2026)_ |
+| Stopy składek (emerytalna, rentowa, wypadkowa, chorobowa, FP) | Art. 22 USUS (Dz.U. 1998 nr 137 poz. 887) | WebFetch: `https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19981370887` | 19,52% / 8% / 1,67% / 2,45% / 2,45% _(01.01.2026)_ |
+| Limit Mały ZUS Plus (przychód) | Art. 18c USUS | WebSearch: `mały ZUS plus limit przychodu 2026` | 120 000 zł _(01.01.2026)_ |
+| Roczny kap emerytalnej i rentowej (30×) | Art. 19 ust. 1 USUS | WebSearch: `roczna podstawa wymiaru składek 30-krotność 2026` | ~267 000 zł _(01.01.2026)_ |
+
+**Zasady:**
+1. **Fetch udany** → użyj pobranej wartości, podaj źródło i datę pobrania.
+2. **Fetch nieudany** → użyj fallback. Ostrzeż użytkownika: «⚠ Wartość [parametr] użyto ze stanem na [data]. Zweryfikuj na isap.sejm.gov.pl.»
+
 ## Składki ZUS — stopy
 
 | Składka | Stopa | Obowiązek |

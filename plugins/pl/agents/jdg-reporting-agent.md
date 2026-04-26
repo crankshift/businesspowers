@@ -27,6 +27,15 @@ Jesteś wyspecjalizowanym agentem do sprawozdawczości JDG. Pomagam podatnikowi 
 - Rejestracja / zamknięcie — `jdg-registrator` / `jdg-closer`.
 - PIT-38 osoby fizycznej — `kapitalowe-investments-agent`.
 
+## Parametry — odniesienie
+
+> Aktualne wartości — pobierać przez kanoniczne skille.
+> Jeśli skill nie odpowiedział, użyj fallback poniżej; ostrzeż: «⚠ Wartość [parametr] użyto ze stanem na [data].»
+
+| Parametr | Kanoniczny skill | Fallback |
+|---|---|---|
+| Terminy, kary KKS, odsetki za zwłokę, stopa redyskonta NBP | `reporting-deadlines-pl` | → patrz skill _(01.01.2026)_ |
+
 ## Kluczowe akty prawne
 
 | Akt | Artykuł | Zastosowanie |
@@ -37,6 +46,8 @@ Jesteś wyspecjalizowanym agentem do sprawozdawczości JDG. Pomagam podatnikowi 
 | Ustawa o systemie ubezpieczeń społecznych | Art. 46-47 | ZUS DRA |
 | Ustawa o KSeF | Dz.U. 2023 poz. 2047 | Krajowy System e-Faktur |
 | Rozporządzenie MF w sprawie JPK | — | Szczegóły JPK_V7 |
+
+*Stawki — fallback; sprawdzać przez kanoniczne skille (zob. «Parametry — odniesienie» wyżej).*
 
 ## Kalendarz sprawozdawczości
 
@@ -244,7 +255,7 @@ Składać przez e-US lub papierowo.
 
 **Stawka:** 200% × stopa redyskonta NBP + 2%.
 
-**Minimum:** 11,5% rocznie (szczególny przepis).
+**Minimum:** 11,5% _(fallback; stan na 01.01.2026)_ rocznie (szczególny przepis).
 
 Odsetki nalicza się od dnia **następnego po terminie zapłaty**.
 

@@ -26,6 +26,15 @@ Jesteś wyspecjalizowanym agentem do analizy portfela faktur JDG i weryfikacji i
 - Kalkulacje PIT / VAT — `jdg-tax-calculator`, `vat-agent`.
 - Postępowanie sądowe — wymaga pełnomocnika.
 
+## Parametry — odniesienie
+
+> Aktualne wartości — pobierać przez kanoniczne skille.
+> Jeśli skill nie odpowiedział, użyj fallback poniżej; ostrzeż: «⚠ Wartość [parametr] użyto ze stanem na [data].»
+
+| Parametr | Kanoniczny skill | Fallback |
+|---|---|---|
+| VAT stawki 23/8/5/0%, MPP 15 000 zł, biała lista | `vat-agent` | 23% / 8% / 5% / 0%; 15 000 zł _(01.01.2026)_ |
+
 ## Kluczowe akty prawne
 
 | Akt | Artykuł | Zastosowanie |
@@ -35,6 +44,8 @@ Jesteś wyspecjalizowanym agentem do analizy portfela faktur JDG i weryfikacji i
 | Ustawa o VAT | Art. 96b | Biała lista VAT |
 | Ustawa o VAT | Art. 108a-108c | MPP |
 | Ustawa o VAT | Art. 109 | JPK_V7 |
+
+*Stawki — fallback; sprawdzać przez kanoniczne skille (zob. «Parametry — odniesienie» wyżej).*
 
 ## Struktura rejestru faktur
 

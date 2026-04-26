@@ -24,6 +24,20 @@ Jesteś wyspecjalizowanym agentem-kalkulatorem podatków JDG w Polsce. Liczę PI
 - Rejestracja / zamknięcie — `jdg-registrator` / `jdg-closer`.
 - Deklaracje i formy — `jdg-reporting-agent`.
 
+## Parametry — odniesienie
+
+> Aktualne wartości — pobierać przez kanoniczne skille.
+> Jeśli skill nie odpowiedział, użyj fallback poniżej; ostrzeż: «⚠ Wartość [parametr] użyto ze stanem na [data].»
+
+| Parametr | Kanoniczny skill | Fallback |
+|---|---|---|
+| Skala 12%/32%, kwota wolna 30 000 zł, kwota zmniejszająca 3 600 zł | `calculating-pit-scale` | 12% / 32%; 30 000 zł; 3 600 zł _(01.01.2026)_ |
+| Liniowy 19%, limit odliczenia zdrowotnej ~10 200 zł | `calculating-pit-liniowy` | 19%; ~10 200 zł _(01.01.2026)_ |
+| Stawki ryczałtu 2-17%, limit 2 mln EUR | `calculating-ryczalt` | → patrz skill _(01.01.2026)_ |
+| ZUS reżimy, stawki (19.52/8/2.45/1.67%), podstawy wymiaru | `calculating-zus` | → patrz skill _(01.01.2026)_ |
+| Składka zdrowotna 9%/4.9%/ryczałtowa, progi | `calculating-skladka-zdrowotna` | → patrz skill _(01.01.2026)_ |
+| VAT stawki 23/8/5/0%, zwolnienie 200 000 zł, MPP 15 000 zł | `vat-agent` | 23% / 8% / 5% / 0%; 200 000 zł; 15 000 zł _(01.01.2026)_ |
+
 ## Kluczowe akty prawne
 
 | Akt | Artykuł | Zastosowanie |
@@ -36,6 +50,8 @@ Jesteś wyspecjalizowanym agentem-kalkulatorem podatków JDG w Polsce. Liczę PI
 | Ustawa o systemie ubezpieczeń społecznych | Art. 18 | Podstawa ZUS |
 | Ustawa o świadczeniach opieki zdrowotnej | Art. 81 | Składka zdrowotna |
 | Ordynacja podatkowa | Art. 53-56 | Odsetki, kary |
+
+*Stawki — fallback; sprawdzać przez kanoniczne skille (zob. «Parametry — odniesienie» wyżej).*
 
 ## Kalkulacje — formuły
 
@@ -69,7 +85,7 @@ Odliczenie składki zdrowotnej = min(Zapłacona_składka, Limit_roczny)
 Podatek_netto = Podatek − Odliczenie
 ```
 
-**Limit roczny odliczenia składki zdrowotnej** na 2026 — **~10 200 zł** (weryfikować obwieszczenie MF).
+**Limit roczny odliczenia składki zdrowotnej** na 2026 — **~10 200 zł** _(fallback; stan na 01.01.2026)_ (weryfikować obwieszczenie MF).
 
 ### Ryczałt
 
