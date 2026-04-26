@@ -5,14 +5,14 @@
   },
   "metadata": {
     "description": "Businesspowers — колекція плагінів для Claude Code для ведення приватного підприємництва. Зараз: ua (ФОП + фізична особа Україна) і pl (JDG + osoba fizyczna Poland).",
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   "plugins": [
     {
       "name": "ua",
       "source": "./plugins/ua",
       "description": "Businesspowers Ukraine — субагенти та скіли для ведення ФОП (фізичної особи-підприємця) і податкових питань фізичної особи: реєстрація, вибір групи ЄП, розрахунок єдиного податку / ЄСВ / ПДФО / військового збору, звітність, закриття, декларування інвестицій (акції, крипто, дивіденди з-за кордону), виставлення і аналіз інвойсів / актів (local UAH, валютні для іноземних клієнтів). Команди отримують префікс /ua:…",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "author": {
         "name": "crankshift"
       },
@@ -49,7 +49,7 @@
       "name": "pl",
       "source": "./plugins/pl",
       "description": "Businesspowers Poland — wyspecjalizowani subagenci i skille do prowadzenia JDG (Jednoosobowej Działalności Gospodarczej) i spraw podatkowych osoby fizycznej: rejestracja w CEIDG, wybór formy opodatkowania (skala, liniowy, ryczałt, karta), kalkulacja PIT / ZUS / składki zdrowotnej / VAT, sprawozdawczość (JPK_V7, PIT-36/36L/28/38, PIT-11), zamknięcie, deklarowanie inwestycji kapitałowych (akcje, ETF, krypto, dywidendy zagraniczne), wystawianie i analiza faktur (faktura VAT, rachunek, WDT, eksportowa, KSeF od 2026, faktury korygujące, MPP). Komendy otrzymują prefiks /pl:…",
-      "version": "0.2.0",
+      "version": "0.3.0",
       "author": {
         "name": "crankshift"
       },

@@ -4,6 +4,16 @@ Format — [Keep a Changelog](https://keepachangelog.com/pl/1.1.0/), wersjonowan
 
 ---
 
+## [0.3.0] — 2026-04-26
+
+### Zmieniono
+
+- Optymalizacja tokenów: opisy agentów skrócone do 250–350 znaków, opisy skillów — do 150–250 znaków. Szczegóły (artykuły ustaw, stawki, nazwy formularzy) pozostają w treści każdego agenta/skilla (ładowane na żądanie).
+- `CLAUDE.md`: usunięto duplikaty — sekcję „Architektura agentów", tabele agentów/skillów, drzewo plików (wszystko ładowane automatycznie z frontmatteru).
+- `plugin.json`: wersja 0.2.0 → 0.3.0.
+
+---
+
 ## [0.2.0] — 2026-04-22
 
 ### Dodano
@@ -63,5 +73,6 @@ Format — [Keep a Changelog](https://keepachangelog.com/pl/1.1.0/), wersjonowan
 - Minimalne wynagrodzenie i prognozowane przeciętne wynagrodzenie na 2026 — weryfikować w obwieszczeniu MRiPS i ustawie budżetowej.
 - Składka zdrowotna 2026 — zasady zależne od bieżącej redakcji ustawy o świadczeniach opieki zdrowotnej (weryfikować ostatnie zmiany).
 
+[0.3.0]: https://github.com/crankshift/businesspowers/releases/tag/pl/v0.3.0
 [0.2.0]: https://github.com/crankshift/businesspowers/releases/tag/pl/v0.2.0
 [0.1.0]: https://github.com/crankshift/businesspowers/releases/tag/pl/v0.1.0

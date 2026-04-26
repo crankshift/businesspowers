@@ -9,6 +9,12 @@ This root file is an **index + monorepo-level structural log** only. It's not ve
 
 ---
 
+### 2026-04-26 — Token usage optimization
+
+- `ua` bumped to `0.3.0`: agent descriptions trimmed to 250–350 chars, skill descriptions to 150–250 chars; `CLAUDE.md` deduplicated.
+- `pl` bumped to `0.3.0`: same optimization applied.
+- Marketplace `metadata.version` bumped to `0.3.0`.
+
 ### 2026-04-22 — Invoice layer added to both plugins
 
 - `ua` bumped to `0.2.0`: +2 agents (`invoice-manager`, `invoice-analyzer`), +4 skills (`issuing-invoice-ua`, `parsing-bank-statements-ua`, `invoice-templates-ua`, `reconciling-invoices-with-declaration`).
