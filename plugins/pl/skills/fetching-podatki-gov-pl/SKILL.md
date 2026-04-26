@@ -1,6 +1,6 @@
 ---
 name: fetching-podatki-gov-pl
-description: Use when retrieving information from podatki.gov.pl (Polish Ministry of Finance portal) and e-Urząd Skarbowy — tax rates, deadlines, forms repository, interpretations, mikrorachunek podatkowy lookup, white list VAT, taxpayer verification. Also KIS individual tax interpretations (eureka.mf.gov.pl). Provides URL patterns, how to search, what to trust vs verify against statute (ustawa o PIT, VAT, etc. on isap.sejm.gov.pl).
+description: Use when retrieving information from podatki.gov.pl and e-Urząd Skarbowy. Covers tax rates, forms, interpretacje KIS, mikrorachunek lookup, biała lista VAT, taxpayer verification, URL patterns.
 ---
 
 # fetching-podatki-gov-pl

@@ -1,6 +1,6 @@
 ---
 name: closing-jdg-checklist
-description: Use when closing JDG in Poland — step-by-step checklist. CEIDG-1 wniosek o wykreślenie, VAT-Z (deregister from VAT) within 7 days, ZUS ZWUA (deregister from social security) within 7 days, remanent likwidacyjny for skala/liniowy (art. 24 ust. 3a ustawy o PIT — inventory at closure adds to income), final JPK_V7, final PIT (within 30 days for general system, otherwise standard April 30), annual składka zdrowotna settlement, closing firmowe bank account, archiving documentation for 5 years. Alternative: suspension (zawieszenie) for up to 24 months without wykreślenie.
+description: Use when closing or suspending JDG in Poland. Covers CEIDG wykreślenie, VAT-Z, ZUS ZWUA, remanent likwidacyjny, final JPK_V7, final PIT, składka zdrowotna settlement, archiving, zawieszenie alternative.
 ---
 
 # closing-jdg-checklist

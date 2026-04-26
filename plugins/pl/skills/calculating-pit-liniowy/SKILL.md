@@ -1,6 +1,6 @@
 ---
 name: calculating-pit-liniowy
-description: Use when calculating Polish PIT linear 19% for JDG — art. 30c ustawy o PIT. Flat 19% on dochód (przychód − koszty uzyskania). No tax-free amount (no kwota wolna 30 000 zł). No joint filing with spouse. No ulga na dziecko. Health insurance deductible up to annual limit (~10 200 zł in 2026, verify). Monthly advance payments calculated simply (19% × dochód narastająco − previous advances − proportional health deduction). Election timing: at CEIDG registration or by 20 February of the subsequent year. Advantage over scale when dochód exceeds ~156 000 zł and no family tax benefits needed. Cannot perform services to former employer for 2 years.
+description: Use when calculating Polish PIT liniowy for JDG. Covers flat rate on dochód, health insurance deduction limit, monthly advance payments, election timing via CEIDG, ex-employer restriction.
 ---
 
 # calculating-pit-liniowy

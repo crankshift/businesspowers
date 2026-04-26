@@ -1,6 +1,6 @@
 ---
 name: parsing-bank-statements-pl
-description: Use when parsing Polish bank statements for JDG reconciliation — covers ING Business, mBank Biznes, Santander Biznes, PKO BP iPKO Biznes, Pekao24, Millennium, BNP Paribas, Nest Bank. Standard formats MT940 (SWIFT), CSV, Excel, XML-CAMT.053. Extract incoming payments (date, amount, counterparty, description, reference), filter out intra-account transfers, bank fees, and FX conversions. Match payments to invoices by extracting invoice number from description using regex. Convert foreign currency income at NBP rate from preceding business day (per art. 11a ustawy o PIT). Reconcile against JPK_V7 sales (VAT-czynni) and PIT annual declaration.
+description: Use when parsing Polish bank statements for JDG reconciliation. Covers MT940, CSV, XML-CAMT.053 formats, transaction classification, invoice matching by regex, NBP currency conversion, reconciliation with JPK_V7 and PIT.
 ---
 
 # parsing-bank-statements-pl

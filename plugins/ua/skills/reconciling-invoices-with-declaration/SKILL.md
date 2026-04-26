@@ -1,6 +1,6 @@
 ---
 name: reconciling-invoices-with-declaration
-description: Use when reconciling issued invoices / acts against the quarterly or annual єдиний податок declaration for Ukrainian ФОП. ФОП on simplified system uses cash-basis accounting per art. 292 ПКУ — income recognized on date of actual credit to the bank account, not on invoice date. Common discrepancies: invoice issued in Q1 but paid in Q2 (goes to Q2), foreign currency autoconverted by mono at slightly different rate than НБУ, client prepayment, refunds, doubled payments. Provides the reconciliation algorithm: bank statement → filter out internal / refunds / fx conversions → compute cash-basis revenue → compare with declaration. Highlights when to file уточнююча declaration under art. 50 ПКУ (3% penalty if self-reported before inspection).
+description: Use when reconciling invoices/acts against the єдиний податок declaration for Ukrainian ФОП. Covers cash-basis accounting, cross-quarter payments, FX discrepancies, reconciliation algorithm, уточнююча declaration.
 ---
 
 # reconciling-invoices-with-declaration

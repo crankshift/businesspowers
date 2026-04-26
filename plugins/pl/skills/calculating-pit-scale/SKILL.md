@@ -1,6 +1,6 @@
 ---
 name: calculating-pit-scale
-description: Use when calculating Polish PIT on the progressive scale (skala podatkowa) — art. 27 ustawy o PIT. Two brackets: 12% up to 120 000 zł, 32% above. Tax-reducing amount 3 600 zł (implements 30 000 zł tax-free). Joint filing with spouse (art. 6) — doubles the threshold. Single-parent filing. Monthly advance payments calculated by cumulative method (zaliczka narastająco). Covers 2026 thresholds: kwota wolna 30 000 zł, ulga na dziecko (1 112,04 per child), PIT-0 dla rodziców 4+ (85 528 zł exemption), termomodernizacyjna. Ulga na dziecko only in PIT-36 (scale). No health insurance deduction under scale.
+description: Use when calculating Polish PIT on skala podatkowa. Covers two brackets, kwota wolna, joint filing with spouse, single-parent filing, ulga na dziecko, PIT-0 dla rodziców 4+, monthly zaliczki narastająco.
 ---
 
 # calculating-pit-scale

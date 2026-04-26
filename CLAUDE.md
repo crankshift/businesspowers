@@ -81,33 +81,9 @@ businesspowers/                     # GitHub: crankshift/businesspowers
 
 ## Key resources per jurisdiction
 
-### Ukraine
-
-| Ресурс | URL | Призначення |
-|---|---|---|
-| Податковий кодекс України | [zakon.rada.gov.ua/laws/show/2755-17](https://zakon.rada.gov.ua/laws/show/2755-17) | Первинне джерело податкового права |
-| Державна податкова служба | [tax.gov.ua](https://tax.gov.ua) | Роз'яснення, кабінет платника, актуальні ставки |
-| Дія | [diia.gov.ua](https://diia.gov.ua) | Реєстрація ФОП онлайн |
-| Пенсійний фонд (ЄСВ) | [pfu.gov.ua](https://pfu.gov.ua) | ЄСВ: ставки, звіти, персональний кабінет |
-| Національний банк | [bank.gov.ua](https://bank.gov.ua) | Офіційний курс валют для перерахунку |
-| Мінфін | [mof.gov.ua](https://mof.gov.ua) | Мінімальна зарплата, прожитковий мінімум, ПМ |
-| Електронний кабінет | [cabinet.tax.gov.ua](https://cabinet.tax.gov.ua) | Подання звітності, сплата податків |
-
-### Poland
-
-| Zasób | URL | Zastosowanie |
-|---|---|---|
-| Ustawa o PIT | [isap.sejm.gov.pl](https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19910800350) | Podstawa prawna podatku dochodowego |
-| Ustawa o VAT | [isap.sejm.gov.pl](https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20040540535) | Podstawa prawna VAT |
-| Ustawa o ryczałcie | [isap.sejm.gov.pl](https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19981440930) | Ryczałt od przychodów ewidencjonowanych |
-| Ministerstwo Finansów | [podatki.gov.pl](https://www.podatki.gov.pl) | Aktualne stawki, formularze, e-Urząd Skarbowy |
-| KIS / interpretacje | [eureka.mf.gov.pl](https://eureka.mf.gov.pl) | Interpretacje indywidualne |
-| CEIDG | [ceidg.gov.pl](https://www.biznes.gov.pl/pl/firma/ceidg) | Rejestracja JDG |
-| ZUS | [zus.pl](https://www.zus.pl) | Składki społeczne i zdrowotna, kalkulator ZUS, e-PUE |
-| NBP — kursy walut | [nbp.pl/kursy](https://www.nbp.pl/kursy) | Kurs średni NBP do przeliczeń |
-| Biała lista VAT | [whitelist.tax.gov.pl](https://www.podatki.gov.pl/wykaz-podatnikow-vat-wyszukiwarka/) | Weryfikacja kontrahentów VAT |
-
-For plugin-specific context (agent catalogs, jurisdiction-specific procedural rules, architectural notes) see the per-plugin `CLAUDE.md` files linked at the top.
+See per-plugin `CLAUDE.md` files for authoritative resource tables:
+- Ukraine: [`plugins/ua/CLAUDE.md`](./plugins/ua/CLAUDE.md) → "Ключові ресурси"
+- Poland: [`plugins/pl/CLAUDE.md`](./plugins/pl/CLAUDE.md) → "Kluczowe zasoby"
 
 ## Landing site (`site/`)
 

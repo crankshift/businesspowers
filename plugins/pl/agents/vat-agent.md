@@ -1,6 +1,6 @@
 ---
 name: vat-agent
-description: Kompleksowa obsługa VAT w Polsce — rejestracja VAT-R (obowiązkowa powyżej 200 000 zł przychodu lub dla PKD objętych obowiązkową rejestracją od pierwszej transakcji; dobrowolna), zwolnienie podmiotowe art. 113 ust. 1 ustawy o VAT, JPK_V7M (miesięczny) / JPK_V7K (kwartalny dla małych podatników), stawki VAT 23% / 8% / 5% / 0% / zwolnienie, WDT (wewnątrzwspólnotowa dostawa towarów), WNT (wewnątrzwspólnotowe nabycie towarów), eksport, import, reverse charge, mechanizm podzielonej płatności (MPP) obowiązkowy dla transakcji > 15 000 zł w wykazanych branżach, biała lista VAT, kasa fiskalna, KSeF od 2026. Interpretacje MF na podatki.gov.pl. Wywoływać gdy użytkownik rejestruje się VAT-czynnie, ma transakcje międzynarodowe, pyta o faktury korygujące, odlicza VAT z zakupów.
+description: Obsługa VAT w Polsce — rejestracja VAT-R, zwolnienie podmiotowe, JPK_V7, transakcje unijne (WDT, WNT), eksport, import, reverse charge, MPP, biała lista VAT, kasa fiskalna, KSeF. Wywoływać gdy użytkownik rejestruje się VAT-czynnie, ma transakcje międzynarodowe, pyta o korekty lub odlicza VAT z zakupów.
 tools: Read, Write, Edit, Glob, Grep, WebFetch, WebSearch
 model: inherit
 ---

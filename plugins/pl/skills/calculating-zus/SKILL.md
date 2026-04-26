@@ -1,6 +1,6 @@
 ---
 name: calculating-zus
-description: Use when calculating Polish ZUS social contributions for JDG — emerytalna (19.52%), rentowa (8%), wypadkowa (~1.67% avg), chorobowa (2.45% voluntary), Fundusz Pracy (2.45%). Four regimes: Ulga na start (0 social, 6 months), Mały ZUS — preferential (24 months at 30% minimum wage base ~1440 zł → ~455 zł total social), Mały ZUS Plus (for annual revenue ≤ 120 000 zł, base proportional to income), Duży ZUS (60% projected average wage base ~5335 zł → ~1700 zł total). Chorobowa voluntary but required for sickness/maternity benefits. Annual threshold 30x average wage caps emerytalna+rentowa contributions. Deductible from dochód (scale, liniowy) or proportional from przychód (ryczałt). Zus DRA monthly to 10th (without staff) or 15th (with staff).
+description: Use when calculating Polish ZUS social contributions for JDG. Covers four regimes (Ulga na start, Mały ZUS, Mały ZUS Plus, Duży ZUS), chorobowa, Fundusz Pracy, annual caps, DRA deadlines.
 ---
 
 # calculating-zus

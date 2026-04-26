@@ -1,6 +1,6 @@
 ---
 name: pkd-codes-reference
-description: Use when selecting PKD codes (Polska Klasyfikacja Działalności 2007) for Polish JDG — listing typical codes for IT and digital (62.01.Z, 62.02.Z, 63.12.Z), consulting (70.22.Z), marketing (73.11.Z), retail (47.xx), services (96.xx), construction (41-43), manufacturing. Crucially identifies PKWiU classes prohibited for ryczałt per art. 8 ustawy o ryczałcie (financial services, currency exchange, lombards, professional services of lawyers/notaries, pharmacies, jewelry). Links to klasyfikacja.stat.gov.pl. Also covers PKD vs PKWiU distinction (PKD for registration in CEIDG, PKWiU for ryczałt tax rate classification).
+description: Use when selecting PKD codes for Polish JDG registration. Covers typical codes by industry, PKD vs PKWiU distinction, ryczałt stawka mapping, prohibited PKWiU classes, CEIDG registration sets.
 ---
 
 # pkd-codes-reference

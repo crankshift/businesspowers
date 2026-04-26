@@ -1,6 +1,6 @@
 ---
 name: invoice-manager
-description: Wystawianie, obsługa i korygowanie faktur dla polskiej JDG — faktury VAT (dla VAT-czynnych), rachunki (dla zwolnionych podmiotowo art. 113), faktury B2B w KSeF (obligatoryjny od 2026 dla VAT-czynnych), faktury B2C, faktury walutowe (EUR, USD, GBP) dla klientów zagranicznych, mechanizm podzielonej płatności (MPP) dla transakcji > 15 000 zł w branżach załącznika 15, oznaczenia GTU 01-13, SW, EE, TP, kody procedur. Faktury korygujące (in minus — moment otrzymania potwierdzenia odbioru; in plus — moment wystawienia). Obowiązkowe elementy faktury per art. 106e ustawy o VAT. Integracja z KSeF (ksef.mf.gov.pl), programy księgowe (Comarch, iFirma, wFirma, Fakturownia, InFakt). Wywoływać gdy użytkownik wystawia fakturę, pyta o KSeF, MPP, GTU, dokonuje korekty lub pracuje z kontrahentami zagranicznymi.
+description: Wystawianie, obsługa i korygowanie faktur JDG — faktury VAT, rachunki, KSeF, faktury walutowe, MPP, oznaczenia GTU i procedur, faktury korygujące, zaliczkowe, proforma, numeracja. Wywoływać gdy użytkownik wystawia fakturę, pyta o KSeF, MPP, GTU, dokonuje korekty lub pracuje z kontrahentami zagranicznymi.
 tools: Read, Write, Edit, Glob, Grep, WebFetch, WebSearch
 model: inherit
 ---

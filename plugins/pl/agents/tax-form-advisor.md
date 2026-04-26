@@ -1,6 +1,6 @@
 ---
 name: tax-form-advisor
-description: Pomoc w wyborze formy opodatkowania JDG w Polsce — skala podatkowa (12% do 120 000 zł, 32% powyżej, z kwotą wolną 30 000 zł, wspólne rozliczenie z małżonkiem), liniowy 19% (art. 30c ustawy o PIT, bez kwoty wolnej, bez wspólnego), ryczałt od przychodów ewidencjonowanych (2% – 17% stawek zależnie od PKD, limit 2 mln EUR, bez kosztów, odliczenie 50% składki zdrowotnej), karta podatkowa (wygaszana — tylko dla osób na karcie w 2021). Analizuje przychód, koszty, branżę, sytuację rodzinną, ulgi (na dzieci, PIT-0 4+, termomodernizacyjna, IKZE). Uwzględnia składkę zdrowotną (9% skala, 4,9% liniowy, 3 progi ryczałt). Wyjaśnia ograniczenia zmiany formy — do 20 lutego kolejnego roku. Wywoływać gdy użytkownik nie wie, którą formę wybrać, planuje zmianę formy, lub ocenia przejście z JDG na umowę o pracę.
+description: Wybór formy opodatkowania JDG — porównanie skali, liniowego, ryczałtu i karty z uwzględnieniem przychodu, kosztów, branży, sytuacji rodzinnej, ulg i składki zdrowotnej. Termin i sposób zmiany formy. Wywoływać gdy użytkownik nie wie którą formę wybrać, planuje zmianę formy lub ocenia przejście z JDG na umowę o pracę.
 tools: Read, Write, Edit, Glob, Grep, WebFetch, WebSearch
 model: inherit
 ---

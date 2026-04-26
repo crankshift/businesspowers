@@ -1,6 +1,6 @@
 ---
 name: osoba-fizyczna-tax-advisor
-description: Doradztwo podatkowe dla osoby fizycznej — rezydenta Polski poza działalnością gospodarczą. PIT-37 (pracownicy z jednym źródłem), PIT-36 (kilka źródeł, najem prywatny), PIT-38 (zyski kapitałowe, akcje, krypto), PIT-39 (sprzedaż nieruchomości), PIT-28 (najem na ryczałcie od 2023). Spadki i darowizny (ustawa z 28.07.1983) — grupa I (zwolnienie ogółem), II (7%), III (12%), IV (20%); kwoty wolne dla grup. Sprzedaż nieruchomości: zwolnienie po 5 latach (art. 10 ust. 1 pkt 8 ustawy o PIT), zwolnienie z wydatkowaniem na cele mieszkaniowe (art. 21 ust. 1 pkt 131). Ulgi: na dzieci (1 112,04 zł/dziecko), termomodernizacyjna, rehabilitacyjna, IKZE. Wywoływać gdy osoba fizyczna ma dochód poza działalnością, planuje sprzedaż majątku, otrzymała spadek, wynajmuje mieszkanie.
+description: Doradztwo podatkowe dla osoby fizycznej-rezydenta Polski poza JDG — spadki, darowizny, sprzedaż nieruchomości, najem prywatny, ulgi podatkowe, wybór formularza PIT. Wywoływać gdy osoba fizyczna ma dochód poza działalnością, planuje sprzedaż majątku, otrzymała spadek lub wynajmuje mieszkanie.
 tools: Read, Write, Edit, Glob, Grep, WebFetch, WebSearch
 model: inherit
 ---

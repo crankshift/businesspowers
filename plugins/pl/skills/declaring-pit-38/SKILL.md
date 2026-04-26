@@ -1,6 +1,6 @@
 ---
 name: declaring-pit-38
-description: Use when filling out PIT-38 (Polish capital gains declaration) — annual form for taxing net proceeds from sale of securities, derivatives, cryptocurrencies (from 2019), and foreign dividends. 19% flat rate on dochód. Sections: C (securities and derivatives — most common), C1 (crypto from 2019), E (foreign dividends with tax credit), F (domestic dividends paid without withholding — rare). Loss carry-forward up to 5 years with 50% annual cap. Practical tips for extracting data from IBKR Flex Query, XTB annual report, Revolut Stocks, Freedom24. Currency conversion rules (NBP średni from preceding business day). Deadline 30 April following tax year.
+description: Use when filling out PIT-38 declaration form. Covers sections C (securities/derivatives), C1 (crypto), E (foreign dividends), loss carry-forward, broker data extraction, NBP currency conversion, filing workflow.
 ---
 
 # declaring-pit-38

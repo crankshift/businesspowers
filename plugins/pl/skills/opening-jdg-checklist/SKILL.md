@@ -1,6 +1,6 @@
 ---
 name: opening-jdg-checklist
-description: Use when opening JDG in Poland — step-by-step checklist. Covers CEIDG-1 online registration (biznes.gov.pl), choosing PKD codes, selecting tax form (skala / liniowy / ryczałt / karta), ZUS registration (ZUS ZUA for full coverage or ZZA for Ulga na start), VAT-R if needed (≥200 000 zł or voluntary or required-PKD), opening a firmowy bank account and listing on white list, obtaining profil zaufany / e-dowód / qualified certificate, KSeF setup (mandatory from 2026), kasa fiskalna if applicable. Includes post-registration verification (CEIDG, white list, e-PUE ZUS, first invoice).
+description: Use when opening JDG in Poland. Covers step-by-step checklist for CEIDG-1 registration, PKD selection, tax form, ZUS regime, VAT-R, bank account, profil zaufany, KSeF setup, kasa fiskalna, post-registration verification.
 ---
 
 # opening-jdg-checklist

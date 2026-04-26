@@ -1,6 +1,6 @@
 ---
 name: choosing-tax-group
-description: Use when choosing Ukrainian tax system for ФОП — decision tree between group 1 / 2 / 3 / 4 of єдиного податку vs. загальна система. Considers turnover limits, allowed KVED (art. 291.5 ПКУ prohibitions), employee count (group 2 capped at 10), client structure (B2C — groups 1, 2; B2B juridical — only group 3 or general; group 2 may sell to other ФОП-on-ЄП but not to юрособи except restaurants and production), VAT necessity (5% without VAT vs. 3% + VAT on group 3), РРО obligation (mostly population-facing retail trade), wartime reliefs. Outputs recommended system with reasoning and quick tax-load comparison.
+description: Use when choosing Ukrainian tax system for ФОП — decision tree between єдиний податок groups 1/2/3/4 and загальна система. Covers turnover limits, КВЕД restrictions, employee count, client structure, VAT, РРО.
 ---
 
 # choosing-tax-group

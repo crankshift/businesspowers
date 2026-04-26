@@ -1,6 +1,6 @@
 ---
 name: calculating-edynyi-podatok
-description: Use when calculating єдиний податок (single tax) for Ukrainian ФОП — group 1 (up to 10% ПМ / month for individuals working with population only), group 2 (up to 20% МЗП / month, up to 10 employees, B2C + ФОП-на-ЄП), group 3 (5% turnover without VAT or 3% + VAT, up to ~9.3M UAH/year for 2026), group 4 (agricultural). Includes proportional calculation for partial month/quarter, application of doubled rate (15%) when conditions are violated, handling of foreign currency revenue converted at НБУ rate, and the 1% military zbir added for group 3 from 01.01.2025. Historical 2% rate for group 3 (2022–2023 wartime relief — now abolished) kept as reference.
+description: Use when calculating єдиний податок (single tax) for Ukrainian ФОП — groups 1, 2, 3, 4. Covers monthly/quarterly amounts, partial periods, penalties, military zbir.
 ---
 
 # calculating-edynyi-podatok

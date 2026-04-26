@@ -1,6 +1,6 @@
 ---
 name: reporting-deadlines-ua
-description: Use when checking tax reporting deadlines for Ukrainian ФОП and individuals — quarterly / annual єдиний податок declaration (40 days after quarter for group 3; until 1 March of the next year for groups 1, 2, 4), annual ЄСВ report (9 February), ПДВ declaration (20th of the next month), 4-ДФ for payments to individuals (40 days after quarter), декларація про майновий стан (1 May for regular individuals, 9 February for ФОП on general system), advance payments for general-system ФОП (quarterly: 20 April, 20 July, 20 October). Includes payment deadlines which often differ from filing deadlines. Shows the full year calendar aligned to 2026.
+description: Use when checking tax reporting deadlines for Ukrainian ФОП and individuals. Covers єдиний податок, ЄСВ, ПДВ, 4-ДФ, декларація про майновий стан filing and payment dates, full year calendar.
 ---
 
 # reporting-deadlines-ua

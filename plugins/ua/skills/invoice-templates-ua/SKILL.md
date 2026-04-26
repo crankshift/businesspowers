@@ -1,6 +1,6 @@
 ---
 name: invoice-templates-ua
-description: Ready-to-use templates for Ukrainian ФОП — Act of Services (UAH, B2B), English Invoice (USD/EUR, international B2B), Proforma Invoice (рахунок на оплату), Video Tax Invoice (ПН structure for VAT payers). Each template covers the mandatory fields from art. 9 of the Accounting Law № 996-14 and follows standard business practice. Includes multi-language versions (UA/EN) and payment instruction patterns for SWIFT (with correspondent bank) / SEPA / domestic IBAN.
+description: Use when generating invoice documents for Ukrainian ФОП. Covers templates for акт наданих послуг, English Invoice, proforma, ПН (VAT), mandatory fields, SWIFT/SEPA/IBAN payment instructions.
 ---
 
 # invoice-templates-ua

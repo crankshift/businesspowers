@@ -1,6 +1,6 @@
 ---
 name: opening-fop-checklist
-description: Use when opening (registering) a Ukrainian ФОП — step-by-step checklist for all three channels (Diia online, ЦНАП, notary/state registrar). Covers preparing documents (passport, РНОКПП, address), choosing KVED codes, filling out registration card form 10 (Order МФУ № 1588), filling the simplified-system application (Order МФУ № 308 from 19.06.2015) MANDATORY to avoid auto-placement on general system, optional VAT registration form 1-PDV, opening a business bank account (mono, PrivatBank, Sense, FUIB), obtaining КЕП (Дія.Підпис for free, Ключ.України, Приватбанк or АЦСК commercial), setting up РРО/ПРРО where obligatory. Includes checks post-registration — ЄДР extract, cabinet status, first payments.
+description: Use when opening (registering) a Ukrainian ФОП. Covers step-by-step checklist for Дія/ЦНАП/registrar, documents, КВЕД, simplified-system application, bank account, КЕП, РРО, post-registration checks.
 ---
 
 # opening-fop-checklist

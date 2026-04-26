@@ -1,6 +1,6 @@
 ---
 name: calculating-skladka-zdrowotna
-description: Use when calculating Polish health insurance contribution (składka zdrowotna) — reformed multiple times since Polski Ład 2022. Currently (2026, verify): for scale PIT = 9% of dochód, minimum 9% × minimum wage; for liniowy = 4.9% of dochód, minimum 9% × min wage, deductible up to annual limit (~10 200 zł 2026 verify); for ryczałt = flat amount in 3 brackets by annual revenue (≤60k: ~480 zł/mo, 60-300k: ~800 zł/mo, >300k: ~1440 zł/mo — orient. 2026). Annual reconciliation due 20 May (DRA) — true-up to actual yearly income. Health contribution was not deductible at all 2022-2022; partially restored for liniowy/ryczałt from 2023. Deductible only as a reduction of income under liniowy (up to limit) and ryczałt (50% paid deducted from revenue); NOT deductible under scale.
+description: Use when calculating Polish składka zdrowotna for JDG. Covers rates per tax form (skala, liniowy, ryczałt), minimum thresholds, annual DRA reconciliation, deductibility rules by form.
 ---
 
 # calculating-skladka-zdrowotna

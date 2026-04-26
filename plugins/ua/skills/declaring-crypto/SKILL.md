@@ -1,6 +1,6 @@
 ---
 name: declaring-crypto
-description: Use when declaring cryptocurrency activity for a Ukrainian resident — before the special law on virtual assets (законопроєкт № 10225 від 13.11.2023) takes effect, crypto falls under art. 170.2 ПКУ (інвестиційний прибуток — 18% ПДФО + 5% ВЗ on net gain) or art. 170.11 (foreign income) depending on interpretation. Each crypto-to-crypto swap is technically a taxable event (reality check: most users only declare fiat exits). Covers extracting CSV history from Binance, Coinbase, Kraken, Bybit, OKX, KuCoin, Bitget, plus MetaMask / DeFi flows; FIFO accounting; conversion to UAH via НБУ dollar rate × market price on the day; mining income (art. 170.11); staking / yield farming (interest-like income); NFTs. Practical strategies for the millions-of-microtransactions problem.
+description: Use when declaring cryptocurrency activity for a Ukrainian resident. Covers інвестиційний прибуток or іноземні доходи treatment, FIFO, НБУ conversion, exchange CSV exports, mining, staking, DeFi, NFTs.
 ---
 
 # declaring-crypto

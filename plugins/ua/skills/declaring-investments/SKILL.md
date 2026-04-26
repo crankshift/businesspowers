@@ -1,6 +1,6 @@
 ---
 name: declaring-investments
-description: Use when declaring investment income and capital gains for a Ukrainian resident individual — trades via Interactive Brokers (IBKR), Freedom24, Wise Stocks, Revolut, Exante, Charles Schwab, XTB, Trading212, Degiro; Ukrainian brokers (Універ, Альфа-Капітал, Інтеркапітал). Filling Appendix Ф1 (інвестиційний прибуток, art. 170.2 ПКУ — 18% + 5% on net result) and Appendix Ф3 (foreign income, art. 170.11) of the individual tax declaration (form per Order MoF No 859 of 02.10.2015). FIFO ordering, summing profits with losses within the year (no carry-over), currency conversion at НБУ rate per operation. W-8BEN for US brokers to get 15% withholding instead of 30%. Practical exports from IBKR Flex Query, Freedom24 reports, Wise statements.
+description: Use when declaring investment income and capital gains for a Ukrainian resident individual. Covers інвестиційний прибуток (Ф1), іноземні доходи (Ф3), FIFO, НБУ conversion, W-8BEN, broker statement exports.
 ---
 
 # declaring-investments

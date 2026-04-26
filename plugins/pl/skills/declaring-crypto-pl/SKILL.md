@@ -1,6 +1,6 @@
 ---
 name: declaring-crypto-pl
-description: Use when declaring cryptocurrency activity in Polish PIT-38 — art. 30b ust. 1 pkt 4 ustawy o PIT (since 2019). 19% flat on dochód (proceeds minus cost of acquisition). Each crypto-to-crypto swap is a taxable event (disposition of old + acquisition of new). Mining, staking, yield farming — income on receipt at market value × NBP rate. NFTs — treated as crypto. Strata przenoszona 5 lat, 50% cap. FIFO mandatory. Extracting data from Binance, Coinbase, Kraken, Bybit, OKX, KuCoin, Bitget, plus DeFi flows (MetaMask, Uniswap). Practical tip: Koinly for automation (supports Polish PIT export).
+description: Use when declaring cryptocurrency activity in Polish PIT-38. Covers crypto-to-crypto swaps as taxable events, mining, staking, yield farming, NFTs, FIFO, loss carry-forward, exchange data extraction, Koinly automation.
 ---
 
 # declaring-crypto-pl

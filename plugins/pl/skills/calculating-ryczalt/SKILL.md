@@ -1,6 +1,6 @@
 ---
 name: calculating-ryczalt
-description: Use when calculating Polish ryczałt od przychodów ewidencjonowanych for JDG — ustawa o ryczałcie z 20.11.1998. Rates from 2% to 17% depending on type of activity (art. 12). Most common: 12% for IT (PKWiU 62.01, 62.02, 63.11), 14% for consulting/legal/HR, 15% for brokerage, 8,5% for general services and rental, 5,5% for manufacturing/construction, 3% for catering/restaurants. Base: revenue only (no cost deduction!). Annual revenue limit ~2 mln EUR converted at NBP rate from 1 October of preceding year. Health insurance deduction: 50% of paid contribution reduces revenue base. Monthly advances (16 months: Jan, Feb, ..., Dec) due by 20th of following month. Annual PIT-28 by 30 April. Exclusions per art. 8 (currency exchange, lombard, pharmacies, professional services — lawyers, notaries, advocates).
+description: Use when calculating Polish ryczałt od przychodów ewidencjonowanych for JDG. Covers multiple stawki by PKWiU activity type, revenue-only base, annual limit, health insurance deduction, monthly advances, PIT-28, exclusions.
 ---
 
 # calculating-ryczalt

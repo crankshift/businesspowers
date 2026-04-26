@@ -1,6 +1,6 @@
 ---
 name: invoice-analyzer
-description: Analiza portfela faktur JDG i uzgadnianie z deklaracjami podatkowymi — śledzenie zapłaconych / niezapłaconych / przeterminowanych, aging report, cash-flow forecast, analiza klientów. Parsowanie wyciągów bankowych (ING, mBank, Santander, Millennium, Pekao) i JPK_V7 do weryfikacji zgodności sprzedaży. Porównanie sumy faktur VAT ze sprzedażą w JPK_V7; identyfikacja faktur nieujętych w JPK (ryzyko kontroli). Weryfikacja kontrahentów na białej liście VAT i w VIES (UE). Odsetki ustawowe za opóźnienie (art. 481 KC + ustawa o przeciwdziałaniu nadmiernym opóźnieniom w transakcjach handlowych Dz.U. 2013 poz. 403 — od 01.01.2020). Przygotowanie wezwań do zapłaty. Wywoływać gdy użytkownik chce przegląd należności, weryfikuje zgodność JPK z fakturami, ściga przeterminowane należności.
+description: Analiza portfela faktur JDG — aging report, cash-flow, uzgodnienie z JPK_V7, weryfikacja kontrahentów na białej liście VAT i VIES, odsetki ustawowe za opóźnienie, wezwania do zapłaty. Wywoływać gdy użytkownik chce przegląd należności, weryfikuje zgodność JPK z fakturami lub ściga przeterminowane.
 tools: Read, Write, Edit, Glob, Grep, WebFetch, WebSearch
 model: inherit
 ---

@@ -1,6 +1,6 @@
 ---
 name: converting-currency-nbu
-description: Use when converting foreign-currency income or expense into UAH for Ukrainian tax purposes — art. 164.4 and 292.5 ПКУ require the НБУ official rate on the date of the operation (receipt on account for income, payment for expense). Covers the official rate archive at bank.gov.ua, the ±0.01 daily rounding, weekends and holidays (use last business day rate), historical rates lookup. Provides URL patterns for fetching specific dates from НБУ API, common mistake of using average annual rate or year-end rate instead of per-operation date.
+description: Use when converting foreign-currency amounts into UAH for Ukrainian tax purposes. Covers НБУ official rate lookup, per-operation date rule, weekends/holidays, API URL patterns, common conversion mistakes.
 ---
 
 # converting-currency-nbu

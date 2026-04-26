@@ -1,6 +1,6 @@
 ---
 name: calculating-pdfo-viyskovyi-zbir
-description: Use when calculating ПДФО (18%, art. 167.1 ПКУ) and військовий збір (5% from 01.12.2024 per art. 161 ПКУ, ЗУ № 4015-IX; previously 1.5%) for Ukrainian individuals. Covers special PDFO rates — dividends from resident profit-tax payers (5%, art. 167.5.2), from non-residents / foreign dividends (9%, art. 167.5.4), from non-profit-tax payers / ІСІ (18%, art. 167.5.1), interest on deposits (18% + 5%), inheritance and gifts (0% / 5% / 18% by kinship degree, art. 174), sale of real estate (art. 172: 0% / 5% / 18%), sale of movable property — cars (art. 173). Separate 1% military zbir on turnover for ФОП group 3 since 01.01.2025. Handles foreign tax credit for dividends (art. 170.11.2) to avoid double taxation.
+description: Use when calculating ПДФО and військовий збір (ВЗ) for Ukrainian individuals. Covers dividends, interest, inheritance, gifts, real estate, movable property, foreign tax credit.
 ---
 
 # calculating-pdfo-viyskovyi-zbir

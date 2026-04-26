@@ -1,6 +1,6 @@
 ---
 name: parsing-bank-statements-ua
-description: Use when parsing bank statements for Ukrainian ФОП to reconcile with invoices and tax declaration — covers mono business (CSV export + API), PrivatBank / Privat24 Business (XML, CSV), Sense Bank, FUIB (ПУМБ), Ukrsibbank Business. Reliable extraction of incoming payments (date, amount, currency, payer, description), filtering out personal transfers between own accounts, internal FX conversions, bank fees. Critical for: (a) matching receipts to issued invoices, (b) converting FX income to UAH at НБУ rate on date of credit (not bank rate), (c) reconciling total revenue against the ЄП declaration submitted under cash-basis accounting per art. 292 ПКУ.
+description: Use when parsing bank statements for Ukrainian ФОП to reconcile with invoices and declaration. Covers statement exports, payment extraction, filtering internals, НБУ FX conversion, cash-basis revenue matching.
 ---
 
 # parsing-bank-statements-ua
