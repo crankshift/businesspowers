@@ -1,6 +1,6 @@
 ---
 name: calculating-esv
-description: Use when calculating ЄСВ (єдиний соціальний внесок) for Ukrainian ФОП — rate 22% of base, minimum base = МЗП (mandatory even with zero income for simplified system groups 1–3), maximum base = 15 × МЗП, exceptions (mobilized servicemembers, pensioners by age, persons with disability — full exemption), wartime reliefs 2022–2023 (partial exemption for groups 1–2, now largely expired), ФОП on general system (22% of net taxable income within min/max bounds, exemption in months with zero net income from 2021). Also covers reduced rate 8.41% for persons with disability I/II group as employees (не для ФОП). Outputs monthly and quarterly sums with statutory references to ЗУ «Про ЄСВ» № 2464-17.
+description: Use when calculating ЄСВ (єдиний соціальний внесок) for Ukrainian ФОП. Covers min/max base, exemptions, monthly and quarterly sums for simplified and general systems.
 ---
 
 # calculating-esv

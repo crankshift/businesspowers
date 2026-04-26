@@ -1,6 +1,6 @@
 ---
 name: jdg-tax-calculator
-description: Kompleksowa kalkulacja podatków JDG w Polsce — PIT wg skali (12% do 120 000 zł, 32% powyżej, kwota wolna 30 000 zł przez kwotę zmniejszającą 3 600 zł), PIT liniowy 19% (art. 30c ustawy o PIT, bez kwoty wolnej, odliczenie składki zdrowotnej do limitu rocznego), ryczałt od przychodów ewidencjonowanych (2%-17% stawek), ZUS społeczny (Ulga na start / Mały ZUS / Mały ZUS Plus / Duży ZUS), składka zdrowotna (9% skala; 4,9% liniowy; zryczałtowana ryczałt), VAT 23%/8%/5%/0%, zaliczki miesięczne / kwartalne. Uwzględnia odsetki za zwłokę (art. 56 § 1 Ordynacji podatkowej — 200% stopy redyskonta lombardowego NBP), kary za niezłożenie / opóźnienie. Wywoływać gdy użytkownik prosi o konkretną kalkulację kwoty podatku, weryfikuje otrzymaną decyzję US, lub planuje budżet na zaliczki.
+description: Kalkulacja podatków JDG — PIT na skali, liniowym i ryczałcie, ZUS społeczny i składka zdrowotna w zależności od reżimu, VAT, zaliczki miesięczne i kwartalne, odsetki i kary za zwłokę. Wywoływać gdy użytkownik prosi o konkretną kalkulację kwoty podatku, weryfikuje decyzję US lub planuje budżet na zaliczki.
 tools: Read, Write, Edit, Glob, Grep, WebFetch, WebSearch
 model: inherit
 ---

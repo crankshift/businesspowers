@@ -1,6 +1,6 @@
 ---
 name: fetching-podatkova-gov-ua
-description: Use when retrieving information from tax.gov.ua (Державна податкова служба) — tax interpretations (ІПК — індивідуальні податкові консультації, publicly searchable by number/date/topic), ДПС explanatory letters, current tax rates, recent changes, forms repository. Also covers the cabinet платника податків (cabinet.tax.gov.ua) for filing reports, checking status of the taxpayer registry, обмеженість ФОП на ЄП. Provides URL patterns for direct access, search tips, and what to trust vs. what to verify against the underlying statute (ПКУ).
+description: Use when retrieving information from tax.gov.ua (ДПС). Covers ІПК search, explanatory letters, forms, rates, cabinet платника, URL patterns, verification against ПКУ.
 ---
 
 # fetching-podatkova-gov-ua

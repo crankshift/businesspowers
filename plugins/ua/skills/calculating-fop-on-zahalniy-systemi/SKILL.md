@@ -1,6 +1,6 @@
 ---
 name: calculating-fop-on-zahalniy-systemi
-description: Use when calculating taxes for Ukrainian ФОП on загальній системі оподаткування (general tax system) — art. 177 ПКУ. Net taxable income = revenue − documented expenses per art. 177.4 ПКУ (salary of workers, materials, rent, utilities, insurance, advertising, bank fees, depreciation of fixed assets, etc.). Taxation: ПДФО 18% + ВЗ 5% (since 01.12.2024) + ЄСВ 22% (within min/max bounds = МЗП and 15 × МЗП). Total load = up to 45% of net income. Quarterly advance payments + annual reconciliation via декларацію про майновий стан до 9 лютого. Zero-income month exemption from ЄСВ since 2021.
+description: Use when calculating taxes for Ukrainian ФОП on загальній системі оподаткування (general system). Covers ПДФО, ВЗ, ЄСВ on net income, documented expenses, quarterly advances, annual reconciliation.
 ---
 
 # calculating-fop-on-zahalniy-systemi

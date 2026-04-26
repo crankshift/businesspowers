@@ -1,6 +1,6 @@
 ---
 name: jdg-reporting-agent
-description: Obsługa sprawozdawczości JDG w Polsce — kalendarz składania, formularze, wypełnianie, elektroniczne składanie przez e-Urząd Skarbowy (podatki.gov.pl). JPK_V7M/K (deklaracja VAT z ewidencją, do 25-go następnego miesiąca lub kwartału), PIT-36 (skala) / PIT-36L (liniowy) / PIT-28 (ryczałt) — do 30 kwietnia, PIT-11 (dla pracowników) — do 31 stycznia, zaliczki PIT miesięczne lub kwartalne (do 20-go), ZUS DRA (do 10-go), roczna deklaracja składki zdrowotnej (DRA majowy). KSeF — Krajowy System e-Faktur, obowiązkowy od 2026. Algorytmy korekt (czynny żal, korekta deklaracji), kary za opóźnienia, oznaczenia JPK_V7 (GTU, SW, EE, TP). Wywoływać gdy podatnik przygotowuje deklarację, pominął termin, otrzymał wezwanie z US lub chce zweryfikować, czy wszystkie raporty zostały złożone.
+description: Sprawozdawczość JDG — kalendarz terminów, wypełnianie deklaracji JPK_V7, PIT roczny, ZUS DRA, składka zdrowotna, KSeF. Korekty, czynny żal, kary, e-Urząd Skarbowy. Wywoływać gdy podatnik przygotowuje deklarację, pominął termin, otrzymał wezwanie z US lub weryfikuje kompletność raportów.
 tools: Read, Write, Edit, Glob, Grep, WebFetch, WebSearch
 model: inherit
 ---

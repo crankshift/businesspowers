@@ -1,6 +1,6 @@
 ---
 name: reconciling-invoices-with-jpk-v7
-description: Use when reconciling Polish JDG issued invoices against JPK_V7 sales register — every VAT invoice must appear in SprzedazWiersz section, every purchase VAT invoice in ZakupWiersz for input VAT deduction. Covers: identifying missing invoices (risk of tax audit), identifying phantom entries (potential duplicate), verifying GTU/procedure flags (SW, EE, TP, MPP), WDT 0% reporting, cross-checking with VAT-UE recapitulative statement. Also reconcile PIT annual income (PIT-36/36L/28) against total from invoices: accrual method (skala/liniowy) vs cash method (ryczałt) vs the bank-recorded payment dates. Flags for corrective JPK when discrepancies are found per art. 81 Ordynacji.
+description: Use when reconciling Polish JDG invoices against JPK_V7 sales register. Covers missing/phantom invoice detection, GTU/procedure flag verification, WDT vs VAT-UE cross-check, PIT accrual vs cash method reconciliation, corrective JPK workflow.
 ---
 
 # reconciling-invoices-with-jpk-v7

@@ -1,6 +1,6 @@
 ---
 name: parsing-ksef-xml
-description: Use when parsing KSeF (Krajowy System e-Faktur) XML documents — structured FA_VAT format for VAT invoices, FA_KOR for corrections. Key XML sections: Naglowek (header with KSeF number, issue date), Podmiot1 (seller), Podmiot2 (buyer), Fa (invoice content), FaWiersz (line items), Stopka (summary). Extracting: invoice number, dates, parties (NIP, VAT-UE), line items with GTU codes, VAT totals, MPP flag, correspondence to source invoice (for corrections). Using Python lxml or xml.etree for parsing, validating against official XSD schema (ksef-test.mf.gov.pl), reconciling against JPK_V7 and rejestr wystawionych faktur. Includes a complete reference of FA_VAT (v3) structure per Ministerstwo Finansów technical documentation.
+description: Use when parsing KSeF XML documents. Covers FA_VAT and FA_KOR structure, extracting invoice data and GTU/MPP flags, XSD validation, API integration, reconciliation with JPK_V7.
 ---
 
 # parsing-ksef-xml

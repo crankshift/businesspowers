@@ -1,6 +1,6 @@
 ---
 name: closing-fop-checklist
-description: Use when closing (terminating) a Ukrainian ФОП — step-by-step checklist. Covers state registration of termination via Дія / ЦНАП / registrar (form 11), final filings (quarterly / annual єдиний податок declaration, final ЄСВ report, final ПДВ-3 anulment application with conditional sale calculation per art. 184.7 ПКУ), paying off all outstanding taxes before termination, closing bank accounts (bank sends form 20-ОПП automatically), dismissing employees with proper severance, deregistration from ПФУ / ДПС. Especially handles the most common painful problem — ЄСВ continuing to accrue monthly until the actual date of entry in ЄДР, not the date of intent.
+description: Use when closing (terminating) a Ukrainian ФОП. Covers step-by-step checklist for Дія/ЦНАП/registrar, final filings, outstanding taxes, bank account closure, employee dismissal, ЄСВ accrual until ЄДР entry.
 ---
 
 # closing-fop-checklist

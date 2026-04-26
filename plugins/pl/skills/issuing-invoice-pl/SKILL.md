@@ -1,6 +1,6 @@
 ---
 name: issuing-invoice-pl
-description: Use when issuing Polish invoices — faktura VAT for VAT-czynni (per art. 106e ustawy o VAT), rachunek for VAT-zwolnieni (art. 113), faktura walutowa (EUR/USD/GBP) with mandatory PLN conversion at NBP rate, WDT invoices (0% VAT, reverse charge to EU buyer), export invoices (0% VAT), faktura zaliczkowa + końcowa, faktura uproszczona (under 450 zł gross, simplified for B2C). Covers obligatory content, numbering discipline, MPP annotation for >15k transactions in Annex 15 goods, GTU codes for JPK_V7, KSeF integration (obligatory from 2026). Includes ready-to-use templates for each scenario.
+description: Use when issuing Polish invoices. Covers faktura VAT, rachunek, faktura walutowa, WDT/export 0%, zaliczkowa, uproszczona, obligatory content, MPP, GTU codes, KSeF integration, templates.
 ---
 
 # issuing-invoice-pl

@@ -1,6 +1,6 @@
 ---
 name: issuing-invoice-ua
-description: Use when issuing invoices, acts of services, or Tax Invoices (ПН) for Ukrainian ФОП — covers all common cases: Ukrainian B2B (act of services in UAH with RNOKPP / IBAN), Ukrainian B2C (simplified act or cash receipt if ПРРО is in use), foreign B2B (English-language Invoice in USD/EUR/GBP with SWIFT/IBAN, non-VAT declaration per art. 186.3 ПКУ for services rendered outside Ukraine), VAT-registered ФОП (Tax Invoice per Order MoF No 1307, registration in ЄРПН within 15 days per art. 201 ПКУ). Includes templates, mandatory fields per art. 9 of Accounting Law № 996-14, numbering conventions, and correction procedures.
+description: Use when issuing invoices, acts of services, or податкові накладні (ПН) for Ukrainian ФОП. Covers B2B/B2C/foreign clients, VAT and non-VAT cases, mandatory fields, numbering, corrections.
 ---
 
 # issuing-invoice-ua

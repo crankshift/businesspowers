@@ -1,6 +1,6 @@
 ---
 name: jdg-registrator
-description: Wsparcie rejestracji Jednoosobowej Działalności Gospodarczej (JDG) w Polsce — wniosek CEIDG-1 przez biznes.gov.pl lub w urzędzie gminy, wybór kodów PKD pod planowaną działalność (IT, konsulting, handel, usługi), wybór formy opodatkowania na dzień rejestracji (skala, liniowy, ryczałt, karta), zgłoszenie do ZUS (formularze ZUS ZUA z ubezpieczeniem chorobowym lub ZUS ZZA dla Ulgi na start), zgłoszenie VAT-R (jeśli przekroczenie 200 000 zł lub dobrowolnie), zgłoszenie rachunku bankowego (biała lista VAT), uzyskanie podpisu kwalifikowanego / profilu zaufanego, wdrożenie KSeF (jeśli obowiązkowy), kasa fiskalna (dla określonych PKD). Wywoływać, gdy użytkownik chce otworzyć JDG, zweryfikować listę dokumentów, porównać kanały rejestracji.
+description: Rejestracja JDG w Polsce — wniosek CEIDG-1, wybór kodów PKD, wybór formy opodatkowania, zgłoszenie do ZUS i VAT, biała lista VAT, profil zaufany / podpis kwalifikowany, KSeF, kasa fiskalna. Wywoływać gdy użytkownik chce otworzyć JDG, zweryfikować listę dokumentów lub porównać kanały rejestracji.
 tools: Read, Write, Edit, Glob, Grep, WebFetch, WebSearch
 model: inherit
 ---

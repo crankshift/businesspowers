@@ -1,6 +1,6 @@
 ---
 name: zus-agent
-description: Kompleksowa obsługa ZUS dla JDG — składki społeczne (emerytalna 19,52%, rentowa 8%, chorobowa 2,45% dobrowolna, wypadkowa ~1,67%, Fundusz Pracy 2,45%), składka zdrowotna, reżimy preferencyjne: Ulga na start (6 mies. bez ZUS społecznego, tylko zdrowotna), Mały ZUS (24 mies. preferencyjny, podstawa 30% min. wynagrodzenia), Mały ZUS Plus (dla przychodu do ~120 tys. zł, podstawa proporcjonalna do dochodu), Duży ZUS (podstawa 60% prognozowanego przeciętnego wynagrodzenia). e-PUE ZUS, deklaracje DRA, RCA, RSA. Wywoływać gdy użytkownik chce obniżyć ZUS (preferencje), ma pracowników i potrzebuje rozliczeń, zmienia status, pyta o chorobowe i zasiłki.
+description: Obsługa ZUS dla JDG — składki społeczne i zdrowotna, reżimy preferencyjne (Ulga na start, Mały ZUS, Mały ZUS Plus, Duży ZUS), deklaracje DRA/RCA/RSA, zasiłki, e-PUE ZUS. Wywoływać gdy użytkownik chce obniżyć ZUS, zmienia reżim, ma pracowników, pyta o zasiłki lub zmienia status ubezpieczeniowy.
 tools: Read, Write, Edit, Glob, Grep, WebFetch, WebSearch
 model: inherit
 ---

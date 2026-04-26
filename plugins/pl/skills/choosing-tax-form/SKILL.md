@@ -1,6 +1,6 @@
 ---
 name: choosing-tax-form
-description: Use when choosing Polish JDG tax form — decision tree between skala (12%/32%), liniowy (19%), ryczałt (various stawki 2-17%), karta podatkowa (phased out). Considers annual revenue, ratio of costs to revenue, PKD/PKWiU eligibility for ryczałt (art. 8 ustawy o ryczałcie), family situation (joint filing with spouse only on skala, ulga na dzieci only on skala), 2-year prohibition on liniowy/ryczałt for services rendered to ex-employer, health insurance treatment (9% scale, 4.9% liniowy, flat ryczałt). Election deadline — CEIDG-1 at registration or by 20 February following year.
+description: Use when choosing Polish JDG tax form. Covers decision tree between skala, liniowy, ryczałt, and karta, considering revenue, cost ratio, PKD eligibility, family situation, ex-employer restriction, health insurance treatment.
 ---
 
 # choosing-tax-form

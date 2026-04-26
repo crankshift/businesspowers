@@ -1,6 +1,6 @@
 ---
 name: fetching-ceidg
-description: Use when interacting with Polish CEIDG (Centralna Ewidencja i Informacja o Działalności Gospodarczej) — rejestracja (CEIDG-1), aktualizacja wpisu (zmiana adresu, PKD, formy opodatkowania, rachunku bankowego), zawieszenie (do 24 miesięcy bez pracowników; nieograniczone dla JDG bez pracowników), wznowienie, wykreślenie. Portal biznes.gov.pl/pl/firma/ceidg. Wyszukiwanie przedsiębiorców po NIP, nazwie lub PESEL (choć PESEL nie publicznie). Uprawnienie odbioru pism do CEIDG (elektroniczne korespondencje z urzędami przez profil zaufany). Integracja z e-US, ZUS, VAT-R — dane z CEIDG-1 idą automatycznie do organów.
+description: Use when interacting with Polish CEIDG. Covers rejestracja, aktualizacja wpisu, zawieszenie, wznowienie, wykreślenie, wyszukiwanie przedsiębiorców, integration with e-US/ZUS/VAT-R.
 ---
 
 # fetching-ceidg

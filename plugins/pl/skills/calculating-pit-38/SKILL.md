@@ -1,6 +1,6 @@
 ---
 name: calculating-pit-38
-description: Use when calculating Polish capital gains tax on PIT-38 — art. 30b ustawy o PIT. Flat 19% on net gain (proceeds − costs of acquisition − commissions) from sale of securities (shares, ETFs, bonds), derivatives, crypto currency, corporate shares. Covers: FIFO matching for identical securities, loss carry-forward up to 5 years with 50% annual cap (art. 9 ust. 3), foreign dividends 19% with tax credit up to the Polish rate (max), separation of declared sections (securities/derivatives/crypto). Declaration deadline 30 April. No monthly advances for PIT-38 (only annual settlement). Currency conversion at NBP średni rate from preceding business day.
+description: Use when calculating Polish capital gains tax on PIT-38. Covers securities, derivatives, crypto, foreign dividends, FIFO matching, loss carry-forward, NBP currency conversion, annual settlement.
 ---
 
 # calculating-pit-38

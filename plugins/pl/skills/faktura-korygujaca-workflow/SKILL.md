@@ -1,6 +1,6 @@
 ---
 name: faktura-korygujaca-workflow
-description: Use when issuing Polish correcting invoice (faktura korygująca) per art. 106j ustawy o VAT — covers in-minus corrections (rebate, return of goods, price reduction; recognized on receipt of buyer's confirmation), in-plus corrections (price increase, additional services; recognized on issue date), technical corrections (error in buyer name/NIP — no VAT change). Includes mandatory content (original invoice reference, reason for correction, amounts before/after, difference), KSeF handling, JPK_V7 treatment (corrective JPK for earlier periods if needed), reconciliation with art. 29a of VAT Act for base reduction rules.
+description: Use when issuing Polish faktura korygująca. Covers in-minus corrections (rabat, zwrot), in-plus corrections, technical corrections, mandatory content, confirmation rules, KSeF handling, JPK_V7 treatment.
 ---
 
 # faktura-korygująca-workflow

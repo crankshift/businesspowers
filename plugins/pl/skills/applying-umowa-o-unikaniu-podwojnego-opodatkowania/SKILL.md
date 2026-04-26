@@ -1,6 +1,6 @@
 ---
 name: applying-umowa-o-unikaniu-podwojnego-opodatkowania
-description: Use when applying Polish double taxation treaties (umowy o unikaniu podwójnego opodatkowania, UPO) — especially for art. 10 (dividends), art. 11 (interest), art. 12 (royalties), art. 13 (capital gains), art. 14 (employment income). Key treaties: USA-Poland 1974, Germany-Poland 2003, UK-Poland 2006, Ireland-Poland 1995 (for UCITS ETFs), Netherlands-Poland 2002, UAE-Poland 2004, France-Poland 1975. W-8BEN for US brokers to claim treaty rate 15% instead of 30%. Tax credit method per art. 30a ust. 9 PIT — capped at Polish rate (19%). Certificate of residency from KAS (CFR-1) for claiming benefits abroad. MLI (Multilateral Instrument) and Principal Purpose Test (PPT) restrictions since 2019.
+description: Use when applying Polish double taxation treaties (UPO). Covers dividends, interest, royalties, capital gains, key bilateral treaties, W-8BEN, tax credit method, certificate of residency CFR-1, MLI and PPT.
 ---
 
 # applying-umowa-o-unikaniu-podwojnego-opodatkowania

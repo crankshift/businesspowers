@@ -1,6 +1,6 @@
 ---
 name: kved-codes-reference
-description: Use when selecting КВЕД (Classifier of Economic Activities) codes for Ukrainian ФОП registration or modification. Provides typical codes for IT/digital (62.01, 62.02, 63.11), consulting (70.22), freelance services (74.20, 74.30), retail (47.xx), services to population (96.02, 96.04), manufacturing basics. Crucially identifies KVEDs prohibited for єдиний податок (art. 291.5 ПКУ) — financial services, lombards, currency exchange, gambling, excisable goods production, freight transport, fuel trade, real estate agents beyond thresholds. Links to official classifier kved.ukrstat.gov.ua.
+description: Use when selecting КВЕД codes for Ukrainian ФОП registration or modification. Covers typical codes by industry, prohibited КВЕДs for єдиний податок, and official classifier reference.
 ---
 
 # kved-codes-reference

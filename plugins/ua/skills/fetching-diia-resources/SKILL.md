@@ -1,6 +1,6 @@
 ---
 name: fetching-diia-resources
-description: Use when working with Дія (diia.gov.ua) for Ukrainian FOP registration and business matters — electronic registration of ФОП (form 10), changes to registration data (form 11), termination of ФОП, Дія.Підпис (free КЕП generated via BankID / NFC ID-card, valid for 2 years), Дія.Бізнес portal with business-specific guides and funding programs, Diia City residents register, issuance of ЄДР extracts in PDF. Provides URL patterns, checklist for Дія.Підпис setup, troubleshooting the common BankID authentication issues, and references for which operations require which specific Дія flow (mobile app vs. web portal).
+description: Use when working with Дія (diia.gov.ua) for Ukrainian ФОП registration, modification, termination. Covers Дія.Підпис (КЕП), Дія.Бізнес, ЄДР extracts, URL patterns, app vs. web flows.
 ---
 
 # fetching-diia-resources

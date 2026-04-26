@@ -1,6 +1,6 @@
 ---
 name: applying-tax-treaty
-description: Use when applying a double taxation treaty (Конвенція про уникнення подвійного оподаткування) between Ukraine and a foreign jurisdiction — primarily for art. 10 (dividends), art. 11 (interest), art. 12 (royalties), art. 13 (capital gains), art. 14 (employment income). Covers the key treaties: US-Ukraine 1994, Poland-Ukraine, Cyprus-Ukraine, Netherlands-Ukraine, UK-Ukraine, Ireland-Ukraine, UAE-Ukraine. Explains how to obtain residency certificate from the foreign tax authority (Form 6166 for US IRS; odpowiednie dla PL), form W-8BEN for US brokers to claim 15% withholding, tax credit mechanism per art. 170.11.2 ПКУ, and the principal purpose test (PPT) clause introduced via MLI (Multilateral Instrument) that can deny treaty benefits.
+description: Use when applying a double taxation treaty (конвенція) between Ukraine and a foreign jurisdiction. Covers dividends, interest, royalties, capital gains, residency certificate, W-8BEN, foreign tax credit, MLI/PPT.
 ---
 
 # applying-tax-treaty

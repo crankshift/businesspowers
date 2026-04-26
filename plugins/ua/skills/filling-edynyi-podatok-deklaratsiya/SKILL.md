@@ -1,6 +1,6 @@
 ---
 name: filling-edynyi-podatok-deklaratsiya
-description: Use when filling out the Ukrainian єдиного податку declaration form (Order МФУ № 578 of 19.06.2015, z0800-15) — structure of the declaration for ФОП groups 1, 2, 3, 4, where to enter turnover, ЄП tax payable, ВЗ 1% for group 3 since 01.01.2025, appendices for hired workers. Covers the difference between звітна, уточнююча, довідкова declarations, how to indicate zero-activity period, how to mark a period with excess over the group limit (double rate 15%), foreign-currency revenue at НБУ rate. Includes the row-by-row structure and where to input the 1% military zbir introduced in 2025 (new line in the form).
+description: Use when filling out the Ukrainian єдиного податку declaration form for ФОП groups 1–4. Covers row-by-row structure, turnover, ВЗ line, звітна/уточнююча/довідкова types, zero-activity, excess penalties.
 ---
 
 # filling-edynyi-podatok-deklaratsiya

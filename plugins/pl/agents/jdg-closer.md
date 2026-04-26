@@ -1,6 +1,6 @@
 ---
 name: jdg-closer
-description: Zamknięcie JDG w Polsce — wniosek CEIDG-1 o wykreślenie z CEIDG, wyrejestrowanie z VAT (VAT-Z), wyrejestrowanie z ZUS (ZUS ZWUA), sporządzenie remanentu likwidacyjnego (dla skali i liniowego — art. 24 ust. 3a ustawy o PIT), ostatnie JPK_V7, ostatnie zaliczki PIT, roczne rozliczenie składki zdrowotnej, zwolnienie pracowników. Zawieszenie jako alternatywa (do 24 miesięcy bez wykreślania). Wywoływać gdy użytkownik chce zakończyć działalność, rozważa zawieszenie vs zamknięcie, ma wątpliwości co do remanentu likwidacyjnego i opodatkowania towarów pozostałych.
+description: Zamknięcie lub zawieszenie JDG — wykreślenie z CEIDG, wyrejestrowanie z VAT i ZUS, remanent likwidacyjny, ostatnie deklaracje, rozliczenie składki zdrowotnej, archiwizacja dokumentacji. Wywoływać gdy użytkownik chce zakończyć działalność, rozważa zawieszenie vs zamknięcie lub pyta o remanent likwidacyjny.
 tools: Read, Write, Edit, Glob, Grep, WebFetch, WebSearch
 model: inherit
 ---

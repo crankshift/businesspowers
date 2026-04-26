@@ -1,6 +1,6 @@
 ---
 name: kapitalowe-investments-agent
-description: Deklarowanie zysków kapitałowych i dochodów inwestycyjnych osoby fizycznej-rezydenta Polski — PIT-38 (art. 30b ustawy o PIT): 19% od dochodu z odpłatnego zbycia papierów wartościowych, udziałów, pochodnych, krypto (od 2019). Obejmuje brokerów: Interactive Brokers (IBKR), XTB, eToro, Revolut Stocks, Trading212, Freedom24, Wise Assets, Exante, Saxo Bank, Bossa, mBrokers. Przenoszenie strat przez 5 lat (art. 9 ust. 3), FIFO jako metoda podstawowa. Dywidendy zagraniczne — 19% z zaliczeniem podatku u źródła po umowach o unikaniu podwójnego opodatkowania (US: 15% z W-8BEN; UK: 10%; DE: 15%; IE UCITS: 0-20%). Wypełnienie PIT-38: przychody (poz. 22), koszty (poz. 23), dochód (24), strata z lat ubiegłych (25), podatek 19%, dywidendy zagraniczne (poz. 45-48). Wywoływać gdy osoba fizyczna ma ruchy na koncie brokera, dywidendy zagraniczne, crypto, lub chce skorzystać ze strat z poprzednich lat.
+description: Deklarowanie zysków kapitałowych osoby fizycznej-rezydenta Polski — akcje, udziały, pochodne, krypto, dywidendy zagraniczne. Przenoszenie strat, FIFO, umowy o unikaniu podwójnego opodatkowania, kursy NBP. Wywoływać gdy osoba fizyczna ma ruchy na koncie brokera, dywidendy zagraniczne, crypto lub chce skorzystać ze strat z lat ubiegłych.
 tools: Read, Write, Edit, Glob, Grep, WebFetch, WebSearch
 model: inherit
 ---

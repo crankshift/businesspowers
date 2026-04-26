@@ -1,6 +1,6 @@
 ---
 name: reporting-deadlines-pl
-description: Use when checking Polish tax reporting deadlines for JDG and individuals — JPK_V7M monthly (25th of next month) / JPK_V7K quarterly (25th after quarter), PIT advance payments monthly (20th of next) or quarterly (20th after quarter), annual PIT-36/36L/28 by 30 April (PIT-38 also 30 April), PIT-11 for employees by 31 January, ZUS DRA monthly (10th without staff / 15th with staff), annual health contribution reconciliation DRA by 20 May. Includes PIT-39 (property sale), PIT-28 (rental ryczałt). Post-deadline: penalties per KKS art. 56-60 and interest per art. 53 Ordynacji podatkowej.
+description: Use when checking Polish tax reporting deadlines for JDG and individuals. Covers JPK_V7 monthly/quarterly, PIT advances, annual PIT-36/36L/28/38/39, PIT-11, ZUS DRA, annual składka zdrowotna reconciliation, penalties, czynny żal.
 ---
 
 # reporting-deadlines-pl

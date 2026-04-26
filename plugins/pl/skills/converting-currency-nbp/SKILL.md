@@ -1,6 +1,6 @@
 ---
 name: converting-currency-nbp
-description: Use when converting foreign currency to PLN for Polish tax purposes — art. 11a (PIT general) and art. 24a (PIT for crypto) require NBP average rate from the preceding business day. Covers official NBP rate archive, API pattern (api.nbp.pl), handling weekends and holidays (use last working day rate), historical rates lookup. Common mistake of using transaction-day rate, average yearly rate, or year-end rate instead of preceding-business-day rate per each operation.
+description: Use when converting foreign currency to PLN for Polish tax purposes. Covers NBP średni rate from preceding business day, API pattern, weekend/holiday handling, PIT vs VAT rate rules.
 ---
 
 # converting-currency-nbp
