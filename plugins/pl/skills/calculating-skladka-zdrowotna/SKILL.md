@@ -14,6 +14,20 @@ Składka zdrowotna dla JDG w Polsce. Najbardziej dynamicznie zmieniająca się s
 - Nowelizacje Polskiego Ładu (2022, 2023, 2024) — weryfikować.
 - Obwieszczenia MRiPS — minimalne wynagrodzenie, przeciętne wynagrodzenie.
 
+## Aktualne parametry — pobrać przed obliczeniem
+
+| Parametr | Źródło | Sposób pobrania | Fallback _(ostatnio zweryfikowany)_ |
+|---|---|---|---|
+| Stopa zdrowotnej — skala (9%) | Art. 79 ustawy o świadczeniach | WebFetch: `https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20042102135` → art. 79 | 9% _(01.01.2026)_ |
+| Stopa zdrowotnej — liniowy (4,9%) | Art. 79a ustawy o świadczeniach | j.w. → art. 79a | 4,9% _(01.01.2023)_ |
+| Progi ryczałtowej zdrowotnej (60k / 300k) | Art. 81 ust. 2e ustawy o świadczeniach | WebSearch: `składka zdrowotna ryczałt progi 2026` | 60 000 / 300 000 zł _(01.01.2026)_ |
+| Limit odliczenia zdrowotnej — liniowy | Obwieszczenie MF (art. 30c ust. 2 ustawy o PIT) | WebSearch: `limit odliczenia składki zdrowotnej liniowy 2026` | ~10 200 zł _(01.01.2026)_ |
+| MZ, przeciętne wynagrodzenie | Obwieszczenia MRiPS / RM | → skill `calculating-zus` | MZ 4 800 zł; przeciętne ~8 900 zł _(01.01.2026)_ |
+
+**Zasady:**
+1. **Fetch udany** → użyj pobranej wartości, podaj źródło i datę pobrania.
+2. **Fetch nieudany** → użyj fallback. Ostrzeż użytkownika: «⚠ Wartość [parametr] użyto ze stanem na [data]. Zweryfikuj na isap.sejm.gov.pl.»
+
 ## Ogólny mechanizm
 
 **Składka zdrowotna:**

@@ -27,6 +27,15 @@ Jesteś wyspecjalizowanym agentem do wystawiania i obsługi faktur/rachunków dl
 - Kalkulacja PIT / VAT — `jdg-tax-calculator`, `vat-agent`.
 - Sprawozdawczość — `jdg-reporting-agent`.
 
+## Parametry — odniesienie
+
+> Aktualne wartości — pobierać przez kanoniczne skille.
+> Jeśli skill nie odpowiedział, użyj fallback poniżej; ostrzeż: «⚠ Wartość [parametr] użyto ze stanem na [data].»
+
+| Parametr | Kanoniczny skill | Fallback |
+|---|---|---|
+| VAT stawki 23/8/5/0%, zwolnienie 200 000 zł, MPP 15 000 zł, KSeF status | `vat-agent` | 23% / 8% / 5% / 0%; 200 000 zł; 15 000 zł _(01.01.2026)_ |
+
 ## Kluczowe akty prawne
 
 | Akt | Artykuł | Zastosowanie |
@@ -38,6 +47,8 @@ Jesteś wyspecjalizowanym agentem do wystawiania i obsługi faktur/rachunków dl
 | Ustawa o VAT | Art. 113 | Zwolnienie podmiotowe |
 | Ustawa o KSeF | Dz.U. 2023 poz. 2047 | e-Faktury |
 | Ordynacja podatkowa | Art. 86 | Przechowywanie (5 lat) |
+
+*Stawki — fallback; sprawdzać przez kanoniczne skille (zob. «Parametry — odniesienie» wyżej).*
 
 ## Typy dokumentów — matryca
 

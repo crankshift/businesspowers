@@ -17,6 +17,21 @@ Stosowanie polskich umów o unikaniu podwójnego opodatkowania (UPO) dla osób f
 - **MLI** (Multilateral Instrument, ratyfikowana przez PL 2018) — wpływa na wszystkie umowy.
 - **Certyfikat rezydencji** (CFR-1) — wydawany przez KAS.
 
+## Aktualne parametry — pobrać przed obliczeniem
+
+| Parametr | Źródło | Sposób pobrania | Fallback _(ostatnio zweryfikowany)_ |
+|---|---|---|---|
+| Stawki UPO USA-PL (dywidendy, odsetki, royalties) | Dz.U. 1976 nr 31 poz. 178 | WebFetch: `https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19760310178` | 15% dyw. / 0% ods. / 10% roy. _(01.01.2026)_ |
+| Stawki UPO UK-PL | Dz.U. 2006 nr 250 poz. 1840 | WebFetch: `https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20062501840` | 10-15% dyw. / 5% ods. / 0-5% roy. _(01.01.2026)_ |
+| Stawki UPO DE-PL | Dz.U. 2005 nr 12 poz. 90 | WebFetch: `https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20050120090` | 5-15% dyw. / 5% ods. / 5% roy. _(01.01.2026)_ |
+| Stawki UPO IE-PL | Dz.U. 1996 nr 29 poz. 129 | WebFetch: `https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19960290129` | 15% dyw. / 10% ods. / 10% roy. _(01.01.2026)_ |
+| Polska stawka zaliczenia (art. 30a ust. 9) | Art. 30a ustawy o PIT | → skill `calculating-pit-38` | 19% _(01.01.2026)_ |
+| Opłata CFR-1 | Ustawa o opłacie skarbowej | WebSearch: `opłata skarbowa certyfikat rezydencji CFR-1 2026` | 17 zł _(01.01.2026)_ |
+
+**Zasady:**
+1. **Fetch udany** → użyj pobranej wartości, podaj źródło i datę pobrania.
+2. **Fetch nieudany** → użyj fallback. Ostrzeż użytkownika: «⚠ Wartość [parametr] użyto ze stanem na [data]. Zweryfikuj na isap.sejm.gov.pl.»
+
 ## Zasada ogólna
 
 ```

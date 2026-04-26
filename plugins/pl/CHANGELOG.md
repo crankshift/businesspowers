@@ -4,6 +4,34 @@ Format — [Keep a Changelog](https://keepachangelog.com/pl/1.1.0/), wersjonowan
 
 ---
 
+## [0.4.0] — 2026-04-26
+
+### Dodano
+
+- **Wzorzec «fetch-then-fallback»** dla wszystkich 26 plików PL-pluginu — agenci i skille najpierw pobierają aktualne stawki ze źródeł oficjalnych (WebSearch/WebFetch isap.sejm.gov.pl, podatki.gov.pl), a wartości zakodowane na stałe służą jedynie jako fallback z ostrzeżeniem dla użytkownika.
+
+**Kanoniczne skille (5 plików — pełne bloki «Aktualne parametry — pobrać przed obliczeniem»):**
+- `calculating-zus` — ZUS 19,52/8/2,45/1,67%, bazy minimalne i przeciętne.
+- `calculating-pit-scale` — PIT skala 12/32%, kwota wolna 30 000, ulga na dziecko.
+- `calculating-skladka-zdrowotna` — zdrowotna 9/4,9%, progi, limit odliczenia liniowy.
+- `calculating-pit-liniowy` — liniowy 19%, odliczenie ~10 200.
+- `calculating-ryczalt` — stawki ryczałtu 2–17%, progi zdrowotnej, limit 2M EUR.
+
+**Kanoniczny agent (1 plik — pełny blok fetch):**
+- `vat-agent` — VAT 23/8/5/0%, próg 200k, MPP 15k.
+
+**Zależne skille (10 plików — odniesienia krzyżowe + fallback-adnotacje):**
+- `calculating-pit-38` (+ mini fetch art. 30b), `declaring-pit-38`, `declaring-crypto-pl`, `applying-umowa-o-unikaniu-podwojnego-opodatkowania` (+ fetch traktatów), `choosing-tax-form`, `closing-jdg-checklist`, `opening-jdg-checklist`, `issuing-invoice-pl`, `reconciling-invoices-with-jpk-v7`, `reporting-deadlines-pl` (+ mini fetch kar KKS i stopy NBP).
+
+**Agenci (10 plików — odniesienia krzyżowe + adnotacje):**
+- `jdg-tax-calculator`, `tax-form-advisor`, `osoba-fizyczna-tax-advisor` (+ własny blok fetch: spadki/darowizny, najem, termomodernizacja), `jdg-reporting-agent`, `jdg-registrator`, `zus-agent`, `invoice-manager`, `invoice-analyzer`, `jdg-closer`, `kapitalowe-investments-agent`.
+
+### Zmieniono
+
+- `plugin.json`: wersja 0.3.0 → 0.4.0.
+
+---
+
 ## [0.3.0] — 2026-04-26
 
 ### Zmieniono
@@ -73,6 +101,7 @@ Format — [Keep a Changelog](https://keepachangelog.com/pl/1.1.0/), wersjonowan
 - Minimalne wynagrodzenie i prognozowane przeciętne wynagrodzenie na 2026 — weryfikować w obwieszczeniu MRiPS i ustawie budżetowej.
 - Składka zdrowotna 2026 — zasady zależne od bieżącej redakcji ustawy o świadczeniach opieki zdrowotnej (weryfikować ostatnie zmiany).
 
+[0.4.0]: https://github.com/crankshift/businesspowers/releases/tag/pl/v0.4.0
 [0.3.0]: https://github.com/crankshift/businesspowers/releases/tag/pl/v0.3.0
 [0.2.0]: https://github.com/crankshift/businesspowers/releases/tag/pl/v0.2.0
 [0.1.0]: https://github.com/crankshift/businesspowers/releases/tag/pl/v0.1.0

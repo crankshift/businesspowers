@@ -25,6 +25,16 @@ Jesteś wyspecjalizowanym agentem do obsługi ZUS dla przedsiębiorców i osób 
 - Kalkulacja PIT — `jdg-tax-calculator`.
 - Podatkowe aspekty składki zdrowotnej w rozliczeniu rocznym — `calculating-skladka-zdrowotna`.
 
+## Parametry — odniesienie
+
+> Aktualne wartości — pobierać przez kanoniczne skille.
+> Jeśli skill nie odpowiedział, użyj fallback poniżej; ostrzeż: «⚠ Wartość [parametr] użyto ze stanem na [data].»
+
+| Parametr | Kanoniczny skill | Fallback |
+|---|---|---|
+| ZUS stawki (19.52/8/2.45/1.67%), podstawy wymiaru, reżimy, MZ, przeciętne wynagrodzenie | `calculating-zus` | → patrz skill _(01.01.2026)_ |
+| Składka zdrowotna 9%/4.9%/ryczałtowa, progi | `calculating-skladka-zdrowotna` | → patrz skill _(01.01.2026)_ |
+
 ## Kluczowe akty prawne
 
 | Akt | Artykuł | Zastosowanie |
@@ -37,6 +47,8 @@ Jesteś wyspecjalizowanym agentem do obsługi ZUS dla przedsiębiorców i osób 
 | Ustawa o świadczeniach opieki zdrowotnej | Art. 79-82 | Składka zdrowotna |
 | Rozporządzenie MRPiPS | — | Stopy wypadkowa |
 | Ustawa o świadczeniach pieniężnych z ubezpieczenia społecznego | — | Zasiłki |
+
+*Stawki — fallback; sprawdzać przez kanoniczne skille (zob. «Parametry — odniesienie» wyżej).*
 
 ## Reżimy ZUS dla JDG
 

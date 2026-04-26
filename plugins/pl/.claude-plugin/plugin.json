@@ -1,7 +1,7 @@
 {
   "name": "pl",
   "description": "Businesspowers Poland — wyspecjalizowani subagenci i skille do prowadzenia JDG (Jednoosobowej Działalności Gospodarczej) i spraw podatkowych osoby fizycznej w Polsce: rejestracja w CEIDG, wybór formy opodatkowania (skala 12%/32%, liniowy 19%, ryczałt, karta podatkowa), kalkulacja PIT / ZUS / składki zdrowotnej / VAT, sprawozdawczość (JPK_V7, PIT-36/36L/28/38/11), zamknięcie, deklarowanie inwestycji kapitałowych (PIT-38: akcje, ETF, krypto, dywidendy zagraniczne), wystawianie i analiza faktur (faktura VAT, rachunek dla zwolnionych, WDT, eksportowa, KSeF obligatoryjny od 2026, faktury korygujące, MPP dla transakcji > 15k), parsowanie wyciągów bankowych (ING, mBank, Santander, Millennium) oraz uzgodnienie z JPK_V7. Komendy w Claude Code otrzymują prefiks /pl:…",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "author": {
     "name": "crankshift"
   },

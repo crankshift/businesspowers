@@ -15,6 +15,18 @@ Kalkulacja PIT liniowego 19% dla JDG w Polsce.
   - Art. 26 — odliczenia od dochodu.
   - Art. 27b — odliczenie składki zdrowotnej.
 
+## Aktualne parametry — pobrać przed obliczeniem
+
+| Parametr | Źródło | Sposób pobrania | Fallback _(ostatnio zweryfikowany)_ |
+|---|---|---|---|
+| Stawka liniowa | Art. 30c ustawy o PIT | WebFetch: `https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19910800350` → art. 30c | 19% _(01.01.2026)_ |
+| Limit roczny odliczenia składki zdrowotnej | Obwieszczenie MF (art. 30c ust. 2) | WebSearch: `limit odliczenia składki zdrowotnej liniowy 2026 obwieszczenie` | ~10 200 zł _(01.01.2026)_ |
+| Składka zdrowotna 4,9%, minimum 9% × MZ | → skill `calculating-skladka-zdrowotna` | — | 4,9% / min 432 zł _(01.01.2026)_ |
+
+**Zasady:**
+1. **Fetch udany** → użyj pobranej wartości, podaj źródło i datę pobrania.
+2. **Fetch nieudany** → użyj fallback. Ostrzeż użytkownika: «⚠ Wartość [parametr] użyto ze stanem na [data]. Zweryfikuj na isap.sejm.gov.pl.»
+
 ## Stawka
 
 **19%** od całego dochodu. **Brak progów.**

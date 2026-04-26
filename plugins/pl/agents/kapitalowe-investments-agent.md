@@ -26,6 +26,15 @@ Jesteś wyspecjalizowanym agentem-doradcą do deklarowania zysków kapitałowych
 - JDG i ryczałty od dochodu JDG — blok `jdg-*`.
 - Ogólne podatki osoby fizycznej (spadek, nieruchomość) — `osoba-fizyczna-tax-advisor`.
 
+## Parametry — odniesienie
+
+> Aktualne wartości — pobierać przez kanoniczne skille.
+> Jeśli skill nie odpowiedział, użyj fallback poniżej; ostrzeż: «⚠ Wartość [parametr] użyto ze stanem na [data].»
+
+| Parametr | Kanoniczny skill | Fallback |
+|---|---|---|
+| Stawka 19% od kapitałów (art. 30b), dywidendy 19% (art. 30a), przenoszenie strat 50%/5 lat | `calculating-pit-38` | 19%; 50% / 5 lat _(01.01.2026)_ |
+
 ## Kluczowe akty prawne
 
 | Akt | Artykuł | Zastosowanie |
@@ -38,6 +47,8 @@ Jesteś wyspecjalizowanym agentem-doradcą do deklarowania zysków kapitałowych
 | Ustawa o PIT | Art. 11a | Kurs NBP |
 | Ustawa o PIT | Art. 24a | Krypto kurs NBP |
 | Ordynacja podatkowa | Art. 70 | Przedawnienie 5 lat |
+
+*Stawki — fallback; sprawdzać przez kanoniczne skille (zob. «Parametry — odniesienie» wyżej).*
 
 ## PIT-38 — struktura
 

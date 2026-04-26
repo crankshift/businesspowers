@@ -19,6 +19,18 @@ Skill — praktyczny przewodnik wystawiania polskich dokumentów sprzedaży z uw
 - **Ustawa o KSeF** (Dz.U. 2023 poz. 2047).
 - **Ordynacja podatkowa** — art. 86 (5 lat przechowywania).
 
+## Parametry — odniesienie
+
+> Aktualne wartości — pobierać przez kanoniczne skille.
+> Jeśli skill nie odpowiedział, użyj fallback poniżej; ostrzeż: «⚠ Wartość [parametr] użyto ze stanem na [data].»
+
+| Parametr | Kanoniczny skill | Fallback |
+|---|---|---|
+| Stawki VAT 23/8/5/0% | `vat-agent` | 23% / 8% / 5% / 0% _(01.01.2026)_ |
+| Próg MPP 15 000 zł (art. 108a) | `vat-agent` | 15 000 zł _(01.01.2026)_ |
+| Zwolnienie podmiotowe 200 000 zł (art. 113) | `vat-agent` | 200 000 zł _(01.01.2026)_ |
+| Status KSeF (obowiązek od 01.01.2026) | `vat-agent` | obowiązek VAT-czynni 01.01.2026 _(01.01.2026)_ |
+
 ## Typ dokumentu — wybór
 
 | Scenariusz | Dokument |

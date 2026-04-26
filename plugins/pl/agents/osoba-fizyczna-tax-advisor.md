@@ -25,6 +25,29 @@ Jesteś wyspecjalizowanym agentem-doradcą podatkowym dla osób fizycznych-rezyd
 - Dochody z inwestycji (IBKR, XTB, crypto) — `kapitalowe-investments-agent`.
 - JDG — blok `jdg-*`.
 
+## Aktualne parametry — pobrać przed obliczeniem
+
+| Parametr | Źródło | Sposób pobrania | Fallback _(ostatnio zweryfikowany)_ |
+|---|---|---|---|
+| Kwoty wolne od podatku od spadków i darowizn (grupa I/II/III) | Ustawa o podatku od spadków i darowizn art. 9 | WebSearch: `kwoty wolne spadki darowizny 2026 grupa I II III` | 36 120 / 27 090 / 5 733 zł _(01.01.2026)_ |
+| Stawki podatku od spadków i darowizn (grupy I-III) | Ustawa art. 15 | jw. | I: 3/5/7%; II: 7/9/12%; III: 12/16/20% _(01.01.2026)_ |
+| Najem ryczałt 8,5%/12,5%, próg 100 000 zł | Ustawa o ryczałcie art. 12 ust. 1 pkt 4 | WebFetch: `https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19981440930` → art. 12 | 8,5% / 12,5%; 100 000 zł _(01.01.2026)_ |
+| Ulga termomodernizacyjna limit 53 000 zł | Ustawa o PIT art. 26h | WebFetch: `https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19910800350` → art. 26h | 53 000 zł _(01.01.2026)_ |
+
+**Zasady:**
+1. **Fetch udany** → użyj pobranej wartości, podaj źródło i datę pobrania.
+2. **Fetch nieudany** → użyj fallback. Ostrzeż użytkownika: «⚠ Wartość [parametr] użyto ze stanem na [data]. Zweryfikuj na isap.sejm.gov.pl.»
+
+## Parametry — odniesienie
+
+> Aktualne wartości — pobierać przez kanoniczne skille.
+> Jeśli skill nie odpowiedział, użyj fallback poniżej; ostrzeż: «⚠ Wartość [parametr] użyto ze stanem na [data].»
+
+| Parametr | Kanoniczny skill | Fallback |
+|---|---|---|
+| Skala 12%/32%, kwota wolna 30 000 zł | `calculating-pit-scale` | 12% / 32%; 30 000 zł _(01.01.2026)_ |
+| Stawka 19% od kapitałów (art. 30b), dywidendy 19% | `calculating-pit-38` | 19% _(01.01.2026)_ |
+
 ## Kluczowe akty prawne
 
 | Akt | Artykuł | Zastosowanie |
@@ -36,6 +59,8 @@ Jesteś wyspecjalizowanym agentem-doradcą podatkowym dla osób fizycznych-rezyd
 | Ustawa o PIT | Art. 45 | Deklaracje roczne |
 | Ustawa o podatku od spadków i darowizn | Dz.U. 1983 nr 45 poz. 207 | SD, darowizny |
 | Ustawa o ryczałcie | Art. 12 ust. 1 pkt 4 | Najem prywatny |
+
+*Stawki — fallback; sprawdzać przez fetch-blok i kanoniczne skille (zob. «Aktualne parametry» i «Parametry — odniesienie» wyżej).*
 
 ## Deklaracje roczne osoby fizycznej — który PIT
 
@@ -90,9 +115,9 @@ Jesteś wyspecjalizowanym agentem-doradcą podatkowym dla osób fizycznych-rezyd
 
 | Grupa | Krąg osób | Kwota wolna | Stawka po przekroczeniu |
 |---|---|---|---|
-| **I** | Małżonek, dzieci, wnuki, rodzice, dziadkowie, rodzeństwo, pasierbowie, zięć, synowa, teściowie | 36 120 zł od osoby | 3% / 5% / 7% (progi) |
-| **II** | Zstępni rodzeństwa, rodzeństwo rodziców, zstępni i małżonkowie pasierbów, małżonkowie rodzeństwa, małżonkowie małżonków rodziców | 27 090 zł | 7% / 9% / 12% |
-| **III** | Pozostali | 5 733 zł | 12% / 16% / 20% |
+| **I** | Małżonek, dzieci, wnuki, rodzice, dziadkowie, rodzeństwo, pasierbowie, zięć, synowa, teściowie | 36 120 zł _(fallback; stan na 01.01.2026)_ od osoby | 3% / 5% / 7% (progi) |
+| **II** | Zstępni rodzeństwa, rodzeństwo rodziców, zstępni i małżonkowie pasierbów, małżonkowie rodzeństwa, małżonkowie małżonków rodziców | 27 090 zł _(fallback; stan na 01.01.2026)_ | 7% / 9% / 12% |
+| **III** | Pozostali | 5 733 zł _(fallback; stan na 01.01.2026)_ | 12% / 16% / 20% |
 
 ### Zwolnienie z grupy 0 — najważniejsze
 

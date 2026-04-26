@@ -17,6 +17,30 @@ Pełny kalendarz sprawozdawczości podatkowej JDG i osoby fizycznej w Polsce. Sk
 - **Ustawa o USUS** — art. 46-47 (ZUS).
 - **KKS** — art. 56-60 (kary).
 
+## Aktualne parametry — pobrać przed obliczeniem
+
+| Parametr | Źródło | Sposób pobrania | Fallback _(ostatnio zweryfikowany)_ |
+|---|---|---|---|
+| Stawka dzienna KKS (art. 23 § 3 KK) | Obwieszczenie MF (1/30 min. wynagr.) | WebSearch: `stawka dzienna KKS 2026 minimalne wynagrodzenie` | ~135 zł _(01.01.2026)_ |
+| Max grzywna KKS (500 stawek) | Art. 23 § 1 KK w zw. z KKS | jw. | ~67 500 zł _(01.01.2026)_ |
+| Stopa redyskonta NBP | NBP | WebFetch: `https://www.nbp.pl/home.aspx?f=/dzienne/stopy.htm` | 5,75% _(01.01.2026)_ |
+| Odsetki za zwłokę (200% redysk. + 2%) | Art. 56 § 1 Ordynacji | obliczeniowe z redyskonta | ~13,5% _(01.01.2026)_ |
+| Min. stawka odsetek za zwłokę | Art. 56 § 1a Ordynacji | jw. | 11,5% _(01.01.2026)_ |
+
+**Zasady:**
+1. **Fetch udany** → użyj pobranej wartości, podaj źródło i datę pobrania.
+2. **Fetch nieudany** → użyj fallback. Ostrzeż użytkownika: «⚠ Wartość [parametr] użyto ze stanem na [data]. Zweryfikuj na isap.sejm.gov.pl.»
+
+## Parametry — odniesienie
+
+> Aktualne wartości — pobierać przez kanoniczne skille.
+> Jeśli skill nie odpowiedział, użyj fallback poniżej; ostrzeż: «⚠ Wartość [parametr] użyto ze stanem na [data].»
+
+| Parametr | Kanoniczny skill | Fallback |
+|---|---|---|
+| Progi skali PIT (12%/32%), kwota wolna | `calculating-pit-scale` | 12% / 32%; 30 000 zł _(01.01.2026)_ |
+| ZUS składki, terminy DRA | `calculating-zus` | → patrz skill _(01.01.2026)_ |
+
 ## Zasady przenoszenia
 
 - Jeśli termin wypada na **sobotę, niedzielę lub święto** → przesunięcie na **kolejny dzień roboczy** (art. 12 Ordynacji).
@@ -162,7 +186,7 @@ Pełny kalendarz sprawozdawczości podatkowej JDG i osoby fizycznej w Polsce. Sk
 Stawka = 200% × stopa redyskonta NBP + 2%
 ```
 
-**Minimum:** 11,5% rocznie (szczególny przepis).
+**Minimum:** 11,5% rocznie _(fallback; stan na 01.01.2026)_ (szczególny przepis).
 
 Odsetki nalicza się **od dnia następnego po terminie** do dnia zapłaty.
 
@@ -176,8 +200,8 @@ Odsetki = Zaległość × Stawka × Dni / 365
 - **Art. 57** — brak wpłaty: grzywna.
 - **Art. 60** — złożenie deklaracji po terminie: grzywna.
 
-**Stawka dzienna 2026** (orient.): ~135 zł.
-- Grzywna 500 stawek = ~67 500 zł.
+**Stawka dzienna 2026** (orient.): ~135 zł _(fallback; stan na 01.01.2026)_.
+- Grzywna 500 stawek = ~67 500 zł _(fallback; stan na 01.01.2026)_.
 
 ### Czynny żal (art. 16 KKS)
 

@@ -22,6 +22,18 @@ Jesteś wyspecjalizowanym agentem-doradcą wyboru formy opodatkowania JDG w Pols
 - Sama rejestracja JDG — `jdg-registrator`.
 - Kalkulacja konkretnych kwot — `jdg-tax-calculator` + skille `calculating-*`.
 
+## Parametry — odniesienie
+
+> Aktualne wartości — pobierać przez kanoniczne skille.
+> Jeśli skill nie odpowiedział, użyj fallback poniżej; ostrzeż: «⚠ Wartość [parametr] użyto ze stanem na [data].»
+
+| Parametr | Kanoniczny skill | Fallback |
+|---|---|---|
+| Skala 12%/32%, kwota wolna 30 000 zł, ulga na dziecko | `calculating-pit-scale` | 12% / 32%; 30 000 zł _(01.01.2026)_ |
+| Liniowy 19%, limit odliczenia zdrowotnej ~10 200 zł | `calculating-pit-liniowy` | 19%; ~10 200 zł _(01.01.2026)_ |
+| Stawki ryczałtu 2-17%, limit 2 mln EUR | `calculating-ryczalt` | → patrz skill _(01.01.2026)_ |
+| Składka zdrowotna 9%/4.9%/ryczałtowa, progi | `calculating-skladka-zdrowotna` | → patrz skill _(01.01.2026)_ |
+
 ## Kluczowe akty prawne
 
 | Akt | Artykuł / Zastosowanie |
@@ -30,6 +42,8 @@ Jesteś wyspecjalizowanym agentem-doradcą wyboru formy opodatkowania JDG w Pols
 | Ustawa o ryczałcie (Dz.U. 1998 nr 144 poz. 930) | Art. 8 (wyłączenia), art. 12 (stawki) |
 | Ustawa o świadczeniach opieki zdrowotnej | Składka zdrowotna (po Polskim Ładzie) |
 | Ustawa o systemie ubezpieczeń społecznych | ZUS |
+
+*Stawki — fallback; sprawdzać przez kanoniczne skille (zob. «Parametry — odniesienie» wyżej).*
 
 ## Cztery formy — porównanie
 

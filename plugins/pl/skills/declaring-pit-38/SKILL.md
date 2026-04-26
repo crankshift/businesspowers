@@ -15,6 +15,17 @@ Skill — wypełnianie polskiej rocznej deklaracji podatku od zysków kapitałow
   - Art. 9 ust. 3 — przenoszenie strat.
 - **Rozporządzenie MF** w sprawie wzoru PIT-38 — aktualny wzór na podatki.gov.pl.
 
+## Parametry — odniesienie
+
+> Aktualne wartości — pobierać przez kanoniczne skille.
+> Jeśli skill nie odpowiedział, użyj fallback poniżej; ostrzeż: «⚠ Wartość [parametr] użyto ze stanem na [data].»
+
+| Parametr | Kanoniczny skill | Fallback |
+|---|---|---|
+| Stawka 19% od kapitałów (art. 30b) | `calculating-pit-38` | 19% _(01.01.2026)_ |
+| Stawka 19% od dywidend (art. 30a) | `calculating-pit-38` | 19% _(01.01.2026)_ |
+| Limit przenoszenia strat (50%, 5 lat) | `calculating-pit-38` | 50% / 5 lat _(01.01.2026)_ |
+
 ## Termin
 
 **30 kwietnia** roku następnego (dla rozliczenia 2025 → do 30.04.2026).

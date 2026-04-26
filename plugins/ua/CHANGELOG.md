@@ -4,6 +4,31 @@
 
 ---
 
+## [0.4.0] — 2026-04-26
+
+### Додано
+
+- **Патерн «fetch-then-fallback»** для всіх 24 файлів UA-плагіна — агенти та скіли тепер спочатку отримують актуальні ставки з офіційних джерел (WebSearch/WebFetch zakon.rada.gov.ua, tax.gov.ua), а захардкоджені значення використовують лише як fallback із попередженням для користувача.
+
+**Канонічні скіли (5 файлів — повні fetch-блоки «Актуальні параметри — отримати перед розрахунком»):**
+- `calculating-esv` — ЄСВ 22%, МЗП min/max бази, воєнні пільги.
+- `calculating-edynyi-podatok` — ставки/ліміти ЄП груп 1–3, ВЗ 1% для групи 3.
+- `calculating-pdfo-viyskovyi-zbir` — ПДФО 18%, ВЗ 5%, ставки на дивіденди, спадщину, нерухомість, авто.
+- `applying-tax-treaty` — ставки за конвенціями (WebFetch тексту договору).
+- `issuing-invoice-ua` — ПДВ 20/7/0%, штрафи за ст. 120¹ ПКУ.
+
+**Залежні скіли (10 файлів — перехресні посилання на канонічні скіли + fallback-анотації):**
+- `calculating-fop-on-zahalniy-systemi`, `declaring-crypto`, `declaring-investments`, `filling-edynyi-podatok-deklaratsiya`, `choosing-tax-group`, `closing-fop-checklist`, `opening-fop-checklist`, `kved-codes-reference`, `reconciling-invoices-with-declaration`, `reporting-deadlines-ua` (+ міні fetch для штрафів і облікової ставки НБУ).
+
+**Агенти (9 файлів — перехресні посилання + анотації):**
+- `fop-tax-calculator`, `tax-system-advisor`, `physical-person-tax-advisor`, `investment-tax-agent`, `fop-reporting-agent`, `invoice-manager`, `invoice-analyzer`, `fop-registrator`, `fop-closer`.
+
+### Змінено
+
+- `plugin.json`: версія 0.3.0 → 0.4.0.
+
+---
+
 ## [0.3.0] — 2026-04-26
 
 ### Змінено
@@ -67,6 +92,7 @@
 - **ЗУ № 4015-IX від 10.10.2024** — підвищення військового збору до 5% для загальних ставок з 01.12.2024, введення 1% ВЗ для ФОП 3 групи з 01.01.2025.
 - Мінімальна зарплата на 2026 р. — перевіряти у ЗУ «Про Держбюджет України на 2026 рік» на момент розрахунку.
 
+[0.4.0]: https://github.com/crankshift/businesspowers/releases/tag/ua/v0.4.0
 [0.3.0]: https://github.com/crankshift/businesspowers/releases/tag/ua/v0.3.0
 [0.2.0]: https://github.com/crankshift/businesspowers/releases/tag/ua/v0.2.0
 [0.1.0]: https://github.com/crankshift/businesspowers/releases/tag/ua/v0.1.0

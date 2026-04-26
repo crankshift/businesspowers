@@ -19,6 +19,19 @@ Kalkulacja ryczałtu od przychodów ewidencjonowanych dla JDG w Polsce. Forma op
   - Art. 11 — odliczenia (w tym 50% składki zdrowotnej).
 - **PKWiU** — klasyfikacja usług/towarów (przypisanie stawki).
 
+## Aktualne parametry — pobrać przed obliczeniem
+
+| Parametr | Źródło | Sposób pobrania | Fallback _(ostatnio zweryfikowany)_ |
+|---|---|---|---|
+| Stawki ryczałtu (2–17%) | Art. 12 ustawy o ryczałcie | WebFetch: `https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU19981440930` → art. 12 | 2% / 3% / 5,5% / 8,5% / 10% / 12% / 12,5% / 14% / 15% / 17% _(01.01.2026)_ |
+| Limit przychodu 2 mln EUR | Art. 6 ust. 4 ustawy o ryczałcie | j.w. → art. 6 | 2 000 000 EUR _(01.01.2026)_ |
+| Progi zdrowotnej ryczałtowej | → skill `calculating-skladka-zdrowotna` | — | 60 000 / 300 000 zł _(01.01.2026)_ |
+| MZ, przeciętne wynagrodzenie | → skill `calculating-zus` | — | MZ 4 800 zł; przeciętne ~8 900 zł _(01.01.2026)_ |
+
+**Zasady:**
+1. **Fetch udany** → użyj pobranej wartości, podaj źródło i datę pobrania.
+2. **Fetch nieudany** → użyj fallback. Ostrzeż użytkownika: «⚠ Wartość [parametr] użyto ze stanem na [data]. Zweryfikuj na isap.sejm.gov.pl.»
+
 ## Stawki ryczałtu (art. 12)
 
 | Stawka | Zakres |
