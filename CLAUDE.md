@@ -58,6 +58,7 @@ businesspowers/                     # GitHub: crankshift/businesspowers
 - **Command prefixes come from plugin names.** `name` in `plugin.json` becomes the namespace — `/ua:…`, `/pl:…`. Agent and skill file names inside the plugin don't need a prefix; Claude Code adds it automatically.
 - **Shared license.** MIT, applied at the repo root.
 - **Independent plugin versions.** Each plugin carries its own `version` in its `plugin.json` (and mirrored in the marketplace entry). The marketplace catalog itself has a separate version in `marketplace.json:metadata.version`.
+- **Releases are per-plugin, never monorepo-level.** Each plugin gets its own GitHub release with a prefixed tag: `ua/v0.3.0`, `pl/v0.3.0`. Release notes are in the plugin's language (Ukrainian for `ua`, Polish for `pl`). Never create a single release for the whole repo. When bumping versions, update `plugin.json` in each plugin + the corresponding entry in `marketplace.json`.
 - **No fabricated rates.** If a tax rate or deadline isn't in the current published statute, it doesn't go in an agent. Better to prompt the user to verify than to hard-code stale numbers.
 
 ## Editorial rules (all plugins)
