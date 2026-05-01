@@ -16,26 +16,40 @@ User-facing install instructions live in the root [`README.md`](./README.md). Th
 ```
 businesspowers/                     # GitHub: crankshift/businesspowers
 ├── README.md                       # user-facing — install guide, links to per-plugin docs
-├── CLAUDE.md                       # this file — contributor context
+├── CLAUDE.md                       # this file — Claude Code contributor context
+├── AGENTS.md                       # Codex contributor context (mirrors CLAUDE.md for Codex)
 ├── CHANGELOG.md                    # index of per-plugin CHANGELOGs + monorepo-level structural log
 ├── LICENSE                         # MIT — covers the whole repo
 ├── .claude-plugin/
-│   └── marketplace.json            # marketplace catalog ("businesspowers"); lists ua and pl with their source paths
+│   └── marketplace.json            # Claude Code marketplace catalog
+├── .agents/
+│   └── plugins/
+│       └── marketplace.json        # Codex marketplace catalog (business-ua, business-pl)
+├── scripts/
+│   ├── release.sh                  # release helper (bump, prepare, publish)
+│   ├── convert-agents-to-codex.py  # generates .codex/agents/*.toml from Claude agents/*.md
+│   └── validate-codex-agents.py    # validates generated Codex agent TOML files
 ├── plugins/                        # all jurisdiction plugins live here
-    ├── ua/                         # plugin "ua" — Ukrainian ФОП + фізособа
-    │   ├── README.md               # user-facing, Ukrainian
-    │   ├── CLAUDE.md               # contributor context for the UA plugin
-    │   ├── CHANGELOG.md            # plugin-level change log, Ukrainian
-    │   ├── .claude-plugin/plugin.json  # name: "ua"
-    │   ├── agents/
-    │   └── skills/
-    └── pl/                         # plugin "pl" — Polish JDG + osoba fizyczna
-        ├── README.md               # user-facing, Polish
-        ├── CLAUDE.md               # contributor context for the PL plugin
-        ├── CHANGELOG.md            # plugin-level change log, Polish
-        ├── .claude-plugin/plugin.json  # name: "pl"
-        ├── agents/
-        └── skills/
+│   ├── ua/                         # plugin "ua" — Ukrainian ФОП + фізособа
+│   │   ├── README.md               # user-facing, Ukrainian
+│   │   ├── CLAUDE.md               # Claude Code contributor context for the UA plugin
+│   │   ├── AGENTS.md               # Codex contributor context for the UA plugin
+│   │   ├── CHANGELOG.md            # plugin-level change log, Ukrainian
+│   │   ├── .claude-plugin/plugin.json  # Claude Code manifest; name: "ua"
+│   │   ├── .codex-plugin/plugin.json   # Codex manifest; name: "business-ua"
+│   │   ├── .codex/agents/*.toml    # generated Codex custom-agent shims (from agents/*.md)
+│   │   ├── agents/                 # source agent definitions (Claude + Codex source of truth)
+│   │   └── skills/                 # skill definitions (shared by Claude Code and Codex)
+│   └── pl/                         # plugin "pl" — Polish JDG + osoba fizyczna
+│       ├── README.md               # user-facing, Polish
+│       ├── CLAUDE.md               # Claude Code contributor context for the PL plugin
+│       ├── AGENTS.md               # Codex contributor context for the PL plugin
+│       ├── CHANGELOG.md            # plugin-level change log, Polish
+│       ├── .claude-plugin/plugin.json  # Claude Code manifest; name: "pl"
+│       ├── .codex-plugin/plugin.json   # Codex manifest; name: "business-pl"
+│       ├── .codex/agents/*.toml    # generated Codex custom-agent shims (from agents/*.md)
+│       ├── agents/                 # source agent definitions (Claude + Codex source of truth)
+│       └── skills/                 # skill definitions (shared by Claude Code and Codex)
 └── site/                           # public landing page (static Astro site, not a plugin)
     ├── README.md                   # site quick-start, deploy flow
     ├── CLAUDE.md                   # site contributor context

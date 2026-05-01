@@ -159,10 +159,11 @@ All plugins in this monorepo follow the same working principles:
 Adding a plugin for a new jurisdiction (e.g. `de`, `cz`, `lt`, `ge`):
 
 1. Create `./plugins/xx/` alongside the existing ones. Short ISO-style code.
-2. Lay out the directory: `xx/README.md`, `xx/CLAUDE.md`, `xx/CHANGELOG.md`, `xx/.claude-plugin/plugin.json`, `xx/agents/`, `xx/skills/`.
-3. Register it in `.claude-plugin/marketplace.json` under `plugins` with `"source": "./plugins/xx"`.
+2. Lay out the directory: `xx/README.md`, `xx/CLAUDE.md`, `xx/AGENTS.md`, `xx/CHANGELOG.md`, `xx/.claude-plugin/plugin.json`, `xx/.codex-plugin/plugin.json`, `xx/agents/`, `xx/skills/`.
+3. Register it in both marketplace catalogs: `.claude-plugin/marketplace.json` with `"source": "./plugins/xx"`, and `.agents/plugins/marketplace.json` with the collision-safe Codex plugin ID.
 4. Add a CHANGELOG entry and bump `metadata.version` in the marketplace manifest.
-5. Open a PR, merge, then tag a release.
+5. Run `python3 scripts/convert-agents-to-codex.py` and `python3 scripts/validate-codex-agents.py` to generate and validate Codex agent shims.
+6. Open a PR, merge, then tag a release.
 
 See [`CLAUDE.md`](./CLAUDE.md) for the monorepo contributor guidelines.
 
