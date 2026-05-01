@@ -4,6 +4,30 @@ Format — [Keep a Changelog](https://keepachangelog.com/pl/1.1.0/), wersjonowan
 
 ---
 
+## [0.4.2] — 2026-05-01
+
+### Dodano
+
+- Wygenerowane pliki Codex custom-agent TOML w `.codex/agents/` dla wszystkich agentów Claude w pluginie.
+- Skrypty `scripts/convert-agents-to-codex.py` i `scripts/validate-codex-agents.py` do synchronizacji agentów Claude/Codex.
+
+### Zmieniono
+
+- README, `AGENTS.md` i `CLAUDE.md` wyjaśniają, że `agents/*.md` pozostają źródłem prawdy, a agenci Codex są z nich generowani.
+- `plugin.json`: wersja 0.4.1 → 0.4.2.
+
+## [0.4.1] — 2026-05-01
+
+### Dodano
+
+- Wsparcie Codex: `.agents/plugins/marketplace.json`, `.codex-plugin/plugin.json` z ID `business-pl` oraz instrukcje `AGENTS.md`.
+- Instrukcje instalacji w Codex w README bez zmiany istniejącego Claude Code ID `pl`.
+
+### Zmieniono
+
+- `CLAUDE.md` uzupełniono o reguły synchronizacji artefaktów Claude/Codex.
+- `plugin.json`: wersja 0.4.0 → 0.4.1.
+
 ## [0.4.0] — 2026-04-26
 
 ### Dodano
@@ -105,3 +129,5 @@ Format — [Keep a Changelog](https://keepachangelog.com/pl/1.1.0/), wersjonowan
 [0.3.0]: https://github.com/crankshift/businesspowers/releases/tag/pl/v0.3.0
 [0.2.0]: https://github.com/crankshift/businesspowers/releases/tag/pl/v0.2.0
 [0.1.0]: https://github.com/crankshift/businesspowers/releases/tag/pl/v0.1.0
+[0.4.1]: https://github.com/crankshift/businesspowers/releases/tag/pl/v0.4.1
+[0.4.2]: https://github.com/crankshift/businesspowers/releases/tag/pl/v0.4.2

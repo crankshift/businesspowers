@@ -1,0 +1,57 @@
+{
+  "name": "business-pl",
+  "version": "0.4.2",
+  "description": "Businesspowers Poland — Codex support for Polish JDG and individual-tax workflows. Codex plugin ID: business-pl. Claude Code keeps the pl plugin ID.",
+  "author": {
+    "name": "crankshift"
+  },
+  "homepage": "https://github.com/crankshift/businesspowers",
+  "repository": "https://github.com/crankshift/businesspowers",
+  "license": "MIT",
+  "keywords": [
+    "poland",
+    "jdg",
+    "sole-proprietorship",
+    "taxes",
+    "tax-calculator",
+    "pit",
+    "ryczalt",
+    "zus",
+    "skladka-zdrowotna",
+    "vat",
+    "ceidg",
+    "pit-38",
+    "investments",
+    "stocks",
+    "polish-tax",
+    "tax-reporting",
+    "invoices",
+    "ksef",
+    "faktury",
+    "jpk-v7",
+    "mpp"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Businesspowers Poland",
+    "shortDescription": "Polish JDG and individual tax workflows",
+    "longDescription": "Businesspowers Poland provides skills and agent prompts for JDG registration, tax-form selection, PIT, ZUS, health contribution, VAT, reporting, closure, PIT-38 investments, invoices, KSeF, bank statements, and JPK_V7 reconciliation. Codex plugin ID: business-pl; Claude Code keeps pl.",
+    "developerName": "crankshift",
+    "category": "Business",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/crankshift/businesspowers",
+    "privacyPolicyURL": "https://github.com/crankshift",
+    "termsOfServiceURL": "https://github.com/crankshift",
+    "defaultPrompt": [
+      "Help me compare Polish JDG tax forms.",
+      "Calculate JDG PIT, ZUS, and VAT.",
+      "Review a Polish invoice workflow."
+    ],
+    "brandColor": "#DC2626",
+    "screenshots": []
+  }
+}

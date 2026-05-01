@@ -1,0 +1,56 @@
+{
+  "name": "business-ua",
+  "version": "0.4.2",
+  "description": "Businesspowers Ukraine — Codex support for Ukrainian FOP and individual-tax workflows. Codex plugin ID: business-ua. Claude Code keeps the ua plugin ID.",
+  "author": {
+    "name": "crankshift"
+  },
+  "homepage": "https://github.com/crankshift/businesspowers",
+  "repository": "https://github.com/crankshift/businesspowers",
+  "license": "MIT",
+  "keywords": [
+    "ukraine",
+    "fop",
+    "private-entrepreneur",
+    "taxes",
+    "tax-calculator",
+    "edynyi-podatok",
+    "esv",
+    "pdfo",
+    "military-zbir",
+    "diia",
+    "podatkova",
+    "investments",
+    "stocks",
+    "ibkr",
+    "ukrainian-tax",
+    "tax-reporting",
+    "foreign-income",
+    "invoices",
+    "invoicing",
+    "bank-statements"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Businesspowers Ukraine",
+    "shortDescription": "Ukrainian FOP and individual tax workflows",
+    "longDescription": "Businesspowers Ukraine provides skills and agent prompts for Ukrainian FOP registration, tax-form selection, single tax, ESV, personal income tax, military levy, reporting, closure, investment income, invoices, acts, and bank-statement workflows. Codex plugin ID: business-ua; Claude Code keeps ua.",
+    "developerName": "crankshift",
+    "category": "Business",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/crankshift/businesspowers",
+    "privacyPolicyURL": "https://github.com/crankshift",
+    "termsOfServiceURL": "https://github.com/crankshift",
+    "defaultPrompt": [
+      "Help me calculate Ukrainian FOP taxes.",
+      "Plan a FOP registration workflow.",
+      "Review a Ukrainian tax filing draft."
+    ],
+    "brandColor": "#1D4ED8",
+    "screenshots": []
+  }
+}
