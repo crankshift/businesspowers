@@ -4,6 +4,18 @@
 
 ---
 
+## [0.4.2] — 2026-05-01
+
+### Додано
+
+- Згенеровані Codex custom-agent TOML файли у `.codex/agents/` для всіх Claude агентів плагіна.
+- Скрипти `scripts/convert-agents-to-codex.py` і `scripts/validate-codex-agents.py` для синхронізації агентів Claude/Codex.
+
+### Змінено
+
+- README, `AGENTS.md` і `CLAUDE.md` уточнюють, що `agents/*.md` лишаються джерелом істини, а Codex агенти генеруються з них.
+- `plugin.json`: версія 0.4.1 → 0.4.2.
+
 ## [0.4.1] — 2026-05-01
 
 ### Додано
@@ -109,3 +121,4 @@
 [0.2.0]: https://github.com/crankshift/businesspowers/releases/tag/ua/v0.2.0
 [0.1.0]: https://github.com/crankshift/businesspowers/releases/tag/ua/v0.1.0
 [0.4.1]: https://github.com/crankshift/businesspowers/releases/tag/ua/v0.4.1
+[0.4.2]: https://github.com/crankshift/businesspowers/releases/tag/ua/v0.4.2

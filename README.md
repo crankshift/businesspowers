@@ -157,6 +157,14 @@ codex plugin marketplace upgrade businesspowers
 
 Codex reads repo and plugin guidance from `AGENTS.md`; Claude Code reads `CLAUDE.md`. Keep both in sync when changing behavior.
 
+Codex agent compatibility: this repo commits generated custom-agent files under `plugins/*/.codex/agents/`. They are generated from the Claude `agents/*.md` source files; after changing agents, run:
+
+```bash
+python3 scripts/convert-agents-to-codex.py
+python3 scripts/validate-codex-agents.py
+```
+
+
 ## Landing page
 
 The public landing lives at [`site/`](./site/) and is deployed to **https://businesspowers.web.app/**. It is a static Astro site (not a plugin) built on the [powers-landing-shell](https://github.com/crankshift/powers-landing-shell) package — multilingual (EN / UA / PL), SEO-first, deployed to Firebase Hosting independently of plugin releases.

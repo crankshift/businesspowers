@@ -1,6 +1,6 @@
 {
   "name": "business-ua",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Businesspowers Ukraine — Codex support for Ukrainian FOP and individual-tax workflows. Codex plugin ID: business-ua. Claude Code keeps the ua plugin ID.",
   "author": {
     "name": "crankshift"

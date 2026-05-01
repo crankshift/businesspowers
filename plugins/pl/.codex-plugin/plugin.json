@@ -1,6 +1,6 @@
 {
   "name": "business-pl",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Businesspowers Poland — Codex support for Polish JDG and individual-tax workflows. Codex plugin ID: business-pl. Claude Code keeps the pl plugin ID.",
   "author": {
     "name": "crankshift"
