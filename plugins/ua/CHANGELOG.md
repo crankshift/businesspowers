@@ -4,6 +4,18 @@
 
 ---
 
+## [0.4.1] — 2026-05-01
+
+### Додано
+
+- Підтримку Codex: `.agents/plugins/marketplace.json`, `.codex-plugin/plugin.json` з ID `business-ua`, та інструкції `AGENTS.md`.
+- README-інструкції для встановлення в Codex без зміни існуючого Claude Code ID `ua`.
+
+### Змінено
+
+- `CLAUDE.md` оновлено правилами синхронізації Claude/Codex артефактів.
+- `plugin.json`: версія 0.4.0 → 0.4.1.
+
 ## [0.4.0] — 2026-04-26
 
 ### Додано
@@ -96,3 +108,4 @@
 [0.3.0]: https://github.com/crankshift/businesspowers/releases/tag/ua/v0.3.0
 [0.2.0]: https://github.com/crankshift/businesspowers/releases/tag/ua/v0.2.0
 [0.1.0]: https://github.com/crankshift/businesspowers/releases/tag/ua/v0.1.0
+[0.4.1]: https://github.com/crankshift/businesspowers/releases/tag/ua/v0.4.1

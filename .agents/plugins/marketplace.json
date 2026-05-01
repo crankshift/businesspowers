@@ -1,0 +1,32 @@
+{
+  "name": "businesspowers",
+  "interface": {
+    "displayName": "Businesspowers"
+  },
+  "plugins": [
+    {
+      "name": "business-ua",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ua"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Business"
+    },
+    {
+      "name": "business-pl",
+      "source": {
+        "source": "local",
+        "path": "./plugins/pl"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Business"
+    }
+  ]
+}

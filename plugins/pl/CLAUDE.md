@@ -46,3 +46,7 @@ Opis każdego agenta i skilla jest ładowany automatycznie z frontmatteru. Pełn
 
 - Pliki agentów/skillów — bez prefiksu (`jdg-registrator.md`, `skills/calculating-ryczalt/SKILL.md`). Prefiks `pl:` dodawany automatycznie z `name` w `plugin.json`.
 - W dokumentacji — odwołania przez wywołanie (`pl:jdg-registrator`), aby użytkownik widział dokładną komendę.
+
+## Codex support
+
+This plugin also has Codex support. Keep `AGENTS.md` and `.codex-plugin/plugin.json` in sync with this Claude-facing file and `.claude-plugin/plugin.json` when user-visible behavior changes. Claude Code continues to use the existing Claude plugin ID; Codex may use a collision-safe ID documented in `AGENTS.md`.

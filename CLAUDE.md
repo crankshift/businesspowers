@@ -1,6 +1,6 @@
 # businesspowers — monorepo
 
-Monorepo of jurisdiction-specific business & tax plugins for **Claude Code**. One marketplace (`businesspowers`) hosts several plugins; each plugin wraps subagents and skills for running a sole-trader business and handling individual taxes in a single legal system.
+Monorepo of jurisdiction-specific business & tax plugins for **Claude Code and Codex**. One marketplace (`businesspowers`) hosts several plugins; each plugin wraps subagents and skills for running a sole-trader business and handling individual taxes in a single legal system.
 
 | Plugin | Jurisdiction | Scope | Command prefix | Working language | Documentation |
 |---|---|---|---|---|---|
@@ -97,3 +97,13 @@ The repo ships a static marketing landing alongside the plugins. It lives in [`s
 - **Editorial rules the site inherits:** same disclaimer discipline as the plugins (not tax or accounting advice, human review mandatory), same jurisdiction separation (no UA/PL mixing in one component), same no-fabrication rule (if it's not in `plugins/`, it's not on the landing).
 
 Full contributor rules in [`site/CLAUDE.md`](./site/CLAUDE.md).
+
+## Codex support
+
+This repository also ships Codex plugin metadata. Keep Claude and Codex surfaces in sync when changing plugin structure.
+
+- Claude marketplace: `.claude-plugin/marketplace.json`; Codex marketplace: `.agents/plugins/marketplace.json`.
+- Claude plugin manifests stay in `plugins/*/.claude-plugin/plugin.json`; Codex plugin manifests stay in `plugins/*/.codex-plugin/plugin.json`.
+- Claude contributor instructions live in `CLAUDE.md`; Codex contributor instructions live in `AGENTS.md`.
+- Claude plugin IDs remain `ua` and `pl`; Codex plugin IDs are `business-ua` and `business-pl` to avoid collisions with `lawpowers`.
+- When adding a plugin, agent, skill, or public install instruction, update README, CLAUDE.md, AGENTS.md, and both manifest families as applicable.

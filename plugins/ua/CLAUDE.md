@@ -43,3 +43,7 @@
 
 - Файли агентів/скілів — без префікса (`fop-registrator.md`, `skills/calculating-edynyi-podatok/SKILL.md`). Префікс `ua:` додається автоматично з `name` у `plugin.json`.
 - У документації — посилатися на агентів через виклик (`ua:fop-registrator`), щоб користувач бачив точну команду.
+
+## Codex support
+
+This plugin also has Codex support. Keep `AGENTS.md` and `.codex-plugin/plugin.json` in sync with this Claude-facing file and `.claude-plugin/plugin.json` when user-visible behavior changes. Claude Code continues to use the existing Claude plugin ID; Codex may use a collision-safe ID documented in `AGENTS.md`.

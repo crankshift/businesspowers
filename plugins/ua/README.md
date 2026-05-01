@@ -1,6 +1,6 @@
 # businesspowers / ua
 
-Плагін `ua` монорепо `businesspowers` — колекція субагентів і скілів для Claude Code на підтримку **ведення ФОП** (фізичної особи-підприємця) та **податкових питань фізичної особи** в Україні.
+Плагін `ua` монорепо `businesspowers` — колекція субагентів і скілів для Claude Code і Codex на підтримку **ведення ФОП** (фізичної особи-підприємця) та **податкових питань фізичної особи** в Україні.
 
 > ⚠️ **Не є податковою консультацією.** Інструмент допомагає орієнтуватись у процедурах, ставках і звітності, але остаточні розрахунки і подання мають пройти через бухгалтера або податкового консультанта (або, принаймні, через звірку з актуальним текстом Податкового кодексу та кабінетом платника на tax.gov.ua).
 
@@ -34,6 +34,25 @@
 ```
 
 Мають з'явитись `ua:fop-registrator`, `ua:tax-system-advisor`, `ua:fop-tax-calculator` і т.д.
+
+## Встановлення в Codex
+
+Codex ID цього плагіна: `business-ua`. Claude Code ID лишається `ua`.
+
+З marketplace GitHub:
+
+```bash
+codex plugin marketplace add crankshift/businesspowers
+```
+
+Локально з checkout репозиторію:
+
+```bash
+cd /path/to/businesspowers
+codex plugin marketplace add .
+```
+
+Після додавання marketplace увімкніть `business-ua` у Codex plugin UI / marketplace flow. Codex читає інструкції з `AGENTS.md`; Claude Code читає `CLAUDE.md`.
 
 ## Каталог агентів
 

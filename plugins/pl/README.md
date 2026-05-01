@@ -1,6 +1,6 @@
 # businesspowers / pl
 
-Plugin `pl` monorepo `businesspowers` — zestaw subagentów i skillów Claude Code do obsługi **Jednoosobowej Działalności Gospodarczej (JDG)** oraz **spraw podatkowych osoby fizycznej** w Polsce.
+Plugin `pl` monorepo `businesspowers` — zestaw subagentów i skillów Claude Code i Codex do obsługi **Jednoosobowej Działalności Gospodarczej (JDG)** oraz **spraw podatkowych osoby fizycznej** w Polsce.
 
 > ⚠️ **Nie jest to porada podatkowa.** Narzędzie pomaga w orientacji w procedurach, stawkach i sprawozdawczości, ale ostateczne wyliczenia i deklaracje powinny być zweryfikowane przez księgowego lub doradcę podatkowego (lub co najmniej przeciwko aktualnej treści ustawy o PIT / VAT / ZUS i własnemu kontu w e-Urzędzie Skarbowym na podatki.gov.pl).
 
@@ -34,6 +34,25 @@ Weryfikacja:
 ```
 
 Powinno się pojawić `pl:jdg-registrator`, `pl:tax-form-advisor`, `pl:jdg-tax-calculator` itd.
+
+## Instalacja w Codex
+
+Codex ID tego plagina: `business-pl`. Claude Code ID pozostaje `pl`.
+
+Z marketplace GitHub:
+
+```bash
+codex plugin marketplace add crankshift/businesspowers
+```
+
+Lokalnie z checkoutu repozytorium:
+
+```bash
+cd /path/to/businesspowers
+codex plugin marketplace add .
+```
+
+Po dodaniu marketplace'u włącz `business-pl` w Codex plugin UI / marketplace flow. Codex czyta instrukcje z `AGENTS.md`; Claude Code czyta `CLAUDE.md`.
 
 ## Katalog agentów
 

@@ -9,6 +9,12 @@ This root file is an **index + monorepo-level structural log** only. It's not ve
 
 ---
 
+### 2026-05-01 — Codex support
+
+- `ua` bumped to `0.4.1`: Codex marketplace/manifest support, `AGENTS.md`, and Codex install docs.
+- `pl` bumped to `0.4.1`: same Codex support.
+- Marketplace `metadata.version` bumped to `0.4.1`.
+
 ### 2026-04-26 — Token usage optimization
 
 - `ua` bumped to `0.3.0`: agent descriptions trimmed to 250–350 chars, skill descriptions to 150–250 chars; `CLAUDE.md` deduplicated.
