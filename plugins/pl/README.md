@@ -133,8 +133,8 @@ Skille uruchamiają się automatycznie z kontekstu. Kanoniczne źródła są w `
 | Skill | Kiedy się włącza |
 |---|---|
 | `business-pl-reporting-deadlines-pl` | Kalendarz: JPK_V7M (25-go), zaliczki PIT (20-go lub kwartalnie), PIT-36 (30 kwietnia), PIT-36L (30 kwietnia), PIT-28 (30 kwietnia od 2023), PIT-11 (31 stycznia), deklaracje ZUS (10-go / 15-go / 20-go). |
-| `business-pl-filling-pit-36-liniowy` | Struktura PIT-36L (dla liniowego): dochód, składki ZUS odliczone, składka zdrowotna odliczona do limitu, zaliczki, podatek do zapłaty. |
-| `business-pl-filling-jpk-v7` | JPK_V7M (miesięczny) / JPK_V7K (kwartalny): ewidencja sprzedaży i zakupów, sekcje deklaracyjne, kody GTU, oznaczenia SW, EE, TP. |
+| `business-pl-calculating-pit-liniowy` | PIT liniowy 19% i struktura rozliczenia PIT-36L: dochód, składki ZUS odliczone, składka zdrowotna odliczona do limitu, zaliczki, podatek do zapłaty. |
+| `business-pl-reconciling-invoices-with-jpk-v7` | JPK_V7M (miesięczny) / JPK_V7K (kwartalny): uzgodnienie ewidencji sprzedaży i zakupów, sekcje deklaracyjne, kody GTU, oznaczenia SW, EE, TP. |
 
 ### Inwestycje i zyski kapitałowe
 
