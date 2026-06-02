@@ -113,6 +113,7 @@ def require_prefixed_canonical_sources(jurisdiction: str) -> None:
 
 
 def require_no_bare_same_jurisdiction_names(text: str, generated: Path, jurisdiction: str, plugin_name: str) -> None:
+    text = re.sub(rf"lawpowers:{re.escape(jurisdiction)}:[A-Za-z0-9_-]+", "", text)
     stale_reference = re.search(rf"(?<!lawpowers:)\b{re.escape(jurisdiction)}:[A-Za-z0-9_-]+", text)
     if stale_reference:
         fail(f"{rel(generated)} contains stale same-jurisdiction reference {stale_reference.group(0)!r}")

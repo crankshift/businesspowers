@@ -172,6 +172,7 @@ def require_prefixed_canonical_sources(jurisdiction: str) -> None:
 
 
 def require_no_bare_same_jurisdiction_names(text: str, generated: Path, jurisdiction: str, plugin_name: str) -> None:
+    text = re.sub(rf"lawpowers:{re.escape(jurisdiction)}:[A-Za-z0-9_-]+", "", text)
     stale_reference = re.search(rf"(?<!lawpowers:)\b{re.escape(jurisdiction)}:[A-Za-z0-9_-]+", text)
     if stale_reference:
         fail(f"{rel(generated)} contains stale same-jurisdiction reference {stale_reference.group(0)!r}")
@@ -786,7 +787,26 @@ def prefixed_name(plugin_name: str, source_name: str) -> str:
     return source_name if source_name.startswith(f"{plugin_name}-") else f"{plugin_name}-{source_name}"
 
 
+def protect_external_references(text: str, jurisdiction: str) -> tuple[str, dict[str, str]]:
+    protected: dict[str, str] = {}
+
+    def replace(match: re.Match[str]) -> str:
+        token = f"__LAWPOWERS_EXTERNAL_REF_{len(protected)}__"
+        protected[token] = match.group(0)
+        return token
+
+    pattern = rf"lawpowers:{re.escape(jurisdiction)}:[A-Za-z0-9_-]+"
+    return re.sub(pattern, replace, text), protected
+
+
+def restore_external_references(text: str, protected: dict[str, str]) -> str:
+    for token, original in protected.items():
+        text = text.replace(token, original)
+    return text
+
+
 def rewrite_body_references(body: str, jurisdiction: str, plugin_name: str, same_jurisdiction_names: set[str]) -> str:
+    body, protected = protect_external_references(body, jurisdiction)
     body = re.sub(rf"(?<!lawpowers:)\b{re.escape(jurisdiction)}:(?!{re.escape(plugin_name)}-)([A-Za-z0-9_-]+)", rf"{plugin_name}-\1", body)
     body = re.sub(
         rf"\.\./\.\./skills/{re.escape(jurisdiction)}/(?:{re.escape(plugin_name)}-)?([A-Za-z0-9_-]+)/SKILL\.md",
@@ -800,7 +820,7 @@ def rewrite_body_references(body: str, jurisdiction: str, plugin_name: str, same
             f"{plugin_name}-{name}",
             body,
         )
-    return body
+    return restore_external_references(body, protected)
 
 
 def render_agent(source: Path, jurisdiction: str, plugin_name: str, same_jurisdiction_names: set[str]) -> tuple[str, str]:
