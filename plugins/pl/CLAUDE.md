@@ -2,7 +2,7 @@
 
 Przestrzeń robocza do obsługi Jednoosobowej Działalności Gospodarczej (JDG) oraz spraw podatkowych osoby fizycznej w Polsce. Plugin zawiera wyspecjalizowanych subagentów pod konkretne zadania i skille do kalkulacji, wyboru form, sprawozdawczości oraz odniesień do pierwotnych źródeł.
 
-Plugin `pl` wchodzi w skład monorepo `businesspowers` (`crankshift/businesspowers`). Komendy w Claude Code otrzymują prefiks `/pl:…` (np. `/pl:jdg-registrator`). Równolegle w tym samym marketplace istnieje plugin `ua` (Ukraina, ФОП), z którym plugin `pl` się nie krzyżuje.
+Plugin `pl` wchodzi w skład monorepo `businesspowers` (`crankshift/businesspowers`). Komendy w Claude Code otrzymują prefiks `/pl:…` (np. `/pl:business-pl-jdg-registrator`). Równolegle w tym samym marketplace istnieje plugin `ua` (Ukraina, ФОП), z którym plugin `pl` się nie krzyżuje.
 
 ## Język komunikacji
 
@@ -12,7 +12,7 @@ Plugin `pl` wchodzi w skład monorepo `businesspowers` (`crankshift/businesspowe
 
 ## Agenci i skille
 
-Opis każdego agenta i skilla jest ładowany automatycznie z frontmatteru. Pełna lista — `agents/*.md` i `skills/*/SKILL.md`. Agenci dzielą się na blok **JDG** (cykl życia działalności) i blok **osoba fizyczna** (dochody poza działalnością — inwestycje, spadki, krypto).
+Opis każdego agenta i skilla jest ładowany automatycznie z frontmatteru. Kanoniczna lista — `agents/pl/business-pl-*.md` i `skills/pl/business-pl-*/SKILL.md` w katalogu głównym repozytorium. `plugins/pl/agents` i `plugins/pl/skills` są wygenerowanymi adapterami Claude Code. Agenci dzielą się na blok **JDG** (cykl życia działalności) i blok **osoba fizyczna** (dochody poza działalnością — inwestycje, spadki, krypto).
 
 ## Kluczowe zasoby
 
@@ -44,11 +44,23 @@ Opis każdego agenta i skilla jest ładowany automatycznie z frontmatteru. Pełn
 
 ## Zasady nazewnictwa
 
-- Pliki agentów/skillów — bez prefiksu (`jdg-registrator.md`, `skills/calculating-ryczalt/SKILL.md`). Prefiks `pl:` dodawany automatycznie z `name` w `plugin.json`.
-- W dokumentacji — odwołania przez wywołanie (`pl:jdg-registrator`), aby użytkownik widział dokładną komendę.
+- Kanoniczne pliki agentów/skillów mają prefiks `business-pl-*`: `agents/pl/business-pl-jdg-registrator.md`, `skills/pl/business-pl-calculating-ryczalt/SKILL.md`.
+- Wygenerowane adaptery znajdują się w `plugins/pl/agents`, `plugins/pl/skills` i `plugins/pl/.codex/agents`.
+- W dokumentacji — odwołania przez wywołanie (`pl:business-pl-jdg-registrator`), aby użytkownik widział dokładną komendę.
 
 ## Codex support
 
 This plugin also has Codex support. Keep `AGENTS.md` and `.codex-plugin/plugin.json` in sync with this Claude-facing file and `.claude-plugin/plugin.json` when user-visible behavior changes. Claude Code continues to use the existing Claude plugin ID; Codex may use a collision-safe ID documented in `AGENTS.md`.
 
-Codex custom-agent files are generated into `.codex/agents/*.toml` from the Claude `agents/*.md` files. Keep `agents/*.md` authoritative, run `python3 scripts/convert-agents-to-codex.py` after agent edits, and verify with `python3 scripts/validate-codex-agents.py`. Do not hand-maintain generated TOML unless the converter is updated too. Current Codex plugin manifests do not declare agents directly; `.codex/agents/` is the compatibility/import layer.
+Codex custom-agent files are generated into `.codex/agents/*.toml` from root canonical `agents/pl/business-pl-*.md` files. Keep root canonical files authoritative. Do not hand-maintain generated TOML unless the converter is updated too. Current Codex plugin manifests do not declare agents directly; `.codex/agents/` is the compatibility/import layer.
+
+## Platform adapter verification
+
+Run these from the repo root after editing agents, skills, or platform adapter support:
+
+```bash
+python3 scripts/generate-claude-plugin-files.py
+python3 scripts/convert-agents-to-codex.py
+python3 scripts/validate-codex-agents.py
+python3 scripts/validate-platform-adapters.py
+```

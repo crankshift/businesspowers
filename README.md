@@ -1,6 +1,6 @@
 # businesspowers
 
-A collection of jurisdiction-specific business & tax plugins for **Claude Code and Codex**. Each plugin wraps a set of subagents and skills tuned to one country's tax system, registration procedures, reporting requirements, and the day-to-day headaches of running as a sole trader or declaring taxes as an individual.
+A collection of jurisdiction-specific business & tax plugins for **Claude Code, Codex, and OpenCode**. Each plugin wraps a set of subagents and skills tuned to one country's tax system, registration procedures, reporting requirements, and the day-to-day headaches of running as a sole trader or declaring taxes as an individual.
 
 Monorepo structure — install only the jurisdictions you need.
 
@@ -14,6 +14,20 @@ Monorepo structure — install only the jurisdictions you need.
 | [`pl`](./plugins/pl) | Poland | JDG (sole proprietorship) + osoba fizyczna (individual taxes, PIT-38 capital gains) | `/pl:…` | [`pl/README.md`](./plugins/pl/README.md) | Polish |
 
 Each plugin's README covers the agents and skills it provides. The plugins are independent — installing one doesn't pull in the other.
+
+## Canonical source layout
+
+Businesspowers keeps behavior in root canonical files and generates platform adapters from them.
+
+| Path | Purpose |
+|---|---|
+| `agents/ua`, `skills/ua` | Ukrainian ФОП and individual-tax agents and skills. |
+| `agents/pl`, `skills/pl` | Polish JDG and individual-tax agents and skills. |
+| `plugins/*/agents`, `plugins/*/skills` | Generated Claude Code plugin adapters. |
+| `plugins/*/.codex/agents` | Generated Codex custom-agent shims. |
+| `package.json`, `.opencode/plugins/businesspowers.js` | OpenCode package plugin and root skill/agent loader. |
+
+Canonical root names use `business-ua-*` and `business-pl-*`. Claude Code adds the jurisdiction namespace at runtime, so visible examples look like `ua:business-ua-fop-registrator` and `pl:business-pl-jdg-tax-calculator`.
 
 ## What it covers
 
@@ -63,7 +77,7 @@ Then in the running session:
 /reload-plugins
 ```
 
-Agents and skills become available under the `ua:` namespace — e.g. `ua:fop-registrator`, `ua:tax-system-advisor`, `ua:calculating-edynyi-podatok`, `ua:declaring-investments`.
+Agents and skills become available under the `ua:` namespace — e.g. `ua:business-ua-fop-registrator`, `ua:business-ua-tax-system-advisor`, `ua:business-ua-calculating-edynyi-podatok`, `ua:business-ua-declaring-investments`.
 
 See [`ua/README.md`](./plugins/ua/README.md) for the full catalog.
 
@@ -74,7 +88,7 @@ See [`ua/README.md`](./plugins/ua/README.md) for the full catalog.
 /reload-plugins
 ```
 
-Agents and skills under the `pl:` namespace — e.g. `pl:jdg-registrator`, `pl:tax-form-advisor`, `pl:calculating-ryczalt`, `pl:kapitalowe-investments-agent`.
+Agents and skills under the `pl:` namespace — e.g. `pl:business-pl-jdg-registrator`, `pl:business-pl-tax-form-advisor`, `pl:business-pl-calculating-ryczalt`, `pl:business-pl-kapitalowe-investments-agent`.
 
 See [`pl/README.md`](./plugins/pl/README.md) for the full catalog.
 
@@ -106,7 +120,7 @@ claude --plugin-dir ./plugins/ua
 
 - `/plugin` → **Installed** tab — lists the plugins you've added.
 - `/agents` — subagents show up with the `ua:` and/or `pl:` prefix.
-- Skills trigger automatically on context (mentioning «єдиний податок» triggers `ua:calculating-edynyi-podatok`; mentioning «ryczałt» triggers `pl:calculating-ryczalt`).
+- Skills trigger automatically on context (mentioning «єдиний податок» triggers `ua:business-ua-calculating-edynyi-podatok`; mentioning «ryczałt» triggers `pl:business-pl-calculating-ryczalt`).
 
 ### Updating
 
@@ -157,11 +171,42 @@ codex plugin marketplace upgrade businesspowers
 
 Codex reads repo and plugin guidance from `AGENTS.md`; Claude Code reads `CLAUDE.md`. Keep both in sync when changing behavior.
 
-Codex agent compatibility: this repo commits generated custom-agent files under `plugins/*/.codex/agents/`. They are generated from the Claude `agents/*.md` source files; after changing agents, run:
+Codex agent compatibility: this repo commits generated custom-agent files under `plugins/*/.codex/agents/`. They are generated from root canonical `agents/<jurisdiction>/business-*.md` files.
+
+## Install in OpenCode
+
+Add the package plugin to your OpenCode config:
+
+```json
+{
+  "plugin": ["businesspowers@git+https://github.com/crankshift/businesspowers.git"]
+}
+```
+
+For local development from a checkout:
+
+```json
+{
+  "plugin": ["file:///path/to/businesspowers"]
+}
+```
+
+OpenCode loads root canonical agents and skills through `.opencode/plugins/businesspowers.js`.
+
+| Jurisdiction | Name prefix | Example agent | Example skill |
+|---|---|---|---|
+| Ukraine | `business-ua-*` | `business-ua-fop-tax-calculator` | `business-ua-calculating-edynyi-podatok` |
+| Poland | `business-pl-*` | `business-pl-jdg-tax-calculator` | `business-pl-calculating-ryczalt` |
+
+## Adapter verification
+
+After changing canonical agents, skills, or platform adapters, run:
 
 ```bash
+python3 scripts/generate-claude-plugin-files.py
 python3 scripts/convert-agents-to-codex.py
 python3 scripts/validate-codex-agents.py
+python3 scripts/validate-platform-adapters.py
 ```
 
 
@@ -197,11 +242,11 @@ All plugins in this monorepo follow the same working principles:
 
 Adding a plugin for a new jurisdiction (e.g. `de`, `cz`, `lt`, `ge`):
 
-1. Create `./plugins/xx/` alongside the existing ones. Short ISO-style code.
-2. Lay out the directory: `xx/README.md`, `xx/CLAUDE.md`, `xx/AGENTS.md`, `xx/CHANGELOG.md`, `xx/.claude-plugin/plugin.json`, `xx/.codex-plugin/plugin.json`, `xx/agents/`, `xx/skills/`.
+1. Create canonical root folders `agents/xx/` and `skills/xx/`, plus `./plugins/xx/` alongside the existing plugin folders. Use a short ISO-style code.
+2. Lay out the plugin directory: `xx/README.md`, `xx/CLAUDE.md`, `xx/AGENTS.md`, `xx/CHANGELOG.md`, `xx/.claude-plugin/plugin.json`, `xx/.codex-plugin/plugin.json`, generated `xx/agents/`, generated `xx/skills/`, and generated `xx/.codex/agents/`.
 3. Register it in both marketplace catalogs: `.claude-plugin/marketplace.json` with `"source": "./plugins/xx"`, and `.agents/plugins/marketplace.json` with the collision-safe Codex plugin ID.
 4. Add a CHANGELOG entry and bump `metadata.version` in the marketplace manifest.
-5. Run `python3 scripts/convert-agents-to-codex.py` and `python3 scripts/validate-codex-agents.py` to generate and validate Codex agent shims.
+5. Run the adapter verification commands above to generate Claude adapters, generate Codex agent shims, and validate all platform adapters.
 6. Open a PR, merge, then tag a release.
 
 See [`CLAUDE.md`](./CLAUDE.md) for Claude Code contributor guidelines and [`AGENTS.md`](./AGENTS.md) for Codex contributor guidelines.

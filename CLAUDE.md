@@ -1,6 +1,6 @@
 # businesspowers — monorepo
 
-Monorepo of jurisdiction-specific business & tax plugins for **Claude Code and Codex**. One marketplace (`businesspowers`) hosts several plugins; each plugin wraps subagents and skills for running a sole-trader business and handling individual taxes in a single legal system.
+Monorepo of jurisdiction-specific business & tax plugins for **Claude Code, Codex, and OpenCode**. One marketplace (`businesspowers`) hosts several plugins; each plugin wraps subagents and skills for running a sole-trader business and handling individual taxes in a single legal system.
 
 | Plugin | Jurisdiction | Scope | Command prefix | Working language | Documentation |
 |---|---|---|---|---|---|
@@ -25,10 +25,22 @@ businesspowers/                     # GitHub: crankshift/businesspowers
 ├── .agents/
 │   └── plugins/
 │       └── marketplace.json        # Codex marketplace catalog (business-ua, business-pl)
+├── .opencode/
+│   └── plugins/
+│       └── businesspowers.js       # OpenCode plugin loading root canonical agents/skills
+├── package.json                    # OpenCode package plugin metadata
+├── agents/
+│   ├── ua/business-ua-*.md         # canonical Ukrainian agents
+│   └── pl/business-pl-*.md         # canonical Polish agents
+├── skills/
+│   ├── ua/business-ua-*/SKILL.md   # canonical Ukrainian skills
+│   └── pl/business-pl-*/SKILL.md   # canonical Polish skills
 ├── scripts/
 │   ├── release.sh                  # release helper (bump, prepare, publish)
-│   ├── convert-agents-to-codex.py  # generates .codex/agents/*.toml from Claude agents/*.md
-│   └── validate-codex-agents.py    # validates generated Codex agent TOML files
+│   ├── generate-claude-plugin-files.py # generates Claude plugin adapters from root sources
+│   ├── convert-agents-to-codex.py  # generates .codex/agents/*.toml from root canonical agents
+│   ├── validate-codex-agents.py    # validates generated Codex agent TOML files
+│   └── validate-platform-adapters.py # validates generated platform adapter parity
 ├── plugins/                        # all jurisdiction plugins live here
 │   ├── ua/                         # plugin "ua" — Ukrainian ФОП + фізособа
 │   │   ├── README.md               # user-facing, Ukrainian
@@ -37,9 +49,9 @@ businesspowers/                     # GitHub: crankshift/businesspowers
 │   │   ├── CHANGELOG.md            # plugin-level change log, Ukrainian
 │   │   ├── .claude-plugin/plugin.json  # Claude Code manifest; name: "ua"
 │   │   ├── .codex-plugin/plugin.json   # Codex manifest; name: "business-ua"
-│   │   ├── .codex/agents/*.toml    # generated Codex custom-agent shims (from agents/*.md)
-│   │   ├── agents/                 # source agent definitions (Claude + Codex source of truth)
-│   │   └── skills/                 # skill definitions (shared by Claude Code and Codex)
+│   │   ├── .codex/agents/*.toml    # generated Codex custom-agent shims
+│   │   ├── agents/                 # generated Claude Code agent adapters
+│   │   └── skills/                 # generated Claude Code skill adapters
 │   └── pl/                         # plugin "pl" — Polish JDG + osoba fizyczna
 │       ├── README.md               # user-facing, Polish
 │       ├── CLAUDE.md               # Claude Code contributor context for the PL plugin
@@ -47,9 +59,9 @@ businesspowers/                     # GitHub: crankshift/businesspowers
 │       ├── CHANGELOG.md            # plugin-level change log, Polish
 │       ├── .claude-plugin/plugin.json  # Claude Code manifest; name: "pl"
 │       ├── .codex-plugin/plugin.json   # Codex manifest; name: "business-pl"
-│       ├── .codex/agents/*.toml    # generated Codex custom-agent shims (from agents/*.md)
-│       ├── agents/                 # source agent definitions (Claude + Codex source of truth)
-│       └── skills/                 # skill definitions (shared by Claude Code and Codex)
+│       ├── .codex/agents/*.toml    # generated Codex custom-agent shims
+│       ├── agents/                 # generated Claude Code agent adapters
+│       └── skills/                 # generated Claude Code skill adapters
 └── site/                           # public landing page (static Astro site, not a plugin)
     ├── README.md                   # site quick-start, deploy flow
     ├── CLAUDE.md                   # site contributor context
@@ -69,7 +81,8 @@ businesspowers/                     # GitHub: crankshift/businesspowers
 
 - **One jurisdiction = one plugin.** Don't mix UA and PL tax logic inside the same agent or skill — each plugin stays self-contained. A person who needs both installs both.
 - **Plugin language matches jurisdiction.** Agents, skills, templates, and plugin-level docs (`README.md`, `CLAUDE.md`, `CHANGELOG.md`) for `ua` are in Ukrainian; for `pl` in Polish. Root-level documentation (at the repo root) is in English for broad accessibility.
-- **Command prefixes come from plugin names.** `name` in `plugin.json` becomes the namespace — `/ua:…`, `/pl:…`. Agent and skill file names inside the plugin don't need a prefix; Claude Code adds it automatically.
+- **Canonical names are prefixed.** Top-level canonical files use `business-ua-*` and `business-pl-*`. Generated adapters live under `plugins/*/agents`, `plugins/*/skills`, and `plugins/*/.codex/agents`.
+- **Command prefixes come from plugin names.** `name` in `plugin.json` becomes the namespace — `/ua:…`, `/pl:…`. Claude Code adds that namespace to generated adapter names at runtime.
 - **Shared license.** MIT, applied at the repo root.
 - **Independent plugin versions.** Each plugin carries its own `version` in its `plugin.json` (and mirrored in the marketplace entry). The marketplace catalog itself has a separate version in `marketplace.json:metadata.version`.
 - **Releases are per-plugin, never monorepo-level.** Each plugin gets its own GitHub release with a prefixed tag: `ua/v0.3.0`, `pl/v0.3.0`. Release notes are in the plugin's language (Ukrainian for `ua`, Polish for `pl`). Never create a single release for the whole repo. When bumping versions, update `plugin.json` in each plugin + the corresponding entry in `marketplace.json`.
@@ -121,7 +134,22 @@ This repository also ships Codex plugin metadata. Keep Claude and Codex surfaces
 - Claude contributor instructions live in `CLAUDE.md`; Codex contributor instructions live in `AGENTS.md`.
 - Claude plugin IDs remain `ua` and `pl`; Codex plugin IDs are `business-ua` and `business-pl` to avoid collisions with `lawpowers`.
 - When adding a plugin, agent, skill, or public install instruction, update README, CLAUDE.md, AGENTS.md, and both manifest families as applicable.
-- Codex custom-agent files live in `plugins/*/.codex/agents/*.toml` and are generated from Claude `agents/*.md` files.
-- After changing any agent frontmatter/body, run `python3 scripts/convert-agents-to-codex.py` and `python3 scripts/validate-codex-agents.py`.
-- Do not hand-edit generated Codex agent TOML unless you also update the converter; Claude agent files remain the source of truth.
+- Codex custom-agent files live in `plugins/*/.codex/agents/*.toml` and are generated from root canonical `agents/<jurisdiction>/business-*.md` files.
+- After changing canonical agents or skills, run the adapter verification commands below.
+- Do not hand-edit generated Codex agent TOML unless you also update the converter; root canonical agent files remain the source of truth.
 - Current Codex plugin manifests do not declare agents directly, so `.codex/agents/` is the compatibility/import layer.
+
+## OpenCode support
+
+OpenCode reads root canonical sources through `.opencode/plugins/businesspowers.js`. Keep `package.json`, the OpenCode loader, root `agents/<jurisdiction>`, and root `skills/<jurisdiction>` aligned when adding or renaming public entries.
+
+## Adapter verification
+
+Run these after editing agents, skills, or platform adapter support:
+
+```bash
+python3 scripts/generate-claude-plugin-files.py
+python3 scripts/convert-agents-to-codex.py
+python3 scripts/validate-codex-agents.py
+python3 scripts/validate-platform-adapters.py
+```

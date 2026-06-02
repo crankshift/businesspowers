@@ -2,7 +2,7 @@
 
 Робочий простір для супроводу ФОП (фізичної особи-підприємця) та податкових питань фізичної особи в Україні. Плагін містить спеціалізованих субагентів під конкретні задачі і скіли для розрахунків, вибору режимів, звітності і посилань на первинні джерела.
 
-Плагін `ua` входить у монорепо `businesspowers` (`crankshift/businesspowers`). Команди в Claude Code отримують префікс `/ua:…` (наприклад, `/ua:fop-registrator`). Паралельно в цьому ж маркетплейсі живе плагін `pl` (Польща, JDG), з яким плагін `ua` не перетинається.
+Плагін `ua` входить у монорепо `businesspowers` (`crankshift/businesspowers`). Команди в Claude Code отримують префікс `/ua:…` (наприклад, `/ua:business-ua-fop-registrator`). Паралельно в цьому ж маркетплейсі живе плагін `pl` (Польща, JDG), з яким плагін `ua` не перетинається.
 
 ## Мова спілкування
 
@@ -12,7 +12,7 @@
 
 ## Агенти та скіли
 
-Опис кожного агента та скіла завантажується автоматично з фронтматтера. Повний перелік — `agents/*.md` та `skills/*/SKILL.md`. Агенти поділяються на блок **ФОП** (життєвий цикл бізнесу) та блок **фізособа** (позабізнесові доходи — інвестиції, спадщина, крипто).
+Опис кожного агента та скіла завантажується автоматично з фронтматтера. Канонічний перелік — `agents/ua/business-ua-*.md` та `skills/ua/business-ua-*/SKILL.md` у корені репозиторію. `plugins/ua/agents` і `plugins/ua/skills` — згенеровані Claude Code адаптери. Агенти поділяються на блок **ФОП** (життєвий цикл бізнесу) та блок **фізособа** (позабізнесові доходи — інвестиції, спадщина, крипто).
 
 ## Ключові ресурси
 
@@ -41,11 +41,23 @@
 
 ## Правила найменування
 
-- Файли агентів/скілів — без префікса (`fop-registrator.md`, `skills/calculating-edynyi-podatok/SKILL.md`). Префікс `ua:` додається автоматично з `name` у `plugin.json`.
-- У документації — посилатися на агентів через виклик (`ua:fop-registrator`), щоб користувач бачив точну команду.
+- Канонічні файли агентів/скілів мають префікс `business-ua-*`: `agents/ua/business-ua-fop-registrator.md`, `skills/ua/business-ua-calculating-edynyi-podatok/SKILL.md`.
+- Згенеровані адаптери живуть у `plugins/ua/agents`, `plugins/ua/skills` і `plugins/ua/.codex/agents`.
+- У документації — посилатися на агентів через виклик (`ua:business-ua-fop-registrator`), щоб користувач бачив точну команду.
 
 ## Codex support
 
 This plugin also has Codex support. Keep `AGENTS.md` and `.codex-plugin/plugin.json` in sync with this Claude-facing file and `.claude-plugin/plugin.json` when user-visible behavior changes. Claude Code continues to use the existing Claude plugin ID; Codex may use a collision-safe ID documented in `AGENTS.md`.
 
-Codex custom-agent files are generated into `.codex/agents/*.toml` from the Claude `agents/*.md` files. Keep `agents/*.md` authoritative, run `python3 scripts/convert-agents-to-codex.py` after agent edits, and verify with `python3 scripts/validate-codex-agents.py`. Do not hand-maintain generated TOML unless the converter is updated too. Current Codex plugin manifests do not declare agents directly; `.codex/agents/` is the compatibility/import layer.
+Codex custom-agent files are generated into `.codex/agents/*.toml` from root canonical `agents/ua/business-ua-*.md` files. Keep root canonical files authoritative. Do not hand-maintain generated TOML unless the converter is updated too. Current Codex plugin manifests do not declare agents directly; `.codex/agents/` is the compatibility/import layer.
+
+## Platform adapter verification
+
+Run these from the repo root after editing agents, skills, or platform adapter support:
+
+```bash
+python3 scripts/generate-claude-plugin-files.py
+python3 scripts/convert-agents-to-codex.py
+python3 scripts/validate-codex-agents.py
+python3 scripts/validate-platform-adapters.py
+```

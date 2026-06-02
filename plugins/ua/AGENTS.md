@@ -2,7 +2,7 @@
 
 Codex plugin ID: `business-ua`. Claude Code plugin ID: `ua`.
 
-Use this plugin for Ukrainian ФОП and individual-tax workflows. The working language is Ukrainian. Keep `agents/` and `skills/` as the source of truth, and keep this Codex guide in sync with `CLAUDE.md` and `README.md`.
+Use this plugin for Ukrainian ФОП and individual-tax workflows. The working language is Ukrainian. Keep root `agents/ua` and `skills/ua` as the source of truth, and keep this Codex guide in sync with `CLAUDE.md` and `README.md`.
 
 ## Rules
 
@@ -17,7 +17,10 @@ Use this plugin for Ukrainian ФОП and individual-tax workflows. The working l
 - Codex manifest: `.codex-plugin/plugin.json`.
 - Claude manifest: `.claude-plugin/plugin.json`.
 - If agents or skills change, update both Codex and Claude docs where user-visible names or behavior changes.
-- Generated Codex agents: `.codex/agents/*.toml`; source files: `agents/*.md`.
-- After editing an agent, run `python3 scripts/convert-agents-to-codex.py` from the repo root, then `python3 scripts/validate-codex-agents.py`.
+- Canonical source files: `agents/ua/business-ua-*.md` and `skills/ua/business-ua-*/SKILL.md` in the repo root.
+- Generated Claude adapters: `plugins/ua/agents` and `plugins/ua/skills`.
+- Generated Codex agents: `plugins/ua/.codex/agents/*.toml`.
+- OpenCode reads root sources through `.opencode/plugins/businesspowers.js`.
+- After editing agents, skills, or platform adapter support, run `python3 scripts/generate-claude-plugin-files.py`, `python3 scripts/convert-agents-to-codex.py`, `python3 scripts/validate-codex-agents.py`, and `python3 scripts/validate-platform-adapters.py` from the repo root.
 - Do not add an `agents` field to `.codex-plugin/plugin.json` unless Codex schema support is confirmed.
 - Tool lists from Claude agents are carried into Codex instructions as guidance, not hard permission boundaries.
