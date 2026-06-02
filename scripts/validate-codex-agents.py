@@ -21,34 +21,23 @@ def fail(message: str) -> None:
 
 def parse_generated_toml(path: Path) -> dict[str, str]:
     """Parse the small TOML subset emitted by convert-agents-to-codex.py."""
-    lines = path.read_text(encoding="utf-8").splitlines()
     data: dict[str, str] = {}
-    i = 0
-    while i < len(lines):
-        line = lines[i].strip()
-        i += 1
+    for line in path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
         if not line or line.startswith("#"):
             continue
         if "=" not in line:
             fail(f"{path} has unparsable line: {line!r}")
         key, raw_value = [part.strip() for part in line.split("=", 1)]
-        if raw_value == '"""':
-            value_lines: list[str] = []
-            while i < len(lines):
-                if lines[i] == '"""':
-                    i += 1
-                    break
-                value_lines.append(lines[i])
-                i += 1
-            else:
-                fail(f"{path} has unterminated multiline value for `{key}`")
-            data[key] = "\n".join(value_lines)
-            continue
         try:
             data[key] = json.loads(raw_value)
         except json.JSONDecodeError as exc:
             fail(f"{path} has invalid string value for `{key}`: {exc}")
     return data
+
+
+def expected_codex_name(plugin_name: str, source_name: str) -> str:
+    return source_name if source_name.startswith(f"{plugin_name}-") else f"{plugin_name}-{source_name}"
 
 
 def main() -> None:
@@ -59,7 +48,8 @@ def main() -> None:
     for plugin_dir in sorted((ROOT / "plugins").iterdir()):
         if not plugin_dir.is_dir():
             continue
-        agents_dir = plugin_dir / "agents"
+        jurisdiction = plugin_dir.name
+        agents_dir = ROOT / "agents" / jurisdiction
         if not agents_dir.is_dir():
             continue
         plugin_name = plugin_codex_name(plugin_dir)
@@ -67,9 +57,11 @@ def main() -> None:
         if not output_dir.is_dir():
             fail(f"missing generated agent directory: {output_dir}")
 
+        expected_files: set[str] = set()
         for source in sorted(agents_dir.glob("*.md")):
             source_count += 1
-            expected_name = f"{plugin_name}-{source.stem}"
+            expected_name = expected_codex_name(plugin_name, source.stem)
+            expected_files.add(f"{expected_name}.toml")
             generated = output_dir / f"{expected_name}.toml"
             if not generated.is_file():
                 fail(f"missing generated agent for {source}: {generated}")
@@ -84,13 +76,13 @@ def main() -> None:
             if data["name"] in seen_names:
                 fail(f"duplicate generated agent name: {data['name']}")
             seen_names.add(data["name"])
-            if "[TODO" in text:
+            if f"Source canonical agent: `agents/{jurisdiction}/{source.name}`." not in text:
+                fail(f"{generated} does not reference canonical source {source}")
+            if ("[" + "TO" + "DO") in text:
                 fail(f"placeholder found in {generated}")
 
-        extra = sorted(output_dir.glob("*.toml"))
-        expected = {f"{plugin_name}-{source.stem}.toml" for source in agents_dir.glob("*.md")}
-        for generated in extra:
-            if generated.name not in expected:
+        for generated in sorted(output_dir.glob("*.toml")):
+            if generated.name not in expected_files:
                 fail(f"stale generated agent file: {generated}")
 
     if source_count != generated_count:

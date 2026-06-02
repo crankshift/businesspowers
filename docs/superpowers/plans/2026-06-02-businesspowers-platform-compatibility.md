@@ -172,7 +172,7 @@ def require_prefixed_canonical_sources(jurisdiction: str) -> None:
 
 
 def require_no_bare_same_jurisdiction_names(text: str, generated: Path, jurisdiction: str, plugin_name: str) -> None:
-    stale_reference = re.search(rf"\b{re.escape(jurisdiction)}:[A-Za-z0-9_-]+", text)
+    stale_reference = re.search(rf"(?<!lawpowers:)\b{re.escape(jurisdiction)}:[A-Za-z0-9_-]+", text)
     if stale_reference:
         fail(f"{rel(generated)} contains stale same-jurisdiction reference {stale_reference.group(0)!r}")
     for name in sorted(unprefixed_canonical_names(jurisdiction)):
@@ -543,7 +543,7 @@ Expected output:
 ```text
 Created canonical sources:
 ua: 9 agents, 20 skills
-pl: 11 agents, 21 skills
+pl: 11 agents, 22 skills
 ```
 
 - [ ] **Step 4: Run the validator again and confirm the next failure has advanced**
@@ -655,7 +655,7 @@ python3 scripts/generate-claude-plugin-files.py
 Expected output:
 
 ```text
-Generated Claude plugin files: 20 agents, 41 skills.
+Generated Claude plugin files: 20 agents, 42 skills.
 ```
 
 - [ ] **Step 3: Run the platform validator and confirm the next failure has advanced**
@@ -787,7 +787,7 @@ def prefixed_name(plugin_name: str, source_name: str) -> str:
 
 
 def rewrite_body_references(body: str, jurisdiction: str, plugin_name: str, same_jurisdiction_names: set[str]) -> str:
-    body = re.sub(rf"\b{re.escape(jurisdiction)}:(?!{re.escape(plugin_name)}-)([A-Za-z0-9_-]+)", rf"{plugin_name}-\1", body)
+    body = re.sub(rf"(?<!lawpowers:)\b{re.escape(jurisdiction)}:(?!{re.escape(plugin_name)}-)([A-Za-z0-9_-]+)", rf"{plugin_name}-\1", body)
     body = re.sub(
         rf"\.\./\.\./skills/{re.escape(jurisdiction)}/(?:{re.escape(plugin_name)}-)?([A-Za-z0-9_-]+)/SKILL\.md",
         rf"../skills/{plugin_name}-\1/SKILL.md",
@@ -1013,7 +1013,7 @@ python3 scripts/validate-platform-adapters.py
 Expected output:
 
 ```text
-Validated platform adapters: 20 agents, 41 skills.
+Validated platform adapters: 20 agents, 42 skills.
 ```
 
 - [ ] **Step 6: Commit generator and adapter changes**
@@ -1253,10 +1253,10 @@ python3 scripts/validate-platform-adapters.py
 Expected output includes:
 
 ```text
-Generated Claude plugin files: 20 agents, 41 skills.
+Generated Claude plugin files: 20 agents, 42 skills.
 Generated 20 Codex agent files.
 Validated 20 Codex agent files.
-Validated platform adapters: 20 agents, 41 skills.
+Validated platform adapters: 20 agents, 42 skills.
 ```
 
 - [ ] **Step 7: Commit documentation changes**
@@ -1303,10 +1303,10 @@ python3 -m json.tool plugins/pl/.claude-plugin/plugin.json
 Expected:
 
 ```text
-Generated Claude plugin files: 20 agents, 41 skills.
+Generated Claude plugin files: 20 agents, 42 skills.
 Generated 20 Codex agent files.
 Validated 20 Codex agent files.
-Validated platform adapters: 20 agents, 41 skills.
+Validated platform adapters: 20 agents, 42 skills.
 ```
 
 Each `python3 -m json.tool ...` command should print formatted JSON and exit with status 0.
@@ -1363,4 +1363,4 @@ Type and naming consistency:
 - OpenCode entrypoint is consistently `.opencode/plugins/businesspowers.js`.
 - Package name is consistently `businesspowers`.
 - Canonical prefixes are consistently `business-ua-` and `business-pl-`.
-- Validation counts match current source inventory: 20 agents and 41 skills.
+- Validation counts match current source inventory: 20 agents and 42 skills.
