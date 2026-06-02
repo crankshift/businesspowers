@@ -18,6 +18,8 @@ Keep the existing folders and Claude IDs unchanged. Codex uses collision-safe ID
 - Root `agents/` and `skills/` remain the source of truth for plugin behavior.
 - Top-level canonical files use `business-ua-*` and `business-pl-*`; generated adapters live under plugin folders.
 - OpenCode reads root sources through `.opencode/plugins/businesspowers.js`.
+- Businesspowers uses one repository-wide SemVer version. New release tags use `v<version>`; do not create new `ua/v<version>` or `pl/v<version>` tags.
+- When bumping a release, update `package.json`, `.claude-plugin/marketplace.json`, and every plugin-level Claude/Codex manifest to the same version.
 - When adding or renaming agents or skills, update the plugin README, `CLAUDE.md`, `AGENTS.md`, Claude manifest, and Codex manifest/marketplace when the public surface changes.
 - Do not commit real personal or client data. Use placeholders such as `[ПІБ]`, `[РНОКПП]`, `[imię i nazwisko]`, `[PESEL]`, and `[NIP]`.
 - Tax rates, thresholds, deadlines, and official interpretations must be verified against primary sources before use.

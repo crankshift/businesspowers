@@ -4,6 +4,18 @@
 
 ---
 
+## [0.5.0] — 2026-06-02
+
+### Додано
+
+- Канонічні кореневі джерела `agents/ua/` і `skills/ua/` з префіксованими назвами `business-ua-*`.
+- Підтримку OpenCode через кореневий package plugin `businesspowers`.
+
+### Змінено
+
+- Версіонування Businesspowers стало єдиним для всього репозиторію: нові релізи тегуються як `v<version>`, а не `ua/v<version>`.
+- Маніфести Claude Code і Codex для UA оновлено до спільної версії `0.5.0`; Claude ID лишається `ua`, Codex ID лишається `business-ua`.
+
 ## [0.4.2] — 2026-05-01
 
 ### Додано
@@ -116,6 +128,7 @@
 - **ЗУ № 4015-IX від 10.10.2024** — підвищення військового збору до 5% для загальних ставок з 01.12.2024, введення 1% ВЗ для ФОП 3 групи з 01.01.2025.
 - Мінімальна зарплата на 2026 р. — перевіряти у ЗУ «Про Держбюджет України на 2026 рік» на момент розрахунку.
 
+[0.5.0]: https://github.com/crankshift/businesspowers/releases/tag/v0.5.0
 [0.4.0]: https://github.com/crankshift/businesspowers/releases/tag/ua/v0.4.0
 [0.3.0]: https://github.com/crankshift/businesspowers/releases/tag/ua/v0.3.0
 [0.2.0]: https://github.com/crankshift/businesspowers/releases/tag/ua/v0.2.0

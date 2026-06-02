@@ -1,11 +1,25 @@
-# Changelog — businesspowers (monorepo)
+# Changelog — businesspowers
 
-Plugin-specific changes live in the per-plugin CHANGELOGs:
+Format — [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning — [SemVer](https://semver.org/).
 
-- [`plugins/ua/CHANGELOG.md`](./plugins/ua/CHANGELOG.md) — Ukrainian, tracks `ua` plugin releases.
-- [`plugins/pl/CHANGELOG.md`](./plugins/pl/CHANGELOG.md) — Polish, tracks `pl` plugin releases.
+Releases are unified across the repository and tagged as `v<version>`. The per-plugin changelogs keep jurisdiction-specific history from the earlier `ua/v<version>` and `pl/v<version>` release model.
 
-This root file is an **index + monorepo-level structural log** only. It's not versioned. Cross-cutting structural moves (repo layout, release tooling, marketplace shape) show up here as dated entries.
+---
+
+## [0.5.0] — 2026-06-02
+
+### Added
+
+- Canonical root `agents/` and `skills/` sources for both jurisdictions, with generated Claude Code adapters under `plugins/*/agents` and `plugins/*/skills`.
+- OpenCode package-plugin support through `package.json` and `.opencode/plugins/businesspowers.js`.
+- Platform adapter validation covering canonical sources, generated Claude adapters, generated Codex agents, Codex manifests, and OpenCode package metadata.
+
+### Changed
+
+- Switched Businesspowers to a unified repository version shared by Claude Code marketplace metadata, Claude plugin manifests, Codex plugin manifests, and the OpenCode package manifest.
+- Replaced per-plugin release tags (`ua/v<version>`, `pl/v<version>`) with one repository tag (`v<version>`) for new releases.
+- Codex keeps collision-safe IDs (`business-ua`, `business-pl`) while Claude Code keeps the existing plugin IDs (`ua`, `pl`).
+- Top-level canonical files now use `business-ua-*` and `business-pl-*` names; generated adapters preserve platform-specific loading behavior.
 
 ---
 
@@ -42,3 +56,5 @@ This root file is an **index + monorepo-level structural log** only. It's not ve
 - Marketplace catalog `.claude-plugin/marketplace.json` created at version `0.1.0`.
 - MIT license applied at repo root.
 - See per-plugin CHANGELOGs for the agent/skill catalog shipped in each `0.1.0`.
+
+[0.5.0]: https://github.com/crankshift/businesspowers/releases/tag/v0.5.0

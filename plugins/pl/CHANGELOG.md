@@ -4,6 +4,18 @@ Format — [Keep a Changelog](https://keepachangelog.com/pl/1.1.0/), wersjonowan
 
 ---
 
+## [0.5.0] — 2026-06-02
+
+### Dodano
+
+- Kanoniczne źródła root `agents/pl/` i `skills/pl/` z prefiksowanymi nazwami `business-pl-*`.
+- Wsparcie OpenCode przez root package plugin `businesspowers`.
+
+### Zmieniono
+
+- Businesspowers ma teraz jedno wersjonowanie dla całego repozytorium: nowe releasy są tagowane jako `v<version>`, a nie `pl/v<version>`.
+- Manifesty Claude Code i Codex dla PL zaktualizowano do wspólnej wersji `0.5.0`; Claude ID pozostaje `pl`, Codex ID pozostaje `business-pl`.
+
 ## [0.4.2] — 2026-05-01
 
 ### Dodano
@@ -125,6 +137,7 @@ Format — [Keep a Changelog](https://keepachangelog.com/pl/1.1.0/), wersjonowan
 - Minimalne wynagrodzenie i prognozowane przeciętne wynagrodzenie na 2026 — weryfikować w obwieszczeniu MRiPS i ustawie budżetowej.
 - Składka zdrowotna 2026 — zasady zależne od bieżącej redakcji ustawy o świadczeniach opieki zdrowotnej (weryfikować ostatnie zmiany).
 
+[0.5.0]: https://github.com/crankshift/businesspowers/releases/tag/v0.5.0
 [0.4.0]: https://github.com/crankshift/businesspowers/releases/tag/pl/v0.4.0
 [0.3.0]: https://github.com/crankshift/businesspowers/releases/tag/pl/v0.3.0
 [0.2.0]: https://github.com/crankshift/businesspowers/releases/tag/pl/v0.2.0

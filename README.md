@@ -245,9 +245,9 @@ Adding a plugin for a new jurisdiction (e.g. `de`, `cz`, `lt`, `ge`):
 1. Create canonical root folders `agents/xx/` and `skills/xx/`, plus `./plugins/xx/` alongside the existing plugin folders. Use a short ISO-style code.
 2. Lay out the plugin directory: `xx/README.md`, `xx/CLAUDE.md`, `xx/AGENTS.md`, `xx/CHANGELOG.md`, `xx/.claude-plugin/plugin.json`, `xx/.codex-plugin/plugin.json`, generated `xx/agents/`, generated `xx/skills/`, and generated `xx/.codex/agents/`.
 3. Register it in both marketplace catalogs: `.claude-plugin/marketplace.json` with `"source": "./plugins/xx"`, and `.agents/plugins/marketplace.json` with the collision-safe Codex plugin ID.
-4. Add a CHANGELOG entry and bump `metadata.version` in the marketplace manifest.
+4. Add a root CHANGELOG entry and bump the unified version in `package.json`, `.claude-plugin/marketplace.json`, and all plugin Claude/Codex manifests.
 5. Run the adapter verification commands above to generate Claude adapters, generate Codex agent shims, and validate all platform adapters.
-6. Open a PR, merge, then tag a release.
+6. Open a PR, merge, then tag a unified `v<version>` release.
 
 See [`CLAUDE.md`](./CLAUDE.md) for Claude Code contributor guidelines and [`AGENTS.md`](./AGENTS.md) for Codex contributor guidelines.
 
